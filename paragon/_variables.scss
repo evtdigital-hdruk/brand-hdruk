@@ -1,8 +1,21 @@
 // Use this file to set SASS variables for @edx/paragon
 // See _variables.scss in https://github.com/openedx/paragon/blob/master/scss/core/ for reference
 
-$primary: #29235C !default;
-$brand: #F98E2B !default;
+$hdruk-green: #3DB28C;
+$hdruk-blue: #475DA7;
+$hdruk-darkblue: #29235C;
+$hdruk-orange: #F98E2B;
+
+$primary: $hdruk-darkblue !default;
+$brand: $hdruk-green !default;
+
+$theme-colors: (
+  "hdruk-green": $hdruk-green,
+  "hdruk-blue": $hdruk-blue,
+  "hdruk-darkblue": $hdruk-darkblue,
+  "hdruk-orange": $hdruk-orange,
+);
+
 
 // Typography
 //
