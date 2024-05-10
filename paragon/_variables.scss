@@ -9,6 +9,11 @@ $hdruk-orange: #F98E2B;
 $primary: $hdruk-darkblue !default;
 $brand: $hdruk-green !default;
 
+$theme-colors: map-merge(("hdruk-green": $hdruk-green,
+      "hdruk-blue": $hdruk-blue,
+      "hdruk-darkblue": $hdruk-darkblue,
+    ));
+
 
 // Typography
 //
