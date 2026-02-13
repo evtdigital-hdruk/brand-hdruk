@@ -1,7 +1,7 @@
-# Open edX Brand Package Interface
+# HDR UK Brand Package Interface
 
 This project contains the default branding assets and style used in Open edX
-applications. It is published on npm as `@openedx/brand-openedx`.
+applications.
 
 The file structure serves as an interface to be implemented for custom
 branding and theming of Open edX.
