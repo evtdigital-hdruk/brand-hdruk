@@ -1,2 +1,17 @@
 // Use this file to define style overrides for @edx/paragon
 // This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
+
+// Authn
+
+// Register/Login page layout background color
+
+.bg-primary-400.w-100,
+.col-md-9.bg-primary-400,
+.col-md-10.bg-primary-400 {
+  background-color: $primary !important;
+}
+
+.medium-screen-svg-primary,
+.large-screen-svg-primary {
+  fill: $primary !important;
+}
