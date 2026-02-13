@@ -1,2 +1,29 @@
 // Use this file to set SASS variables for @edx/paragon
 // See _variables.scss in https://github.com/openedx/paragon/blob/master/scss/core/ for reference
+
+$hdruk-green: #3DB28C;
+$hdruk-blue: #475DA7;
+$hdruk-darkblue: #29235C;
+$hdruk-orange: #F98E2B;
+
+$primary: $hdruk-darkblue !default;
+$brand: $hdruk-green !default;
+
+$theme-colors: (
+  "hdruk-green": $hdruk-green,
+  "hdruk-blue": $hdruk-blue,
+  "hdruk-darkblue": $hdruk-darkblue,
+  "hdruk-orange": $hdruk-orange,
+);
+
+$accent-a : $hdruk-green;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
