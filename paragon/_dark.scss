@@ -1,0 +1,741 @@
+// Futures dark theme for the MFEs (Paragon 22 / sass-compiled stack).
+//
+// `.dark <selector>` (specificity +1 class) sits above Paragon's base
+// single-class rules. Bootstrap utility classes (.bg-white etc.) carry
+// !important, so their overrides do too.
+
+$d-bg: #1e1f1d; // page background (ink)
+$d-surface: #26272a; // cards / inputs / menus (ink-raised)
+$d-text: #f5f2eb; // primary text (cream)
+$d-text-secondary: rgba(245, 242, 235, 0.8);
+$d-muted: rgba(245, 242, 235, 0.6);
+$d-border: rgba(245, 242, 235, 0.12);
+$d-border-strong: rgba(245, 242, 235, 0.2);
+$d-link: #0adec8; // aqua links in dark
+$d-link-hover: #2ce7d4;
+$d-indigo: #2e34ba;
+$d-aqua: #0adec8;
+$d-ink: #1e1f1d;
+
+.dark {
+    // ---- Page + base text ----
+    background-color: $d-bg;
+    color: $d-text;
+
+    body {
+        background-color: $d-bg;
+        color: $d-text;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        color: $d-text;
+    }
+
+    // Profile section headers (.edit-section-header) bake in black at equal
+    // specificity; force cream.
+    .edit-section-header,
+    h2.edit-section-header,
+    .section-title {
+        color: $d-text !important;
+    }
+
+    p,
+    span,
+    li,
+    dt,
+    dd,
+    label,
+    small {
+        color: inherit;
+    }
+
+    // Monochrome inline icons frequently hardcode `fill: #000` instead of
+    // using currentColor, so they vanish in dark.
+    svg {
+        fill: currentColor;
+    }
+
+    // Light border utilities (.border-light, .border-light-400 …) are bright on
+    // ink; use the dark border colour.
+    .border-light,
+    [class*="border-light"] {
+        border-color: $d-border !important;
+    }
+
+    // Icon buttons that bake a black glyph (e.g. the notification-tray bell)
+    // follow cream instead.
+    .icon-container,
+    [aria-label*="notification" i] {
+        color: $d-text;
+    }
+
+    .text-muted,
+    .text-gray-500,
+    .text-gray-700 {
+        color: $d-muted !important;
+    }
+
+    // `.text-dark`, `.text-dark-500`, `.text-black` etc. - dark text utilities
+    // that are near-invisible on ink.
+    [class*="text-dark"],
+    .text-black {
+        color: $d-text !important;
+    }
+
+    // Indigo "primary" text utilities (.text-primary, .text-primary-500/700
+    // etc. - used for dates and emphasis) are low-contrast on ink; use aqua.
+    [class*="text-primary"] {
+        color: $d-aqua !important;
+    }
+
+    hr {
+        border-color: $d-border;
+    }
+
+    // ---- Links ----
+    a {
+        color: $d-link;
+
+        &:hover,
+        &:focus {
+            color: $d-link-hover;
+        }
+    }
+
+    // Paragon hyperlinks / muted links default to indigo (low contrast on ink).
+    // The `.muted-link` variant sets its colour at equal specificity, so force.
+    .pgn__hyperlink,
+    .muted-link,
+    a.muted-link,
+    .pgn__hyperlink.muted-link {
+        color: $d-link !important;
+
+        &:hover,
+        &:focus {
+            color: $d-link-hover !important;
+        }
+    }
+
+    // Progress grade bar: the full-range track rect is near-white; darken it
+    // (the indigo/yellow marker rects after it are left alone).
+    .grade-bar rect:first-of-type {
+        fill: rgba(245, 242, 235, 0.16) !important;
+    }
+
+    // Small / fine-print text (grade labels etc.) bakes very dark greens/greys.
+    small,
+    .small,
+    .x-small,
+    .micro {
+        color: $d-text-secondary;
+    }
+
+    // Course-material tabs (Course / Progress / Dates): readable inactive +
+    // aqua active, instead of dim grey / indigo.
+    .nav-tabs .nav-link,
+    .nav-link.h-100,
+    nav[class*="tab"] .nav-link {
+        color: $d-text-secondary;
+
+        &:hover,
+        &:focus {
+            color: $d-text;
+        }
+
+        &.active {
+            color: $d-aqua;
+            border-color: $d-aqua;
+        }
+    }
+
+    // ---- Surface utilities (common on cards/sections) ----
+    .bg-white,
+    .bg-light {
+        background-color: $d-surface !important;
+    }
+
+    // ---- Cards ----
+    .pgn__card,
+    .card {
+        background-color: $d-surface;
+        border-color: $d-border;
+        color: $d-text;
+    }
+
+    .card-header,
+    .card-footer,
+    .pgn__card-header,
+    .pgn__card-footer {
+        background-color: $d-surface;
+        border-color: $d-border;
+        color: $d-text;
+    }
+
+    // Paragon card header titles/subtitles bake black/grey text -> invisible on
+    // the dark card. Force readable cream / muted-cream.
+    // Paragon bakes these at `.pgn__card .pgn__card-header .pgn__card-header-title`
+    // (0,3,0) with #000, so `.dark .pgn__card-header-title` (0,2,0) loses. Use
+    // !important to win regardless of nesting depth.
+    .pgn__card-header-title,
+    .pgn__card-header-title-sm,
+    .pgn__card-header-title-md,
+    .pgn__card-header-title-lg,
+    .pgn__card-header-content,
+    .pgn__card-header-content * {
+        color: $d-text !important;
+    }
+
+    .pgn__card-header-subtitle-sm,
+    .pgn__card-header-subtitle-md,
+    .pgn__card-header-subtitle-lg {
+        color: $d-text-secondary !important;
+    }
+
+    // Light/dark page also uses `.pgn__card-light` (a white card variant) for
+    // raised cards; keep them on the dark surface.
+    .pgn__card-light {
+        background-color: $d-surface;
+        color: $d-text;
+    }
+
+    // Muted card sections (e.g. the goal-reminder note) bake a light grey bg.
+    .pgn__card-section.is-muted {
+        background-color: rgba(245, 242, 235, 0.05) !important;
+        color: $d-text-secondary;
+    }
+
+    // ---- Forms / inputs ----
+    .form-control,
+    .pgn__form-control,
+    textarea,
+    select,
+    .pgn__form-control-decorator-group,
+    .input-group-text {
+        background-color: $d-surface;
+        border-color: $d-border-strong;
+        color: $d-text;
+
+        &::placeholder {
+            color: $d-muted;
+        }
+
+        &:focus {
+            background-color: $d-surface;
+            color: $d-text;
+            border-color: $d-aqua;
+        }
+    }
+
+    .form-control:disabled,
+    .form-control[readonly] {
+        background-color: rgba(245, 242, 235, 0.06);
+    }
+
+    // Checkboxes, radios and switches: aqua accent, dark unchecked track.
+    input[type="checkbox"],
+    input[type="radio"],
+    .pgn__form-checkbox-input,
+    .pgn__form-radio-input,
+    .pgn__form-switch-input {
+        accent-color: $d-aqua;
+    }
+
+    .pgn__form-switch-input {
+        background-color: $d-surface;
+        border-color: $d-border-strong;
+
+        &:checked {
+            background-color: $d-aqua;
+            border-color: $d-aqua;
+        }
+    }
+
+    // Goal-selection cards (learning home weekly goal) render light.
+    .flag-button {
+        background-color: $d-surface;
+        border-color: $d-border;
+        color: $d-text;
+
+        &.selected,
+        &:hover {
+            border-color: $d-aqua;
+        }
+    }
+
+    // ---- Dropdowns / menus ----
+    .dropdown-menu,
+    .pgn__menu,
+    .menu-content {
+        background-color: $d-surface;
+        border-color: $d-border;
+        color: $d-text;
+    }
+
+    .dropdown-item {
+        color: $d-text;
+
+        &:hover,
+        &:focus {
+            background-color: rgba(245, 242, 235, 0.08);
+            color: $d-text;
+        }
+    }
+
+    .dropdown-divider {
+        border-color: $d-border;
+    }
+
+    .dropdown-header {
+        color: $d-muted;
+    }
+
+    // ---- Modals / popovers / tooltips ----
+    .modal-content,
+    .pgn__modal,
+    .popover {
+        background-color: $d-surface;
+        color: $d-text;
+        border-color: $d-border;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border-color: $d-border;
+    }
+
+    // ---- List groups + tables ----
+    .list-group-item {
+        background-color: $d-surface;
+        border-color: $d-border;
+        color: $d-text;
+    }
+
+    .table {
+        color: $d-text;
+
+        th,
+        td {
+            border-color: $d-border;
+        }
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(245, 242, 235, 0.04);
+    }
+
+    // ---- Tabs / nav ----
+    .nav-tabs {
+        border-color: $d-border;
+
+        .nav-link {
+            color: $d-muted;
+
+            &.active {
+                background-color: $d-surface;
+                border-color: $d-border $d-border $d-surface;
+                color: $d-text;
+            }
+        }
+    }
+
+    // ---- Header (matches the marketing nav bar in dark) ----
+    .site-header-desktop,
+    .site-header-mobile {
+        background-color: $d-bg;
+        border-bottom-color: $d-border;
+
+        // Mobile hamburger + avatar (.menu-trigger.icon-button) render black
+        // by default; make the glyphs cream in dark.
+        .icon-button,
+        .menu-trigger {
+            color: $d-text;
+
+            svg {
+                color: $d-text;
+                fill: currentColor;
+            }
+        }
+
+        // Header nav-link convention (dark): cream text, aqua on
+        // hover/focus/active, no bg change. Main nav + secondary menu.
+        .main-nav .nav-link,
+        .secondary-menu-container .nav-link {
+            color: $d-text;
+            background-color: transparent;
+        }
+
+        .main-nav .nav-link:hover,
+        .main-nav .nav-link:focus,
+        .main-nav .nav-link.active,
+        .main-nav .expanded .nav-link,
+        .secondary-menu-container .nav-link:hover,
+        .secondary-menu-container .nav-link:focus,
+        .secondary-menu-container .nav-link.active,
+        .secondary-menu-container .expanded .nav-link {
+            color: $d-aqua;
+            background-color: transparent;
+        }
+
+        // Search + theme icon buttons (dark): white icon, transparent, dark
+        // accent on hover, aqua focus ring. The `.secondary-menu-container
+        // .btn.hdruk-header-icon` selector (-> 0,5,0) outranks the light
+        // _overrides rule (0,4,1) so dark wins; the bare `.btn.hdruk-header-icon`
+        // covers the mobile menu (which has no secondary-menu-container).
+        .secondary-menu-container .btn.hdruk-header-icon,
+        .btn.hdruk-header-icon {
+            width: 2.75rem;
+            height: 2.75rem;
+            min-width: 2.75rem;
+            border-radius: 0.875rem;
+            color: #fff;
+            background-color: transparent;
+
+            .pgn__icon svg,
+            svg {
+                color: #fff;
+                fill: currentColor;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: oklch(0.32 0.006 271); // --accent (dark)
+                color: #fff;
+            }
+
+            &:focus-visible {
+                outline: 2px solid $d-aqua; // --ring (aqua)
+                outline-offset: 2px;
+            }
+        }
+
+        // User-menu toggle pill: cream text + subtle border (Paragon's default
+        // indigo outline is too low-contrast on ink), aqua border on hover.
+        .secondary-menu-container .menu-trigger.btn-outline-primary {
+            color: $d-text;
+            background-color: transparent;
+            border-color: $d-border-strong;
+
+            &:hover,
+            &:focus {
+                background-color: rgba(245, 242, 235, 0.08);
+                border-color: $d-aqua;
+                color: $d-text;
+            }
+        }
+    }
+
+    // ---- Learning MFE: course-outline sidebar + content chrome ----
+    .outline-sidebar-heading-wrapper {
+        background-color: $d-surface !important;
+        color: $d-text;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        button,
+        span,
+        a {
+            color: $d-text;
+        }
+
+        // Collapse / menu icon button shows a light circle in dark; clear it.
+        .btn-icon {
+            background-color: transparent !important;
+
+            &:hover,
+            &:focus {
+                background-color: rgba(245, 242, 235, 0.08) !important;
+            }
+        }
+    }
+
+    // Light highlight utility backgrounds (active/current items, banners).
+    // Bootstrap sets these with !important, so the overrides match.
+    .bg-info-100 {
+        background-color: rgba(10, 222, 200, 0.12) !important;
+    }
+
+    .bg-primary-100 {
+        background-color: rgba(46, 52, 186, 0.18) !important;
+    }
+
+    .bg-success-100 {
+        background-color: rgba(84, 207, 94, 0.12) !important;
+    }
+
+    .bg-warning-100 {
+        background-color: rgba(255, 227, 64, 0.12) !important;
+    }
+
+    .bg-danger-100 {
+        background-color: rgba(255, 160, 122, 0.12) !important;
+    }
+
+    // ---- Learning courseware: borders, hovers, tooltips ----
+    // The outline active item uses `.bg-info-100`; the generic aqua-12% tint
+    // reads as a muddy green there, so give the sidebar a neutral cream wash.
+    #outline-sidebar-outline li.bg-info-100,
+    #outline-sidebar-outline .bg-info-100 {
+        background-color: rgba(245, 242, 235, 0.08) !important;
+    }
+
+    // Light grey hover backgrounds (#E1DDDB / rgb(232,229,228)) on the outline
+    // collapsibles and course tabs -> subtle cream wash.
+    #outline-sidebar-outline li .collapsible-trigger:hover,
+    .course-tabs-navigation .nav a:not(.active):hover {
+        background-color: rgba(245, 242, 235, 0.06) !important;
+    }
+
+    // Hairline borders baked at #eaeaea -> subtle cream, like a card border.
+    .sequence,
+    .course-tabs-navigation {
+        border-color: $d-border !important;
+    }
+
+    .course-tabs-navigation {
+        border-bottom-color: $d-border !important;
+    }
+
+    // "Your current grade" marker tooltip bakes a bright #FFEE88 yellow that
+    // glares on dark; re-skin as a dark surface tooltip with cream text.
+    #non-passing-grade-tooltip,
+    #non-passing-grade-tooltip.tooltip .tooltip-inner {
+        background-color: $d-surface !important;
+        color: $d-text !important;
+    }
+
+    // ---- Footer ----
+    .footer,
+    .wrapper-footer {
+        background-color: $d-bg;
+        color: $d-text-secondary;
+    }
+
+    // Footer links: cream, aqua on hover (were low-contrast indigo on ink).
+    // Depth matches FooterSlot's `.footer .content-container .nav-colophon ol
+    // li a` (0,3,3) so the `.dark`-prefixed rule (0,4,3) wins.
+    .footer .content-container .nav-colophon ol li a,
+    .footer .nav-colophon a,
+    .footer a {
+        color: $d-text;
+
+        &:hover,
+        &:focus {
+            color: $d-aqua;
+        }
+    }
+
+    // "Powered by" logos are dark/coloured marks that vanish on the ink footer.
+    // Invert them to light silhouettes so they stay visible. Any logo that has
+    // a real white variant wired up can opt out with `.no-dark-invert`.
+    .footer .powered-area img:not(.no-dark-invert) {
+        filter: brightness(0) invert(1);
+    }
+
+    // ---- Alerts: dark surfaces so text isn't cream-on-cream ----
+    .alert {
+        background-color: $d-surface;
+        color: $d-text;
+        border-color: $d-border;
+    }
+
+    .alert-warning {
+        background-color: rgba(255, 227, 64, 0.14);
+        border-color: rgba(255, 227, 64, 0.35);
+    }
+
+    .alert-danger {
+        background-color: rgba(255, 160, 122, 0.14);
+        border-color: rgba(255, 160, 122, 0.35);
+    }
+
+    .alert-success {
+        background-color: rgba(84, 207, 94, 0.14);
+        border-color: rgba(84, 207, 94, 0.35);
+    }
+
+    .alert-info {
+        background-color: rgba(10, 222, 200, 0.12);
+        border-color: rgba(10, 222, 200, 0.3);
+    }
+
+    // Learner-dashboard empty-state ("no courses") container has a baked
+    // light-grey border; soften it to the dark border colour.
+    main .d-flex.align-items-center.justify-content-center.mb-4\.5 {
+        border-color: $d-border !important;
+    }
+
+    // ---- Breadcrumbs ----
+    .breadcrumb {
+        background-color: transparent;
+        color: $d-muted;
+    }
+
+    // ---- Logo: the Futures mark is monochrome ink; invert it to cream ----
+    .logo img,
+    img.logo {
+        filter: brightness(0) invert(1);
+    }
+
+    // ---- Course cards (learner-dashboard) ----
+    .course-card-title,
+    .pgn__card-header-title,
+    .pgn__card-header-title-sm {
+        color: $d-text;
+    }
+
+    .course-card {
+        .pgn__card {
+            background-color: $d-surface;
+            border-color: $d-border;
+        }
+
+        // Hover/focus border highlight is aqua in dark (indigo in light).
+        &:hover .pgn__card,
+        .pgn__card:focus-within {
+            border-color: $d-aqua;
+        }
+
+        // Ellipsis (kebab) menu: cream icon (was indigo). Covers both the
+        // Paragon icon-button and the dropdown `.btn-icon` variants.
+        .pgn__icon-button,
+        .btn-icon {
+            color: $d-text;
+            border-color: $d-border-strong;
+
+            svg {
+                color: $d-text;
+                fill: currentColor;
+            }
+        }
+
+        // Course-number chip.
+        .pgn__chip {
+            background-color: rgba(10, 222, 200, 0.12);
+            border-color: rgba(10, 222, 200, 0.3);
+            color: $d-aqua;
+        }
+    }
+
+    // ---- Pagination (learner-dashboard) ----
+    .pgn__pagination,
+    .pagination {
+
+        .page-link,
+        .pgn__pagination__card-button {
+            background-color: $d-surface;
+            border-color: $d-border;
+            color: $d-text;
+
+            &:hover,
+            &:focus {
+                background-color: rgba(245, 242, 235, 0.08);
+                color: $d-text;
+            }
+        }
+
+        .page-item.active .page-link {
+            background-color: $d-aqua;
+            border-color: $d-aqua;
+            color: $d-ink;
+        }
+
+        .page-item.disabled .page-link {
+            background-color: $d-surface;
+            color: $d-muted;
+        }
+    }
+
+    // ---- Learning MFE header + courseware chrome ----
+    .learning-header {
+        background-color: $d-bg;
+        border-bottom-color: $d-border;
+        color: $d-text;
+
+        .course-title {
+            color: $d-text;
+        }
+
+        a {
+            color: $d-text;
+        }
+    }
+
+    .course-title,
+    .course-title-lockup {
+        color: $d-text;
+    }
+
+    // ---- Buttons (brand colours stay; fix foregrounds) ----
+    .btn-primary {
+        background-color: $d-indigo;
+        border-color: $d-indigo;
+        color: $d-text; // cream on indigo
+    }
+
+    .btn-brand,
+    .btn-accent-a {
+        background-color: $d-aqua;
+        border-color: $d-aqua;
+        color: $d-ink; // ink on aqua
+    }
+
+    .btn-outline-primary {
+        border-color: $d-aqua;
+        color: $d-aqua;
+
+        &:hover,
+        &:focus {
+            background-color: $d-aqua;
+            border-color: $d-aqua;
+            color: $d-ink;
+        }
+    }
+
+    .btn-link {
+        color: $d-link;
+    }
+
+    // Icon buttons in the `primary` variant (e.g. the outline expand/collapse
+    // +/- control) bake indigo, which is low-contrast on ink. Use aqua, matching
+    // the primary->aqua convention for links in dark.
+    .btn-icon-primary,
+    .btn-icon-primary .btn-icon__icon,
+    .btn-icon-primary .btn-icon__icon-container {
+        color: $d-aqua;
+    }
+
+    // ---- Badges keep the aqua action colour ----
+    .badge-accent-a,
+    .badge-brand {
+        background-color: $d-aqua;
+        color: $d-ink;
+    }
+
+    // Light/secondary count badges -> dark surface so they aren't pale blobs.
+    .badge-light,
+    .badge-secondary {
+        background-color: $d-surface;
+        color: $d-text;
+    }
+}

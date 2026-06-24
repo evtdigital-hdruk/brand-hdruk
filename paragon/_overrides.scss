@@ -1,17 +1,124 @@
 // Use this file to define style overrides for @edx/paragon
-// This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
+// This file is included after all Paragon styles, but should generally avoid
+// using private mixins in Paragon.
+//
+// Everything is nested under `html` so each rule gets one extra element of
+// specificity
 
-// Authn
+html {
 
-// Register/Login page layout background color
+  // Authn - Register/Login page layout background color
+  .bg-primary-400.w-100,
+  .col-md-9.bg-primary-400,
+  .col-md-10.bg-primary-400 {
+    background-color: $primary !important;
+  }
 
-.bg-primary-400.w-100,
-.col-md-9.bg-primary-400,
-.col-md-10.bg-primary-400 {
-  background-color: $primary !important;
+  .medium-screen-svg-primary,
+  .large-screen-svg-primary {
+    fill: $primary !important;
+  }
+
+  // Header nav-link convention (light mode): ink text, indigo on
+  // hover/focus/active, no background change. Main nav + secondary menu.
+  // Dark-mode equivalents (cream -> aqua) live in _dark.scss.
+  .site-header-desktop .main-nav .nav-link,
+  .site-header-desktop .secondary-menu-container .nav-link {
+    color: $futures-ink;
+    background-color: transparent;
+    font-size: 0.9375rem;
+  }
+
+  .site-header-desktop .main-nav .nav-link:hover,
+  .site-header-desktop .main-nav .nav-link:focus,
+  .site-header-desktop .main-nav .nav-link.active,
+  .site-header-desktop .main-nav .expanded .nav-link,
+  .site-header-desktop .secondary-menu-container .nav-link:hover,
+  .site-header-desktop .secondary-menu-container .nav-link:focus,
+  .site-header-desktop .secondary-menu-container .nav-link.active,
+  .site-header-desktop .secondary-menu-container .expanded .nav-link {
+    color: $futures-indigo;
+    background-color: transparent;
+  }
+
+  .site-header-desktop .secondary-menu-container .btn.hdruk-header-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    min-width: 2.75rem;
+    border-radius: 0.875rem;
+    background-color: transparent;
+    color: #1e1f1d; // on-background (ink)
+
+    &:hover,
+    &:focus {
+      background-color: oklch(0.93 0.012 87.5); // --accent (light)
+      color: #1e1f1d;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #2e34ba; // --ring (indigo)
+      outline-offset: 2px;
+    }
+  }
+
+  // Navbar background: warm cream
+  .site-header-desktop,
+  .site-header-mobile {
+    background-color: $futures-cream;
+  }
+
+  .site-header-desktop,
+  .site-header-mobile,
+  .learning-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .learning-header {
+    background-color: $futures-cream;
+  }
+
+  // Logo: 72px wide, vertically centred.
+  .site-header-desktop .logo,
+  .site-header-mobile .logo {
+    display: inline-flex;
+    align-items: center;
+    height: auto;
+  }
+
+  .site-header-desktop .logo,
+  .site-header-mobile .logo {
+    height: 100%!important;
+    padding: 0;
+
+    img {
+      width: 72px;
+      height: auto !important;
+    }
+  }
+
+  // Learning MFE uses a separate `.learning-header`; size its logo to match.
+  // The header forces `.logo { height: 28px }` + `img { height: 100% }`, which
+  // squashes the mark - override both so the 72px width keeps its aspect ratio.
+  .learning-header .logo {
+    display: inline-flex;
+    align-items: center;
+    height: auto !important;
+    padding: 0;
+
+    img {
+      width: 72px;
+      height: auto !important;
+    }
+  }
 }
 
-.medium-screen-svg-primary,
-.large-screen-svg-primary {
-  fill: $primary !important;
+// Suppress transitions during a theme switch so toggling light/dark is instant
+// `hdruk-no-transition` is added to <html> by setTheme() for one frame.
+html.hdruk-no-transition,
+html.hdruk-no-transition *,
+html.hdruk-no-transition *::before,
+html.hdruk-no-transition *::after {
+  transition: none !important;
 }
