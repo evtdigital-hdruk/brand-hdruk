@@ -1,0 +1,36 @@
+{
+  "color": {
+    "$type": "color",
+    "primary": {
+      "base": {
+        "$value": "#2e34ba",
+        "$description": "Futures indigo - brand primary (mode-invariant)."
+      }
+    },
+    "brand": {
+      "base": {
+        "$value": "#0adec8",
+        "$description": "Futures aqua - action accent (mode-invariant)."
+      }
+    },
+    "white": {
+      "$value": "#1e1f1d",
+      "$description": "In dark mode 'white' surfaces map to ink so default backgrounds invert."
+    },
+    "black": {
+      "$value": "#f5f2eb",
+      "$description": "In dark mode 'black' text maps to cream."
+    },
+    "gray": {
+      "100": { "$value": "#26272a" },
+      "200": { "$value": "#303134" },
+      "300": { "$value": "#3c3d40" },
+      "400": { "$value": "#56575a" },
+      "500": { "$value": "#8a8b8d" },
+      "600": { "$value": "#b7b8b8" },
+      "700": { "$value": "#d6d6d2" },
+      "800": { "$value": "#e8e7e1" },
+      "900": { "$value": "#f5f2eb" }
+    }
+  }
+}

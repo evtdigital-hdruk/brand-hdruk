@@ -1,0 +1,16 @@
+{
+  "color": {
+    "$type": "color",
+    "link": {
+      "base": {
+        "$value": "{color.brand.500}",
+        "$description": "Dark-mode links use aqua (the indigo/aqua swap from the spec)."
+      },
+      "inline": {
+        "base": {
+          "$value": "{color.brand.500}"
+        }
+      }
+    }
+  }
+}

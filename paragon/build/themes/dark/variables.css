@@ -1,0 +1,91 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * See <PARAGON_ROOT>/tokens/README.md for more details.
+ */
+
+:root {
+  --pgn-size-btn-focus-width: 2px;
+  --pgn-size-input-btn-focus-width: 1px;
+  --pgn-spacing-input-btn-padding-y: 0.5625rem;
+  --pgn-color-bg-base: #1E1F1DFF; /** Ink page background (dark mode). */
+  --pgn-color-btn-bg-outline-dark: inherit;
+  --pgn-color-btn-bg-inverse-outline-dark: #00000000;
+  --pgn-color-btn-border-inverse-dark: #00000000;
+  --pgn-color-btn-hover-border-inverse-dark: #00000000;
+  --pgn-color-btn-hover-border-inverse-outline-dark: #00000000;
+  --pgn-color-btn-active-border-inverse-dark: #00000000;
+  --pgn-color-btn-active-border-inverse-outline-dark: #00000000;
+  --pgn-color-btn-focus-text-outline-dark: inherit;
+  --pgn-color-btn-focus-bg-outline-dark: inherit;
+  --pgn-color-btn-focus-bg-inverse-outline-dark: inherit;
+  --pgn-color-btn-disabled-text-outline-dark: inherit;
+  --pgn-color-btn-disabled-bg-outline-dark: inherit;
+  --pgn-color-btn-disabled-bg-inverse-dark: inherit;
+  --pgn-color-btn-disabled-bg-inverse-outline-dark: inherit;
+  --pgn-color-btn-disabled-border-inverse-dark: #00000000;
+  --pgn-color-white: #1E1F1DFF; /** In dark mode 'white' surfaces map to ink so default backgrounds invert. */
+  --pgn-color-black: #F5F2EBFF; /** In dark mode 'black' text maps to cream. */
+  --pgn-color-gray-100: #26272AFF; /** Gray color of level 100. */
+  --pgn-color-gray-200: #303134FF; /** Gray color of level 200. */
+  --pgn-color-gray-300: #3C3D40FF; /** Gray color of level 300. */
+  --pgn-color-gray-400: #56575AFF; /** Gray color of level 400. */
+  --pgn-color-gray-500: #8A8B8DFF; /** Gray color of level 500. */
+  --pgn-color-gray-600: #B7B8B8FF; /** Gray color of level 600. */
+  --pgn-color-gray-700: #D6D6D2FF; /** Gray color of level 700. */
+  --pgn-color-gray-800: #E8E7E1FF; /** Gray color of level 800. */
+  --pgn-color-gray-900: #F5F2EBFF; /** Gray color of level 900. */
+  --pgn-color-primary-base: #2E34BAFF; /** Futures indigo - brand primary (mode-invariant). */
+  --pgn-color-brand-base: #0ADEC8FF; /** Futures aqua - action accent (mode-invariant). */
+  --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
+  --pgn-color-btn-text-outline-dark: var(--pgn-color-dark-base);
+  --pgn-color-btn-text-inverse-dark: var(--pgn-color-dark-base);
+  --pgn-color-btn-text-inverse-outline-dark: var(--pgn-color-white);
+  --pgn-color-btn-bg-dark: var(--pgn-color-dark-base);
+  --pgn-color-btn-border-outline-dark: var(--pgn-color-dark-base);
+  --pgn-color-btn-border-inverse-outline-dark: var(--pgn-color-white);
+  --pgn-color-btn-active-bg-inverse-dark: var(--pgn-color-gray-100);
+  --pgn-color-btn-focus-border-inverse-dark: var(--pgn-color-white);
+  --pgn-color-btn-focus-border-inverse-outline-dark: var(--pgn-color-white);
+  --pgn-color-btn-text-dark: #FFFFFFFF;
+  --pgn-color-btn-bg-inverse-dark: #FFFFFFFF;
+  --pgn-color-btn-border-dark: var(--pgn-color-btn-bg-dark);
+  --pgn-color-btn-hover-text-inverse-dark: #18271DFF;
+  --pgn-color-btn-hover-bg-outline-dark: var(--pgn-color-dark-100);
+  --pgn-color-btn-hover-bg-inverse-outline-dark: var(--pgn-color-dark-100);
+  --pgn-color-btn-hover-border-outline-dark: var(--pgn-color-dark-900);
+  --pgn-color-btn-active-text-inverse-dark: #142018FF;
+  --pgn-color-btn-focus-text-inverse-dark: var(--pgn-color-btn-text-inverse-dark);
+  --pgn-color-btn-focus-text-inverse-outline-dark: var(--pgn-color-btn-text-inverse-outline-dark);
+  --pgn-color-btn-focus-border-outline-dark: var(--pgn-color-btn-border-outline-dark);
+  --pgn-color-btn-focus-bg-dark: var(--pgn-color-btn-bg-dark);
+  --pgn-color-btn-focus-outline-inverse-dark: var(--pgn-color-btn-focus-border-inverse-dark);
+  --pgn-color-btn-focus-outline-inverse-outline-dark: var(--pgn-color-btn-focus-border-inverse-outline-dark);
+  --pgn-color-btn-disabled-text-inverse-dark: var(--pgn-color-btn-text-inverse-dark);
+  --pgn-color-btn-disabled-text-inverse-outline-dark: var(--pgn-color-btn-text-inverse-outline-dark);
+  --pgn-color-btn-disabled-bg-dark: var(--pgn-color-btn-bg-dark);
+  --pgn-color-btn-disabled-border-inverse-outline-dark: var(--pgn-color-btn-focus-border-inverse-outline-dark);
+  --pgn-color-link-base: var(--pgn-color-brand-500); /** Dark-mode links use aqua (the indigo/aqua swap from the spec). */
+  --pgn-color-link-inline-base: var(--pgn-color-brand-500);
+  --pgn-color-btn-hover-text-outline-dark: var(--pgn-color-theme-hover-dark);
+  --pgn-color-btn-hover-text-inverse-outline-dark: var(--pgn-color-theme-hover-dark);
+  --pgn-color-btn-hover-bg-dark: var(--pgn-color-theme-hover-dark);
+  --pgn-color-btn-hover-bg-inverse-dark: #ECECECFF;
+  --pgn-color-btn-hover-border-dark: var(--pgn-color-theme-hover-dark);
+  --pgn-color-btn-active-bg-dark: var(--pgn-color-theme-active-dark);
+  --pgn-color-btn-active-bg-outline-dark: var(--pgn-color-theme-bg-dark);
+  --pgn-color-btn-active-bg-inverse-outline-dark: var(--pgn-color-theme-bg-dark);
+  --pgn-color-btn-active-border-dark: var(--pgn-color-theme-active-dark);
+  --pgn-color-btn-active-border-outline-dark: var(--pgn-color-theme-active-dark);
+  --pgn-color-btn-focus-text-dark: var(--pgn-color-btn-text-dark);
+  --pgn-color-btn-focus-border-dark: var(--pgn-color-btn-focus-bg-dark);
+  --pgn-color-btn-focus-bg-inverse-dark: var(--pgn-color-btn-bg-inverse-dark);
+  --pgn-color-btn-focus-outline-dark: var(--pgn-color-theme-focus-dark);
+  --pgn-color-btn-focus-outline-outline-dark: var(--pgn-color-theme-focus-dark);
+  --pgn-color-btn-disabled-text-dark: var(--pgn-color-btn-text-dark);
+  --pgn-color-btn-disabled-border-dark: var(--pgn-color-btn-border-dark);
+  --pgn-color-btn-hover-text-dark: #FFFFFFFF;
+  --pgn-color-btn-active-text-dark: #FFFFFFFF;
+  --pgn-color-btn-active-text-outline-dark: #454545FF;
+  --pgn-color-btn-active-text-inverse-outline-dark: #454545FF;
+  --pgn-color-btn-disabled-border-outline-dark: var(--pgn-color-btn-hover-text-outline-dark);
+}

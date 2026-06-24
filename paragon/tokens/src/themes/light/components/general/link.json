@@ -1,0 +1,16 @@
+{
+  "color": {
+    "$type": "color",
+    "link": {
+      "base": {
+        "$value": "{color.primary.500}",
+        "$description": "Light-mode links use indigo (aqua-on-cream fails contrast)."
+      },
+      "inline": {
+        "base": {
+          "$value": "{color.primary.500}"
+        }
+      }
+    }
+  }
+}

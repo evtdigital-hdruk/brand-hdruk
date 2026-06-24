@@ -1,0 +1,17 @@
+{
+  "color": {
+    "$type": "color",
+    "primary": {
+      "base": {
+        "$value": "#2e34ba",
+        "$description": "Futures indigo - brand primary (buttons, focus, links)."
+      }
+    },
+    "brand": {
+      "base": {
+        "$value": "#0adec8",
+        "$description": "Futures aqua - action accent (CTAs, badges, highlights)."
+      }
+    }
+  }
+}

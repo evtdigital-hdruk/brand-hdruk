@@ -1,0 +1,11 @@
+{
+  "color": {
+    "$type": "color",
+    "bg": {
+      "base": {
+        "$value": "#1e1f1d",
+        "$description": "Ink page background (dark mode)."
+      }
+    }
+  }
+}
