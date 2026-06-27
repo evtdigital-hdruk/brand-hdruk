@@ -1,0 +1,26 @@
+name: Build smoke
+
+# Verify the brand stylesheet build (Paragon CLI build-tokens + build-scss) still
+# compiles and emits the theme CSS. Catches SCSS/token regressions that would
+# otherwise only surface when an MFE rebuilds against this package.
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Build emitted the core + light theme stylesheets
+        run: |
+          test -f paragon/build/core/index.css
+          test -f paragon/build/themes/light/index.css
