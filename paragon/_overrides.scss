@@ -14,9 +14,172 @@ html {
     background-color: $primary !important;
   }
 
+  .col-md-3.bg-white.p-0 {
+    background-color: $futures-cream !important;
+  }
+
   .medium-screen-svg-primary,
   .large-screen-svg-primary {
     fill: $primary !important;
+  }
+
+  // Authn - Register/Login page, dark theme.
+  //
+  // The authn MFE has no site-header slot, so (unlike the other MFEs) it
+  // never imports `@edx/brand/paragon/dark` (_dark.scss). The brand core
+  // (_overrides.scss) IS loaded here, so the page's dark theming has to
+  // live in this block. Values are kept in sync with _dark.scss.
+  //
+  // The hero (.bg-primary-400) and the diagonal SVG stay indigo in both
+  // themes (theme-agnostic rules above); everything else on the form
+  // needs dark values below.
+  &.dark {
+    // Page + base text (mirrors `.dark { background-color; color }`).
+    background-color: $futures-ink !important;
+    color: $futures-cream !important;
+
+    body {
+      background-color: $futures-ink !important;
+      color: $futures-cream !important;
+    }
+
+    // Side panel: the cream wedge (revealed by the skewed indigo SVG)
+    // becomes ink so it blends into the dark content/page background.
+    .col-md-3.bg-white.p-0 {
+      background-color: $futures-ink !important;
+    }
+
+    // Tabs (Register / Sign in).
+    .nav-tabs {
+      border-color: rgba(245, 242, 235, 0.12) !important;
+
+      .nav-link {
+        color: rgba(245, 242, 235, 0.6) !important;
+
+        &.active,
+        &:hover {
+          background-color: $futures-ink-raised !important;
+          border-color: rgba(245, 242, 235, 0.12) rgba(245, 242, 235, 0.12) $futures-ink-raised !important;
+          color: $futures-cream !important;
+        }
+      }
+    }
+
+    // Text inputs (Full name / Email / Username / Password).
+    .form-control,
+    .pgn__form-control,
+    .pgn__form-control-decorator-group {
+      background-color: $futures-ink-raised !important;
+      border-color: rgba(245, 242, 235, 0.2) !important;
+      color: $futures-cream !important;
+
+      &::placeholder {
+        color: rgba(245, 242, 235, 0.6) !important;
+      }
+
+      &:focus {
+        background-color: $futures-ink-raised !important;
+        border-color: $futures-aqua !important;
+        box-shadow: 0 0 0 1px $futures-aqua !important;
+        color: $futures-cream !important;
+
+      }
+
+      &:focus~.pgn__form-control-floating-label .pgn__form-control-floating-label-text,
+      &.has-value~.pgn__form-control-floating-label .pgn__form-control-floating-label-text {
+        background-color: $futures-ink-raised !important;
+      }
+
+      &~.pgn__form-control-floating-label {
+        .pgn__form-control-floating-label-content {
+          background-color: rgba(0, 0, 0, 0) !important;
+        }
+      }
+
+    }
+
+    // Floating labels: muted-cream text; the label chip matches the input
+    // surface so it doesn't show as a light notch when it floats up.
+    .pgn__form-control-floating-label-content {
+      background-color: $futures-ink-raised !important;
+    }
+
+    .pgn__form-control-floating-label-text {
+      color: rgba(245, 242, 235, 0.6) !important;
+    }
+
+    // Invalid state ("Enter your full name" etc.) - readable red on ink.
+    .form-control.is-invalid {
+      border-color: #ff8a8a;
+    }
+
+    .pgn__form-text-invalid {
+      color: #ff8a8a;
+    }
+
+    // Password show/hide icon button.
+    .btn-icon,
+    .btn-icon-secondary {
+      color: $futures-cream;
+    }
+
+    // Password requirements tooltip
+    #password-requirement-top .tooltip-inner {
+      background: $futures-ink-raised !important;
+      color: $futures-cream !important;
+      border: solid 1px rgba(245, 242, 235, 0.2) !important;
+    }
+
+    // Login / Account creation failure alert
+    #login-failure-alert, 
+    #validation-errors {
+      background-color: $futures-ink-raised !important;
+      border-color: rgba(245, 242, 235, 0.2) !important;
+
+      .alert-heading {
+        color: #ffffff !important;
+      }
+    }
+
+    // Terms-of-service block: muted text, aqua link, aqua checkbox.
+    .text-muted,
+    .text-gray-500,
+    .text-gray-700 {
+      color: rgba(245, 242, 235, 0.6) !important;
+    }
+
+    .pgn__form-label {
+      color: $futures-cream;
+    }
+
+    input[type="checkbox"],
+    .pgn__form-checkbox-input {
+      accent-color: $futures-aqua;
+    }
+
+    a {
+      color: $futures-aqua !important;
+
+      &:hover,
+      &:focus {
+        color: #2ce7d4 !important;
+      }
+    }
+
+    .pgn__hyperlink,
+    .muted-link,
+    a.muted-link,
+    .pgn__hyperlink.muted-link {
+      color: $futures-aqua !important;
+    }
+
+    // Submit ("Create an account for free") - aqua + ink.
+    .btn-brand,
+    .btn-accent-a {
+      background-color: $futures-aqua;
+      border-color: $futures-aqua;
+      color: $futures-ink;
+    }
   }
 
   // Header nav-link convention (light mode): ink text, indigo on
@@ -89,7 +252,7 @@ html {
 
   .site-header-desktop .logo,
   .site-header-mobile .logo {
-    height: 100%!important;
+    height: 100% !important;
     padding: 0;
 
     img {
