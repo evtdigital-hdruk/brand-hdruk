@@ -23,6 +23,43 @@ html {
     fill: $primary !important;
   }
 
+  .large-screen-svg-light,
+  .medium-screen-svg-light {
+    fill: $futures-cream !important;
+  }
+
+  .col-md-3.bg-white.p-0,
+  .bg-light-200,
+  .bg-white {
+    background-color: $futures-cream !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $futures-ink;
+    }
+  }
+
+  .form-control,
+  .pgn__form-control,
+  .pgn__form-control-decorator-group,
+  .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown {
+    background-color: #ffffff !important;
+    // border-color: rgba(245, 242, 235, 0.2) !important;
+    color: $futures-ink !important;
+
+    &.has-floating-label select.form-control:not(.has-value):not(:focus) {
+      color: rgba(0, 0, 0, 0) !important;
+    }
+  }
+
+  .medium-yellow-line {
+    border: 3px solid $futures-aqua;
+  }
+
   // Authn - Register/Login page, dark theme.
   //
   // The authn MFE has no site-header slot, so (unlike the other MFEs) it
@@ -45,9 +82,27 @@ html {
 
     // Side panel: the cream wedge (revealed by the skewed indigo SVG)
     // becomes ink so it blends into the dark content/page background.
-    .col-md-3.bg-white.p-0 {
+    .col-md-3.bg-white.p-0,
+    .bg-light-200,
+    .bg-white {
       background-color: $futures-ink !important;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #ffffff;
+      }
     }
+
+    .large-screen-svg-light,
+    .medium-screen-svg-light {
+      fill: $futures-ink !important;
+    }
+
+
 
     // Tabs (Register / Sign in).
     .nav-tabs {
@@ -68,7 +123,8 @@ html {
     // Text inputs (Full name / Email / Username / Password).
     .form-control,
     .pgn__form-control,
-    .pgn__form-control-decorator-group {
+    .pgn__form-control-decorator-group,
+    .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown {
       background-color: $futures-ink-raised !important;
       border-color: rgba(245, 242, 235, 0.2) !important;
       color: $futures-cream !important;
@@ -96,6 +152,23 @@ html {
         }
       }
 
+      .dropdown-item {
+        color: $futures-cream !important;
+
+        &:hover,
+        &:focus {
+          background-color: rgba(245, 242, 235, 0.2) !important;
+          color: $futures-cream !important;
+        }
+      }
+
+
+
+    }
+
+    .pp-page__heading.text-primary,
+    .pgn__form-label.text-primary {
+      color: $futures-aqua !important;
     }
 
     // Floating labels: muted-cream text; the label chip matches the input
@@ -131,7 +204,7 @@ html {
     }
 
     // Login / Account creation failure alert
-    #login-failure-alert, 
+    #login-failure-alert,
     #validation-errors {
       background-color: $futures-ink-raised !important;
       border-color: rgba(245, 242, 235, 0.2) !important;
