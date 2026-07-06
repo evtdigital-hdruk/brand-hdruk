@@ -438,6 +438,7 @@ $d-ink: #1e1f1d;
     // ---- Learning MFE: course-outline sidebar + content chrome ----
     .outline-sidebar-heading-wrapper {
         background-color: $d-surface !important;
+        border-color: $d-border !important; // bakes #d7d3d1
         color: $d-text;
 
         h1,
@@ -466,6 +467,21 @@ $d-ink: #1e1f1d;
             &:focus {
                 background-color: rgba(245, 242, 235, 0.08) !important;
             }
+        }
+    }
+
+    // Section rows in the course-outline tray (unit page) bake a white bg
+    // + #d7d3d1 border (CourseOutlineTray.scss `.course-sidebar-section`),
+    // leaving cream section titles invisible on white. Re-skin as a dark
+    // surface; the active row's `.bg-info-100` cream wash still reads on top.
+    .course-sidebar-section {
+        background: $d-surface;
+        border-color: $d-border;
+
+        button,
+        button span,
+        a {
+            color: $d-text;
         }
     }
 
@@ -522,6 +538,18 @@ $d-ink: #1e1f1d;
     #non-passing-grade-tooltip.tooltip .tooltip-inner {
         background-color: $d-surface !important;
         color: $d-text !important;
+    }
+
+    // Progress-page banners ("A weighted grade of N% is required...",
+    // certificate status) sit on `.bg-warning-100`; the generic 12% yellow
+    // wash reads as muddy olive across a full-width band. Neutral cream
+    // wash instead, with an amber icon to keep the warning affordance.
+    .raised-card .bg-warning-100 {
+        background-color: rgba(245, 242, 235, 0.06) !important;
+
+        .pgn__icon {
+            color: #ffe340;
+        }
     }
 
     // ---- Footer ----
@@ -714,6 +742,56 @@ $d-ink: #1e1f1d;
 
     .btn-link {
         color: $d-link;
+    }
+
+    // Tertiary (text) buttons bake dark grey text; cream + cream-wash hover.
+    .btn-tertiary {
+        color: $d-text;
+
+        &:hover,
+        &:focus {
+            background-color: rgba(245, 242, 235, 0.08);
+            color: $d-text;
+        }
+    }
+
+    // ---- Paragon product-tour checkpoint (e.g. course-home tour) ----
+    // Bakes $light-300 bg, $gray-700 body text and $primary (indigo)
+    // breadcrumbs (ProductTour/_variables.scss); the popover arrows repeat
+    // the light bg per placement. Aqua top border / bottom arrow stay.
+    .pgn__checkpoint {
+        background: $d-surface;
+        color: $d-text;
+
+        #pgn__checkpoint-title {
+            color: $d-text;
+        }
+
+        .pgn__checkpoint-body {
+            color: $d-text-secondary;
+        }
+
+        .pgn__checkpoint-breadcrumb.pgn__checkpoint-breadcrumb_active {
+            background: $d-aqua;
+        }
+
+        .pgn__checkpoint-breadcrumb.pgn__checkpoint-breadcrumb_inactive {
+            border-color: rgba(245, 242, 235, 0.4);
+        }
+    }
+
+    // Arrow tips that mirror the popover background (the bottom-placement
+    // arrow uses the aqua border colour upstream and needs no override).
+    .pgn__checkpoint[data-popper-placement^="top"] > #pgn__checkpoint-arrow::after {
+        border-top-color: $d-surface;
+    }
+
+    .pgn__checkpoint[data-popper-placement^="left"] > #pgn__checkpoint-arrow::after {
+        border-left-color: $d-surface;
+    }
+
+    .pgn__checkpoint[data-popper-placement^="right"] > #pgn__checkpoint-arrow::after {
+        border-right-color: $d-surface;
     }
 
     // Icon buttons in the `primary` variant (e.g. the outline expand/collapse
