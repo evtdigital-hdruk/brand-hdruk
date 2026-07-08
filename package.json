@@ -1,7 +1,7 @@
 {
   "name": "@evtdigital-hdruk/brand-hdruk",
-  "version": "3.0.0",
-  "description": "The default branding and SASS theme package containing for Open edX applications.",
+  "version": "3.1.0",
+  "description": "The branding and SASS theme package for Futures.",
   "scripts": {
     "build-tokens": "paragon build-tokens --source ./paragon/tokens/ --build-dir ./paragon/build -t light",
     "build-scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/build/themes --source",

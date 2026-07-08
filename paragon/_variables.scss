@@ -1,29 +1,46 @@
 // Use this file to set SASS variables for @edx/paragon
 // See _variables.scss in https://github.com/openedx/paragon/blob/master/scss/core/ for reference
+//
+// Futures palette:
+//   indigo  #2e34ba  brand primary - hero, links, focus, default buttons
+//   aqua    #0adec8  action accent - CTAs, badges, stat numbers
+//   cream   #f5f2eb  light page background
+//   ink     #1e1f1d  primary text (light) / page background (dark)
+//   ink-raised #26272a  dark-mode card/surface
 
-$hdruk-green: #3DB28C;
-$hdruk-blue: #475DA7;
-$hdruk-darkblue: #29235C;
-$hdruk-orange: #F98E2B;
+$futures-indigo: #2e34ba;
+$futures-aqua: #0adec8;
+$futures-cream: #f5f2eb;
+$futures-ink: #1e1f1d;
+$futures-ink-raised: #26272a;
 
-$primary: $hdruk-darkblue !default;
-$brand: $hdruk-green !default;
+$primary: $futures-indigo !default;
+$brand: $futures-aqua !default;
 
 $theme-colors: (
-  "hdruk-green": $hdruk-green,
-  "hdruk-blue": $hdruk-blue,
-  "hdruk-darkblue": $hdruk-darkblue,
-  "hdruk-orange": $hdruk-orange,
+  "indigo": $futures-indigo,
+  "aqua": $futures-aqua,
+  "cream": $futures-cream,
+  "ink": $futures-ink,
 );
 
-$accent-a : $hdruk-green;
+// Aqua drives Paragon's accent utilities (badges, highlights, CTAs).
+$accent-a: $futures-aqua;
+
+// Page background is warm cream; ink is the default body text colour.
+$body-bg: $futures-cream;
+$body-color: $futures-ink;
 
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
+// Headings use Gravita GEO; body copy uses Work Sans (see _fonts.scss).
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI",
+$font-family-sans-serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$headings-font-family: "gravita-geo-variable", "Gravita GEO", $font-family-sans-serif !default;
+$headings-letter-spacing: -0.025em !default;
