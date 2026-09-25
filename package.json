@@ -1,6 +1,6 @@
 {
   "name": "@evtdigital-hdruk/brand-hdruk",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "The branding and SASS theme package for Futures.",
   "scripts": {
     "build-tokens": "paragon build-tokens --source ./paragon/tokens/src/ --build-dir ./paragon/build -t light,dark --base-paragon-theme light",

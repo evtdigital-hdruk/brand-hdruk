@@ -1,4 +1,8 @@
-// this file creates the core.css import here all the common styles for your theme. 
+// Assembled by `paragon build-scss` into `dist/core.css`, which the MFEs load
+// as the brand's core override (see HDRUKFUTURESTHEME_PARAGON_THEME_BASE_URL
+// in tutor-hdrukfuturestheme). Fonts and the token-generated core variables
+// must be here or they never reach the MFE: Paragon 23 MFEs do not compile
+// this package's SCSS, they only load the built CSS.
 
-// @use "./build/core/variables";
-// @use "./build/core/custom-media-breakpoints";
+@use "./fonts";
+@use "./build/core/variables";
