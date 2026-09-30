@@ -1,0 +1,39 @@
+{
+  "color": {
+    "$type": "color",
+    "chip": {
+      "text": {
+        "light": {
+          "$value": "{color.futures.aqua}"
+        }
+      },
+      "bg": {
+        "light": {
+          "$value": "{color.futures.aqua}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.12
+            }
+          ]
+        }
+      },
+      "border": {
+        "base": {
+          "$value": "{color.futures.aqua}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.3
+            }
+          ]
+        }
+      },
+      "label": {
+        "base": {
+          "$value": "{color.futures.aqua}"
+        }
+      }
+    }
+  }
+}

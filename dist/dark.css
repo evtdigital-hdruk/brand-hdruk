@@ -1,13 +1,18 @@
+/* Dark variant: the token-generated CSS plus the residual rules that have no
+   Paragon token. Compiled by `paragon build-scss` into dist/dark.css. */
 /**
  * Do not edit directly, this file was auto-generated.
  * See <PARAGON_ROOT>/tokens/README.md for more details.
  */
-
 :root {
   --pgn-size-btn-focus-width: 2px;
   --pgn-size-input-btn-focus-width: 1px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
-  --pgn-color-bg-base: #1E1F1DFF;
+  --pgn-other-form-feedback-tooltip-opacity: .9;
+  --pgn-other-content-form-control-select-bg-repeat: no-repeat;
+  --pgn-other-content-form-control-select-bg-position-x: right;
+  --pgn-other-content-form-control-select-bg-position-y: center;
+  --pgn-color-alert-title: #FFFFFFFF;
   --pgn-color-btn-bg-outline-dark: inherit;
   --pgn-color-btn-bg-inverse-outline-dark: #00000000;
   --pgn-color-btn-border-inverse-dark: #00000000;
@@ -23,8 +28,9 @@
   --pgn-color-btn-disabled-bg-inverse-dark: inherit;
   --pgn-color-btn-disabled-bg-inverse-outline-dark: inherit;
   --pgn-color-btn-disabled-border-inverse-dark: #00000000;
-  --pgn-color-white: #1E1F1DFF;
-  --pgn-color-black: #F5F2EBFF;
+  --pgn-color-link-hover: #2CE7D4FF;
+  --pgn-color-link-muted-hover: #2CE7D4FF;
+  --pgn-color-link-muted-inline-hover-base: #2CE7D4FF;
   --pgn-color-gray-100: #26272AFF;
   --pgn-color-gray-200: #303134FF;
   --pgn-color-gray-300: #3C3D40FF;
@@ -34,2511 +40,2653 @@
   --pgn-color-gray-700: #D6D6D2FF;
   --pgn-color-gray-800: #E8E7E1FF;
   --pgn-color-gray-900: #F5F2EBFF;
+  --pgn-color-gray-base: #8A8B8DFF;
   --pgn-color-primary-base: #2E34BAFF;
   --pgn-color-brand-base: #0ADEC8FF;
+  --pgn-color-success-100: #54CF5E24;
+  --pgn-color-success-200: #54CF5E59;
+  --pgn-color-success-base: #54CF5EFF;
+  --pgn-color-info-base: #0ADEC8FF;
+  --pgn-color-warning-100: #FFE34024;
+  --pgn-color-warning-200: #FFE34059;
+  --pgn-color-warning-base: #FFE340FF;
+  --pgn-color-danger-100: #FF8A8A24;
+  --pgn-color-danger-200: #FF8A8A59;
+  --pgn-color-danger-base: #FF8A8AFF;
+  --pgn-color-dark-base: #F5F2EBFF;
+  --pgn-color-futures-indigo: #2E34BAFF;
+  --pgn-color-futures-aqua: #0ADEC8FF;
+  --pgn-color-futures-cream: #F5F2EBFF;
+  --pgn-color-futures-ink: #1E1F1DFF;
+  --pgn-color-futures-ink-raised: #26272AFF;
+  --pgn-color-futures-header-icon-hover-bg: #323336FF;
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
-  --pgn-color-btn-text-outline-dark: var(--pgn-color-dark-base);
+  --pgn-color-bg-base: var(--pgn-color-futures-ink);
+  --pgn-color-bg-active: var(--pgn-color-futures-aqua);
+  --pgn-color-active: var(--pgn-color-futures-ink);
+  --pgn-color-input-focus: var(--pgn-color-futures-aqua);
+  --pgn-color-border: #F5F2EB1F;
+  --pgn-color-theme-focus-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-alert-content: #F5F2EBD9;
+  --pgn-color-badge-text-secondary: #F5F2EBFF;
+  --pgn-color-badge-text-light: #F5F2EBFF;
+  --pgn-color-badge-bg-secondary: var(--pgn-color-futures-ink-raised);
+  --pgn-color-badge-bg-light: var(--pgn-color-futures-ink-raised);
+  --pgn-color-breadcrumb-base: var(--pgn-color-futures-aqua);
+  --pgn-color-breadcrumb-active: #F5F2EB99;
+  --pgn-color-btn-text-brand: #1E1F1DFF;
+  --pgn-color-btn-text-outline-dark: var(--pgn-color-futures-cream);
   --pgn-color-btn-text-inverse-dark: var(--pgn-color-dark-base);
   --pgn-color-btn-text-inverse-outline-dark: var(--pgn-color-white);
+  --pgn-color-btn-text-primary: #F5F2EBFF;
+  --pgn-color-btn-text-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-text-tertiary: var(--pgn-color-futures-cream);
   --pgn-color-btn-bg-dark: var(--pgn-color-dark-base);
-  --pgn-color-btn-border-outline-dark: var(--pgn-color-dark-base);
+  --pgn-color-btn-border-outline-dark: #F5F2EB66;
   --pgn-color-btn-border-inverse-outline-dark: var(--pgn-color-white);
+  --pgn-color-btn-border-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-hover-text-brand: #1E1F1DFF;
+  --pgn-color-btn-hover-text-outline-dark: #F5F2EBFF;
+  --pgn-color-btn-hover-text-primary: #F5F2EBFF;
+  --pgn-color-btn-hover-text-outline-primary: var(--pgn-color-futures-ink);
+  --pgn-color-btn-hover-text-tertiary: var(--pgn-color-futures-cream);
+  --pgn-color-btn-hover-bg-outline-dark: #F5F2EB14;
+  --pgn-color-btn-hover-bg-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-hover-bg-tertiary: #F5F2EB14;
+  --pgn-color-btn-hover-border-outline-dark: var(--pgn-color-futures-cream);
+  --pgn-color-btn-hover-border-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-active-text-brand: #1E1F1DFF;
+  --pgn-color-btn-active-text-outline-dark: #F5F2EBFF;
+  --pgn-color-btn-active-text-tertiary: var(--pgn-color-futures-cream);
+  --pgn-color-btn-active-bg-outline-dark: #F5F2EB1F;
   --pgn-color-btn-active-bg-inverse-dark: var(--pgn-color-gray-100);
+  --pgn-color-btn-active-bg-tertiary: #F5F2EB14;
+  --pgn-color-btn-active-border-outline-dark: var(--pgn-color-futures-cream);
+  --pgn-color-btn-focus-border-outline-dark: var(--pgn-color-futures-cream);
   --pgn-color-btn-focus-border-inverse-dark: var(--pgn-color-white);
   --pgn-color-btn-focus-border-inverse-outline-dark: var(--pgn-color-white);
-  --pgn-color-btn-text-dark: #FFFFFFFF;
-  --pgn-color-btn-bg-inverse-dark: #FFFFFFFF;
+  --pgn-color-btn-focus-outline-outline-dark: var(--pgn-color-futures-aqua);
+  --pgn-color-card-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-card-bg-muted: #F5F2EB0D;
+  --pgn-color-card-border-base: #F5F2EB1F;
+  --pgn-color-card-border-focus-base: var(--pgn-color-futures-aqua);
+  --pgn-color-card-divider-bg: #F5F2EB1F;
+  --pgn-color-chip-text-light: var(--pgn-color-futures-aqua);
+  --pgn-color-chip-bg-light: #0ADEC81F;
+  --pgn-color-chip-border-base: #0ADEC84D;
+  --pgn-color-chip-label-base: var(--pgn-color-futures-aqua);
+  --pgn-color-data-table-border: #F5F2EB1F;
+  --pgn-color-dropdown-text: var(--pgn-color-futures-cream);
+  --pgn-color-dropdown-header: #F5F2EB99;
+  --pgn-color-dropdown-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-dropdown-border: #F5F2EB1F;
+  --pgn-color-dropdown-divider-bg: #F5F2EB1F;
+  --pgn-color-dropdown-link-base: var(--pgn-color-futures-cream);
+  --pgn-color-dropdown-link-hover-base: #F5F2EBFF;
+  --pgn-color-dropdown-link-hover-bg: #F5F2EB14;
+  --pgn-color-form-input-base: var(--pgn-color-futures-cream);
+  --pgn-color-form-input-placeholder: #F5F2EB99;
+  --pgn-color-form-input-border: #F5F2EB33;
+  --pgn-color-form-input-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-form-input-bg-disabled: #F5F2EB0F;
+  --pgn-color-form-input-group-addon-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-form-control-indicator-border: #F5F2EB99;
+  --pgn-color-form-control-label-floating-text: #26272AFF;
+  --pgn-color-form-control-switch-indicator-checked-bg: var(--pgn-color-futures-aqua);
+  --pgn-color-icon-button-bg-primary-hover: #0ADEC81F;
+  --pgn-color-icon-button-bg-primary-focus: #0ADEC81F;
+  --pgn-color-icon-button-bg-black-hover: #F5F2EB14;
+  --pgn-color-icon-button-bg-black-focus: #F5F2EB14;
+  --pgn-color-icon-button-text-primary-base: var(--pgn-color-futures-aqua);
+  --pgn-color-icon-button-text-primary-hover: var(--pgn-color-futures-aqua);
+  --pgn-color-icon-button-text-primary-focus: var(--pgn-color-futures-aqua);
+  --pgn-color-icon-button-text-black-base: var(--pgn-color-futures-cream);
+  --pgn-color-icon-button-text-black-hover: var(--pgn-color-futures-cream);
+  --pgn-color-icon-button-text-black-focus: var(--pgn-color-futures-cream);
+  --pgn-color-menu-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-menu-item-color: var(--pgn-color-futures-cream);
+  --pgn-color-menu-item-focus-bg: #F5F2EB14;
+  --pgn-color-modal-content-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-modal-content-border: #F5F2EB1F;
+  --pgn-color-nav-link-text-base: #F5F2EBCC;
+  --pgn-color-nav-tabs-base-border-base: #F5F2EB1F;
+  --pgn-color-nav-tabs-base-link-hover-bg: #F5F2EB14;
+  --pgn-color-nav-tabs-base-link-active-text: var(--pgn-color-futures-aqua);
+  --pgn-color-pagination-text-base: var(--pgn-color-futures-cream);
+  --pgn-color-pagination-text-hover: var(--pgn-color-futures-cream);
+  --pgn-color-pagination-text-disabled: #F5F2EB99;
+  --pgn-color-pagination-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-pagination-bg-hover: #F5F2EB14;
+  --pgn-color-pagination-bg-disabled: var(--pgn-color-futures-ink-raised);
+  --pgn-color-pagination-border-base: #F5F2EB1F;
+  --pgn-color-pagination-border-hover: #F5F2EB1F;
+  --pgn-color-pagination-border-disabled: #F5F2EB1F;
+  --pgn-color-popover-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-popover-border: #F5F2EB1F;
+  --pgn-color-popover-header-text: var(--pgn-color-futures-cream);
+  --pgn-color-popover-header-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-popover-body: var(--pgn-color-futures-cream);
+  --pgn-color-product-tour-checkpoint-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-product-tour-checkpoint-body: #F5F2EBCC;
+  --pgn-color-product-tour-checkpoint-breadcrumb: var(--pgn-color-futures-aqua);
+  --pgn-color-tooltip-text: var(--pgn-color-futures-cream);
+  --pgn-color-tooltip-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-body-base: var(--pgn-color-futures-cream);
+  --pgn-color-headings-base: var(--pgn-color-futures-cream);
+  --pgn-color-hr-border: #F5F2EB1F;
+  --pgn-color-link-base: var(--pgn-color-futures-aqua);
+  --pgn-color-link-inline-base: var(--pgn-color-futures-aqua);
+  --pgn-color-link-muted-base: var(--pgn-color-futures-aqua);
+  --pgn-color-link-muted-inline-base: var(--pgn-color-futures-aqua);
+  --pgn-color-list-group-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-list-group-bg-hover: #F5F2EB14;
+  --pgn-color-list-group-border: #F5F2EB1F;
+  --pgn-color-list-group-action-base: var(--pgn-color-futures-cream);
+  --pgn-color-text-muted: #F5F2EB99;
+  --pgn-color-accent-a: var(--pgn-color-futures-aqua);
+  --pgn-color-primary-100: #2E34BA2E;
+  --pgn-color-primary-200: #2E34BA59;
+  --pgn-color-primary-300: #979ADDFF;
+  --pgn-color-primary-400: #6267CBFF;
+  --pgn-color-primary-500: var(--pgn-color-primary-base);
+  --pgn-color-primary-600: #292FA7FF;
+  --pgn-color-primary-700: #252A95FF;
+  --pgn-color-primary-800: #23278CFF;
+  --pgn-color-primary-900: #202482FF;
+  --pgn-color-brand-100: #0ADEC81F;
+  --pgn-color-brand-200: #0ADEC84D;
+  --pgn-color-brand-300: #85EFE4FF;
+  --pgn-color-brand-400: #47E6D6FF;
+  --pgn-color-brand-500: var(--pgn-color-brand-base);
+  --pgn-color-brand-600: #09C8B4FF;
+  --pgn-color-brand-700: #08B2A0FF;
+  --pgn-color-brand-800: #08A796FF;
+  --pgn-color-brand-900: #079B8CFF;
+  --pgn-color-success-300: #AAE7AFFF;
+  --pgn-color-success-400: #7FDB86FF;
+  --pgn-color-success-500: var(--pgn-color-success-base);
+  --pgn-color-success-600: #4CBA55FF;
+  --pgn-color-success-700: #43A64BFF;
+  --pgn-color-success-800: #3F9B47FF;
+  --pgn-color-success-900: #3B9142FF;
+  --pgn-color-info-100: #0ADEC81F;
+  --pgn-color-info-200: #0ADEC84D;
+  --pgn-color-info-300: #85EFE4FF;
+  --pgn-color-info-400: #47E6D6FF;
+  --pgn-color-info-500: var(--pgn-color-info-base);
+  --pgn-color-info-600: #09C8B4FF;
+  --pgn-color-info-700: #08B2A0FF;
+  --pgn-color-info-800: #08A796FF;
+  --pgn-color-info-900: #079B8CFF;
+  --pgn-color-warning-300: #FFF1A0FF;
+  --pgn-color-warning-400: #FFEA70FF;
+  --pgn-color-warning-500: var(--pgn-color-warning-base);
+  --pgn-color-warning-600: #E6CC3AFF;
+  --pgn-color-warning-700: #CCB633FF;
+  --pgn-color-warning-800: #BFAA30FF;
+  --pgn-color-warning-900: #B39F2DFF;
+  --pgn-color-danger-300: #FFC5C5FF;
+  --pgn-color-danger-400: #FFA7A7FF;
+  --pgn-color-danger-500: var(--pgn-color-danger-base);
+  --pgn-color-danger-600: #E67C7CFF;
+  --pgn-color-danger-700: #CC6E6EFF;
+  --pgn-color-danger-800: #BF6868FF;
+  --pgn-color-danger-900: #B36161FF;
+  --pgn-color-dark-100: #FEFEFEFF;
+  --pgn-color-dark-200: #FDFCFAFF;
+  --pgn-color-dark-300: #FAF9F5FF;
+  --pgn-color-dark-400: #F8F5F0FF;
+  --pgn-color-dark-500: var(--pgn-color-dark-base);
+  --pgn-color-dark-600: #DDDAD4FF;
+  --pgn-color-dark-700: #C4C2BCFF;
+  --pgn-color-dark-800: #B8B6B0FF;
+  --pgn-color-dark-900: #ACA9A5FF; /** Dark color of level 900. */
+  --pgn-border-color-nav-tabs-link-border-active: var(--pgn-color-futures-aqua);
+  --pgn-other-content-form-control-checkbox-indicator-icon-checked-valid: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z' fill='%2354CF5EFF'/></svg>");
+  --pgn-other-content-form-control-checkbox-indicator-icon-checked-invalid: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z' fill='%23FF8A8AFF'/></svg>");
+  --pgn-other-content-form-control-radio-indicator-icon-checked-valid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2354CF5EFF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-radio-indicator-icon-checked-invalid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FF8A8AFF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-select-bg-offset-y: var(--pgn-spacing-form-input-padding-y-base);
+  --pgn-color-btn-text-dark: #454545FF;
+  --pgn-color-btn-bg-inverse-dark: #454545FF;
   --pgn-color-btn-border-dark: var(--pgn-color-btn-bg-dark);
-  --pgn-color-btn-hover-text-inverse-dark: #18271DFF;
-  --pgn-color-btn-hover-bg-outline-dark: var(--pgn-color-dark-100);
+  --pgn-color-btn-hover-text-inverse-dark: #E8E1D1FF;
   --pgn-color-btn-hover-bg-inverse-outline-dark: var(--pgn-color-dark-100);
-  --pgn-color-btn-hover-border-outline-dark: var(--pgn-color-dark-900);
-  --pgn-color-btn-active-text-inverse-dark: #142018FF;
+  --pgn-color-btn-active-text-inverse-dark: #E4DCC9FF;
   --pgn-color-btn-focus-text-inverse-dark: var(--pgn-color-btn-text-inverse-dark);
   --pgn-color-btn-focus-text-inverse-outline-dark: var(--pgn-color-btn-text-inverse-outline-dark);
-  --pgn-color-btn-focus-border-outline-dark: var(--pgn-color-btn-border-outline-dark);
   --pgn-color-btn-focus-bg-dark: var(--pgn-color-btn-bg-dark);
   --pgn-color-btn-focus-outline-inverse-dark: var(--pgn-color-btn-focus-border-inverse-dark);
   --pgn-color-btn-focus-outline-inverse-outline-dark: var(--pgn-color-btn-focus-border-inverse-outline-dark);
   --pgn-color-btn-disabled-text-inverse-dark: var(--pgn-color-btn-text-inverse-dark);
   --pgn-color-btn-disabled-text-inverse-outline-dark: var(--pgn-color-btn-text-inverse-outline-dark);
   --pgn-color-btn-disabled-bg-dark: var(--pgn-color-btn-bg-dark);
+  --pgn-color-btn-disabled-border-outline-dark: var(--pgn-color-btn-hover-text-outline-dark);
   --pgn-color-btn-disabled-border-inverse-outline-dark: var(--pgn-color-btn-focus-border-inverse-outline-dark);
-  --pgn-color-link-base: var(--pgn-color-brand-500); /** Dark-mode links use aqua (the indigo/aqua swap from the spec). */
-  --pgn-color-link-inline-base: var(--pgn-color-brand-500);
-  --pgn-color-btn-hover-text-outline-dark: var(--pgn-color-theme-hover-dark);
+  --pgn-other-content-form-control-checkbox-indicator-icon-checked-base: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z' fill='%230ADEC8FF'/></svg>");
+  --pgn-other-content-form-control-radio-indicator-icon-checked-base: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%230ADEC8FF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-switch-indicator-icon-off: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%230ADEC8FF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-switch-indicator-icon-on: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%231E1F1DFF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-select-indicator-icon: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="%23D6D6D2FF"/></svg>');
+  --pgn-other-content-form-control-select-bg-color: var(--pgn-color-form-control-select-bg-base);
+  --pgn-other-content-form-feedback-icon-valid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2354CF5EFF' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  --pgn-other-content-form-feedback-icon-invalid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23FF8A8AFF' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23FF8A8AFF' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
   --pgn-color-btn-hover-text-inverse-outline-dark: var(--pgn-color-theme-hover-dark);
   --pgn-color-btn-hover-bg-dark: var(--pgn-color-theme-hover-dark);
-  --pgn-color-btn-hover-bg-inverse-dark: #ECECECFF;
+  --pgn-color-btn-hover-bg-inverse-dark: #323232FF;
   --pgn-color-btn-hover-border-dark: var(--pgn-color-theme-hover-dark);
   --pgn-color-btn-active-bg-dark: var(--pgn-color-theme-active-dark);
-  --pgn-color-btn-active-bg-outline-dark: var(--pgn-color-theme-bg-dark);
   --pgn-color-btn-active-bg-inverse-outline-dark: var(--pgn-color-theme-bg-dark);
   --pgn-color-btn-active-border-dark: var(--pgn-color-theme-active-dark);
-  --pgn-color-btn-active-border-outline-dark: var(--pgn-color-theme-active-dark);
   --pgn-color-btn-focus-text-dark: var(--pgn-color-btn-text-dark);
   --pgn-color-btn-focus-border-dark: var(--pgn-color-btn-focus-bg-dark);
   --pgn-color-btn-focus-bg-inverse-dark: var(--pgn-color-btn-bg-inverse-dark);
   --pgn-color-btn-focus-outline-dark: var(--pgn-color-theme-focus-dark);
-  --pgn-color-btn-focus-outline-outline-dark: var(--pgn-color-theme-focus-dark);
   --pgn-color-btn-disabled-text-dark: var(--pgn-color-btn-text-dark);
   --pgn-color-btn-disabled-border-dark: var(--pgn-color-btn-border-dark);
-  --pgn-color-btn-hover-text-dark: #FFFFFFFF;
-  --pgn-color-btn-active-text-dark: #FFFFFFFF;
-  --pgn-color-btn-active-text-outline-dark: #454545FF;
+  --pgn-other-content-form-control-checkbox-indicator-indeterminate-icon: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM17 13H7V11H17V13Z' fill='%230ADEC8FF'/></svg>");
+  --pgn-other-content-form-control-select-bg-image: var(--pgn-other-content-form-control-select-indicator-icon);
+  --pgn-color-btn-hover-text-dark: #454545FF;
+  --pgn-color-btn-active-text-dark: #3D3D3DFF;
   --pgn-color-btn-active-text-inverse-outline-dark: #454545FF;
-  --pgn-color-btn-disabled-border-outline-dark: var(--pgn-color-btn-hover-text-outline-dark);
 }
-
 /**
  * Do not edit directly, this file was auto-generated.
  * See <PARAGON_ROOT>/tokens/README.md for more details.
  */
-
 .bg-accent-a {
   background-color: var(--pgn-color-accent-a) !important;
 }
-
 a.bg-accent-a:hover,
 a.bg-accent-a:focus,
 button.bg-accent-a:hover,
 button.bg-accent-a:focus {
   background-color: var(--pgn-color-action-default-accent-a) !important;
 }
-
 .text-accent-a {
   color: var(--pgn-color-accent-a) !important;
 }
-
 a.text-accent-a:hover,
 a.text-accent-a:focus {
   color: var(--pgn-color-action-default-accent-a) !important;
 }
-
 .border-accent-a {
   border-color: var(--pgn-color-accent-a) !important;
 }
-
 .bg-accent-b {
   background-color: var(--pgn-color-accent-b) !important;
 }
-
 a.bg-accent-b:hover,
 a.bg-accent-b:focus,
 button.bg-accent-b:hover,
 button.bg-accent-b:focus {
   background-color: var(--pgn-color-action-default-accent-b) !important;
 }
-
 .text-accent-b {
   color: var(--pgn-color-accent-b) !important;
 }
-
 a.text-accent-b:hover,
 a.text-accent-b:focus {
   color: var(--pgn-color-action-default-accent-b) !important;
 }
-
 .border-accent-b {
   border-color: var(--pgn-color-accent-b) !important;
 }
-
 .bg-gray-100 {
   background-color: var(--pgn-color-gray-100) !important;
 }
-
 a.bg-gray-100:hover,
 a.bg-gray-100:focus,
 button.bg-gray-100:hover,
 button.bg-gray-100:focus {
   background-color: var(--pgn-color-action-default-gray-100) !important;
 }
-
 .text-gray-100 {
   color: var(--pgn-color-gray-100) !important;
 }
-
 a.text-gray-100:hover,
 a.text-gray-100:focus {
   color: var(--pgn-color-action-default-gray-100) !important;
 }
-
 .border-gray-100 {
   border-color: var(--pgn-color-gray-100) !important;
 }
-
 .bg-gray-200 {
   background-color: var(--pgn-color-gray-200) !important;
 }
-
 a.bg-gray-200:hover,
 a.bg-gray-200:focus,
 button.bg-gray-200:hover,
 button.bg-gray-200:focus {
   background-color: var(--pgn-color-action-default-gray-200) !important;
 }
-
 .text-gray-200 {
   color: var(--pgn-color-gray-200) !important;
 }
-
 a.text-gray-200:hover,
 a.text-gray-200:focus {
   color: var(--pgn-color-action-default-gray-200) !important;
 }
-
 .border-gray-200 {
   border-color: var(--pgn-color-gray-200) !important;
 }
-
 .bg-gray-300 {
   background-color: var(--pgn-color-gray-300) !important;
 }
-
 a.bg-gray-300:hover,
 a.bg-gray-300:focus,
 button.bg-gray-300:hover,
 button.bg-gray-300:focus {
   background-color: var(--pgn-color-action-default-gray-300) !important;
 }
-
 .text-gray-300 {
   color: var(--pgn-color-gray-300) !important;
 }
-
 a.text-gray-300:hover,
 a.text-gray-300:focus {
   color: var(--pgn-color-action-default-gray-300) !important;
 }
-
 .border-gray-300 {
   border-color: var(--pgn-color-gray-300) !important;
 }
-
 .bg-gray-400 {
   background-color: var(--pgn-color-gray-400) !important;
 }
-
 a.bg-gray-400:hover,
 a.bg-gray-400:focus,
 button.bg-gray-400:hover,
 button.bg-gray-400:focus {
   background-color: var(--pgn-color-action-default-gray-400) !important;
 }
-
 .text-gray-400 {
   color: var(--pgn-color-gray-400) !important;
 }
-
 a.text-gray-400:hover,
 a.text-gray-400:focus {
   color: var(--pgn-color-action-default-gray-400) !important;
 }
-
 .border-gray-400 {
   border-color: var(--pgn-color-gray-400) !important;
 }
-
 .bg-gray-500 {
   background-color: var(--pgn-color-gray-500) !important;
 }
-
 a.bg-gray-500:hover,
 a.bg-gray-500:focus,
 button.bg-gray-500:hover,
 button.bg-gray-500:focus {
   background-color: var(--pgn-color-action-default-gray-500) !important;
 }
-
 .text-gray-500 {
   color: var(--pgn-color-gray-500) !important;
 }
-
 a.text-gray-500:hover,
 a.text-gray-500:focus {
   color: var(--pgn-color-action-default-gray-500) !important;
 }
-
 .border-gray-500 {
   border-color: var(--pgn-color-gray-500) !important;
 }
-
 .bg-gray-600 {
   background-color: var(--pgn-color-gray-600) !important;
 }
-
 a.bg-gray-600:hover,
 a.bg-gray-600:focus,
 button.bg-gray-600:hover,
 button.bg-gray-600:focus {
   background-color: var(--pgn-color-action-default-gray-600) !important;
 }
-
 .text-gray-600 {
   color: var(--pgn-color-gray-600) !important;
 }
-
 a.text-gray-600:hover,
 a.text-gray-600:focus {
   color: var(--pgn-color-action-default-gray-600) !important;
 }
-
 .border-gray-600 {
   border-color: var(--pgn-color-gray-600) !important;
 }
-
 .bg-gray-700 {
   background-color: var(--pgn-color-gray-700) !important;
 }
-
 a.bg-gray-700:hover,
 a.bg-gray-700:focus,
 button.bg-gray-700:hover,
 button.bg-gray-700:focus {
   background-color: var(--pgn-color-action-default-gray-700) !important;
 }
-
 .text-gray-700 {
   color: var(--pgn-color-gray-700) !important;
 }
-
 a.text-gray-700:hover,
 a.text-gray-700:focus {
   color: var(--pgn-color-action-default-gray-700) !important;
 }
-
 .border-gray-700 {
   border-color: var(--pgn-color-gray-700) !important;
 }
-
 .bg-gray-800 {
   background-color: var(--pgn-color-gray-800) !important;
 }
-
 a.bg-gray-800:hover,
 a.bg-gray-800:focus,
 button.bg-gray-800:hover,
 button.bg-gray-800:focus {
   background-color: var(--pgn-color-action-default-gray-800) !important;
 }
-
 .text-gray-800 {
   color: var(--pgn-color-gray-800) !important;
 }
-
 a.text-gray-800:hover,
 a.text-gray-800:focus {
   color: var(--pgn-color-action-default-gray-800) !important;
 }
-
 .border-gray-800 {
   border-color: var(--pgn-color-gray-800) !important;
 }
-
 .bg-gray-900 {
   background-color: var(--pgn-color-gray-900) !important;
 }
-
 a.bg-gray-900:hover,
 a.bg-gray-900:focus,
 button.bg-gray-900:hover,
 button.bg-gray-900:focus {
   background-color: var(--pgn-color-action-default-gray-900) !important;
 }
-
 .text-gray-900 {
   color: var(--pgn-color-gray-900) !important;
 }
-
 a.text-gray-900:hover,
 a.text-gray-900:focus {
   color: var(--pgn-color-action-default-gray-900) !important;
 }
-
 .border-gray-900 {
   border-color: var(--pgn-color-gray-900) !important;
 }
-
 .bg-gray {
   background-color: var(--pgn-color-gray-base) !important;
 }
-
 a.bg-gray:hover,
 a.bg-gray:focus,
 button.bg-gray:hover,
 button.bg-gray:focus {
   background-color: var(--pgn-color-action-default-gray-base) !important;
 }
-
 .text-gray {
   color: var(--pgn-color-gray-base) !important;
 }
-
 a.text-gray:hover,
 a.text-gray:focus {
   color: var(--pgn-color-action-default-gray-base) !important;
 }
-
 .border-gray {
   border-color: var(--pgn-color-gray-base) !important;
 }
-
 .bg-primary-100 {
   background-color: var(--pgn-color-primary-100) !important;
 }
-
 a.bg-primary-100:hover,
 a.bg-primary-100:focus,
 button.bg-primary-100:hover,
 button.bg-primary-100:focus {
   background-color: var(--pgn-color-action-default-primary-100) !important;
 }
-
 .text-primary-100 {
   color: var(--pgn-color-primary-100) !important;
 }
-
 a.text-primary-100:hover,
 a.text-primary-100:focus {
   color: var(--pgn-color-action-default-primary-100) !important;
 }
-
 .border-primary-100 {
   border-color: var(--pgn-color-primary-100) !important;
 }
-
 .bg-primary-200 {
   background-color: var(--pgn-color-primary-200) !important;
 }
-
 a.bg-primary-200:hover,
 a.bg-primary-200:focus,
 button.bg-primary-200:hover,
 button.bg-primary-200:focus {
   background-color: var(--pgn-color-action-default-primary-200) !important;
 }
-
 .text-primary-200 {
   color: var(--pgn-color-primary-200) !important;
 }
-
 a.text-primary-200:hover,
 a.text-primary-200:focus {
   color: var(--pgn-color-action-default-primary-200) !important;
 }
-
 .border-primary-200 {
   border-color: var(--pgn-color-primary-200) !important;
 }
-
 .bg-primary-300 {
   background-color: var(--pgn-color-primary-300) !important;
 }
-
 a.bg-primary-300:hover,
 a.bg-primary-300:focus,
 button.bg-primary-300:hover,
 button.bg-primary-300:focus {
   background-color: var(--pgn-color-action-default-primary-300) !important;
 }
-
 .text-primary-300 {
   color: var(--pgn-color-primary-300) !important;
 }
-
 a.text-primary-300:hover,
 a.text-primary-300:focus {
   color: var(--pgn-color-action-default-primary-300) !important;
 }
-
 .border-primary-300 {
   border-color: var(--pgn-color-primary-300) !important;
 }
-
 .bg-primary-400 {
   background-color: var(--pgn-color-primary-400) !important;
 }
-
 a.bg-primary-400:hover,
 a.bg-primary-400:focus,
 button.bg-primary-400:hover,
 button.bg-primary-400:focus {
   background-color: var(--pgn-color-action-default-primary-400) !important;
 }
-
 .text-primary-400 {
   color: var(--pgn-color-primary-400) !important;
 }
-
 a.text-primary-400:hover,
 a.text-primary-400:focus {
   color: var(--pgn-color-action-default-primary-400) !important;
 }
-
 .border-primary-400 {
   border-color: var(--pgn-color-primary-400) !important;
 }
-
 .bg-primary-500 {
   background-color: var(--pgn-color-primary-500) !important;
 }
-
 a.bg-primary-500:hover,
 a.bg-primary-500:focus,
 button.bg-primary-500:hover,
 button.bg-primary-500:focus {
   background-color: var(--pgn-color-action-default-primary-500) !important;
 }
-
 .text-primary-500 {
   color: var(--pgn-color-primary-500) !important;
 }
-
 a.text-primary-500:hover,
 a.text-primary-500:focus {
   color: var(--pgn-color-action-default-primary-500) !important;
 }
-
 .border-primary-500 {
   border-color: var(--pgn-color-primary-500) !important;
 }
-
 .bg-primary-600 {
   background-color: var(--pgn-color-primary-600) !important;
 }
-
 a.bg-primary-600:hover,
 a.bg-primary-600:focus,
 button.bg-primary-600:hover,
 button.bg-primary-600:focus {
   background-color: var(--pgn-color-action-default-primary-600) !important;
 }
-
 .text-primary-600 {
   color: var(--pgn-color-primary-600) !important;
 }
-
 a.text-primary-600:hover,
 a.text-primary-600:focus {
   color: var(--pgn-color-action-default-primary-600) !important;
 }
-
 .border-primary-600 {
   border-color: var(--pgn-color-primary-600) !important;
 }
-
 .bg-primary-700 {
   background-color: var(--pgn-color-primary-700) !important;
 }
-
 a.bg-primary-700:hover,
 a.bg-primary-700:focus,
 button.bg-primary-700:hover,
 button.bg-primary-700:focus {
   background-color: var(--pgn-color-action-default-primary-700) !important;
 }
-
 .text-primary-700 {
   color: var(--pgn-color-primary-700) !important;
 }
-
 a.text-primary-700:hover,
 a.text-primary-700:focus {
   color: var(--pgn-color-action-default-primary-700) !important;
 }
-
 .border-primary-700 {
   border-color: var(--pgn-color-primary-700) !important;
 }
-
 .bg-primary-800 {
   background-color: var(--pgn-color-primary-800) !important;
 }
-
 a.bg-primary-800:hover,
 a.bg-primary-800:focus,
 button.bg-primary-800:hover,
 button.bg-primary-800:focus {
   background-color: var(--pgn-color-action-default-primary-800) !important;
 }
-
 .text-primary-800 {
   color: var(--pgn-color-primary-800) !important;
 }
-
 a.text-primary-800:hover,
 a.text-primary-800:focus {
   color: var(--pgn-color-action-default-primary-800) !important;
 }
-
 .border-primary-800 {
   border-color: var(--pgn-color-primary-800) !important;
 }
-
 .bg-primary-900 {
   background-color: var(--pgn-color-primary-900) !important;
 }
-
 a.bg-primary-900:hover,
 a.bg-primary-900:focus,
 button.bg-primary-900:hover,
 button.bg-primary-900:focus {
   background-color: var(--pgn-color-action-default-primary-900) !important;
 }
-
 .text-primary-900 {
   color: var(--pgn-color-primary-900) !important;
 }
-
 a.text-primary-900:hover,
 a.text-primary-900:focus {
   color: var(--pgn-color-action-default-primary-900) !important;
 }
-
 .border-primary-900 {
   border-color: var(--pgn-color-primary-900) !important;
 }
-
 .bg-primary {
   background-color: var(--pgn-color-primary-base) !important;
 }
-
 a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
   background-color: var(--pgn-color-action-default-primary-base) !important;
 }
-
 .text-primary {
   color: var(--pgn-color-primary-base) !important;
 }
-
 a.text-primary:hover,
 a.text-primary:focus {
   color: var(--pgn-color-action-default-primary-base) !important;
 }
-
 .border-primary {
   border-color: var(--pgn-color-primary-base) !important;
 }
-
 .bg-secondary-100 {
   background-color: var(--pgn-color-secondary-100) !important;
 }
-
 a.bg-secondary-100:hover,
 a.bg-secondary-100:focus,
 button.bg-secondary-100:hover,
 button.bg-secondary-100:focus {
   background-color: var(--pgn-color-action-default-secondary-100) !important;
 }
-
 .text-secondary-100 {
   color: var(--pgn-color-secondary-100) !important;
 }
-
 a.text-secondary-100:hover,
 a.text-secondary-100:focus {
   color: var(--pgn-color-action-default-secondary-100) !important;
 }
-
 .border-secondary-100 {
   border-color: var(--pgn-color-secondary-100) !important;
 }
-
 .bg-secondary-200 {
   background-color: var(--pgn-color-secondary-200) !important;
 }
-
 a.bg-secondary-200:hover,
 a.bg-secondary-200:focus,
 button.bg-secondary-200:hover,
 button.bg-secondary-200:focus {
   background-color: var(--pgn-color-action-default-secondary-200) !important;
 }
-
 .text-secondary-200 {
   color: var(--pgn-color-secondary-200) !important;
 }
-
 a.text-secondary-200:hover,
 a.text-secondary-200:focus {
   color: var(--pgn-color-action-default-secondary-200) !important;
 }
-
 .border-secondary-200 {
   border-color: var(--pgn-color-secondary-200) !important;
 }
-
 .bg-secondary-300 {
   background-color: var(--pgn-color-secondary-300) !important;
 }
-
 a.bg-secondary-300:hover,
 a.bg-secondary-300:focus,
 button.bg-secondary-300:hover,
 button.bg-secondary-300:focus {
   background-color: var(--pgn-color-action-default-secondary-300) !important;
 }
-
 .text-secondary-300 {
   color: var(--pgn-color-secondary-300) !important;
 }
-
 a.text-secondary-300:hover,
 a.text-secondary-300:focus {
   color: var(--pgn-color-action-default-secondary-300) !important;
 }
-
 .border-secondary-300 {
   border-color: var(--pgn-color-secondary-300) !important;
 }
-
 .bg-secondary-400 {
   background-color: var(--pgn-color-secondary-400) !important;
 }
-
 a.bg-secondary-400:hover,
 a.bg-secondary-400:focus,
 button.bg-secondary-400:hover,
 button.bg-secondary-400:focus {
   background-color: var(--pgn-color-action-default-secondary-400) !important;
 }
-
 .text-secondary-400 {
   color: var(--pgn-color-secondary-400) !important;
 }
-
 a.text-secondary-400:hover,
 a.text-secondary-400:focus {
   color: var(--pgn-color-action-default-secondary-400) !important;
 }
-
 .border-secondary-400 {
   border-color: var(--pgn-color-secondary-400) !important;
 }
-
 .bg-secondary-500 {
   background-color: var(--pgn-color-secondary-500) !important;
 }
-
 a.bg-secondary-500:hover,
 a.bg-secondary-500:focus,
 button.bg-secondary-500:hover,
 button.bg-secondary-500:focus {
   background-color: var(--pgn-color-action-default-secondary-500) !important;
 }
-
 .text-secondary-500 {
   color: var(--pgn-color-secondary-500) !important;
 }
-
 a.text-secondary-500:hover,
 a.text-secondary-500:focus {
   color: var(--pgn-color-action-default-secondary-500) !important;
 }
-
 .border-secondary-500 {
   border-color: var(--pgn-color-secondary-500) !important;
 }
-
 .bg-secondary-600 {
   background-color: var(--pgn-color-secondary-600) !important;
 }
-
 a.bg-secondary-600:hover,
 a.bg-secondary-600:focus,
 button.bg-secondary-600:hover,
 button.bg-secondary-600:focus {
   background-color: var(--pgn-color-action-default-secondary-600) !important;
 }
-
 .text-secondary-600 {
   color: var(--pgn-color-secondary-600) !important;
 }
-
 a.text-secondary-600:hover,
 a.text-secondary-600:focus {
   color: var(--pgn-color-action-default-secondary-600) !important;
 }
-
 .border-secondary-600 {
   border-color: var(--pgn-color-secondary-600) !important;
 }
-
 .bg-secondary-700 {
   background-color: var(--pgn-color-secondary-700) !important;
 }
-
 a.bg-secondary-700:hover,
 a.bg-secondary-700:focus,
 button.bg-secondary-700:hover,
 button.bg-secondary-700:focus {
   background-color: var(--pgn-color-action-default-secondary-700) !important;
 }
-
 .text-secondary-700 {
   color: var(--pgn-color-secondary-700) !important;
 }
-
 a.text-secondary-700:hover,
 a.text-secondary-700:focus {
   color: var(--pgn-color-action-default-secondary-700) !important;
 }
-
 .border-secondary-700 {
   border-color: var(--pgn-color-secondary-700) !important;
 }
-
 .bg-secondary-800 {
   background-color: var(--pgn-color-secondary-800) !important;
 }
-
 a.bg-secondary-800:hover,
 a.bg-secondary-800:focus,
 button.bg-secondary-800:hover,
 button.bg-secondary-800:focus {
   background-color: var(--pgn-color-action-default-secondary-800) !important;
 }
-
 .text-secondary-800 {
   color: var(--pgn-color-secondary-800) !important;
 }
-
 a.text-secondary-800:hover,
 a.text-secondary-800:focus {
   color: var(--pgn-color-action-default-secondary-800) !important;
 }
-
 .border-secondary-800 {
   border-color: var(--pgn-color-secondary-800) !important;
 }
-
 .bg-secondary-900 {
   background-color: var(--pgn-color-secondary-900) !important;
 }
-
 a.bg-secondary-900:hover,
 a.bg-secondary-900:focus,
 button.bg-secondary-900:hover,
 button.bg-secondary-900:focus {
   background-color: var(--pgn-color-action-default-secondary-900) !important;
 }
-
 .text-secondary-900 {
   color: var(--pgn-color-secondary-900) !important;
 }
-
 a.text-secondary-900:hover,
 a.text-secondary-900:focus {
   color: var(--pgn-color-action-default-secondary-900) !important;
 }
-
 .border-secondary-900 {
   border-color: var(--pgn-color-secondary-900) !important;
 }
-
 .bg-secondary {
   background-color: var(--pgn-color-secondary-base) !important;
 }
-
 a.bg-secondary:hover,
 a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
   background-color: var(--pgn-color-action-default-secondary-base) !important;
 }
-
 .text-secondary {
   color: var(--pgn-color-secondary-base) !important;
 }
-
 a.text-secondary:hover,
 a.text-secondary:focus {
   color: var(--pgn-color-action-default-secondary-base) !important;
 }
-
 .border-secondary {
   border-color: var(--pgn-color-secondary-base) !important;
 }
-
 .bg-brand-100 {
   background-color: var(--pgn-color-brand-100) !important;
 }
-
 a.bg-brand-100:hover,
 a.bg-brand-100:focus,
 button.bg-brand-100:hover,
 button.bg-brand-100:focus {
   background-color: var(--pgn-color-action-default-brand-100) !important;
 }
-
 .text-brand-100 {
   color: var(--pgn-color-brand-100) !important;
 }
-
 a.text-brand-100:hover,
 a.text-brand-100:focus {
   color: var(--pgn-color-action-default-brand-100) !important;
 }
-
 .border-brand-100 {
   border-color: var(--pgn-color-brand-100) !important;
 }
-
 .bg-brand-200 {
   background-color: var(--pgn-color-brand-200) !important;
 }
-
 a.bg-brand-200:hover,
 a.bg-brand-200:focus,
 button.bg-brand-200:hover,
 button.bg-brand-200:focus {
   background-color: var(--pgn-color-action-default-brand-200) !important;
 }
-
 .text-brand-200 {
   color: var(--pgn-color-brand-200) !important;
 }
-
 a.text-brand-200:hover,
 a.text-brand-200:focus {
   color: var(--pgn-color-action-default-brand-200) !important;
 }
-
 .border-brand-200 {
   border-color: var(--pgn-color-brand-200) !important;
 }
-
 .bg-brand-300 {
   background-color: var(--pgn-color-brand-300) !important;
 }
-
 a.bg-brand-300:hover,
 a.bg-brand-300:focus,
 button.bg-brand-300:hover,
 button.bg-brand-300:focus {
   background-color: var(--pgn-color-action-default-brand-300) !important;
 }
-
 .text-brand-300 {
   color: var(--pgn-color-brand-300) !important;
 }
-
 a.text-brand-300:hover,
 a.text-brand-300:focus {
   color: var(--pgn-color-action-default-brand-300) !important;
 }
-
 .border-brand-300 {
   border-color: var(--pgn-color-brand-300) !important;
 }
-
 .bg-brand-400 {
   background-color: var(--pgn-color-brand-400) !important;
 }
-
 a.bg-brand-400:hover,
 a.bg-brand-400:focus,
 button.bg-brand-400:hover,
 button.bg-brand-400:focus {
   background-color: var(--pgn-color-action-default-brand-400) !important;
 }
-
 .text-brand-400 {
   color: var(--pgn-color-brand-400) !important;
 }
-
 a.text-brand-400:hover,
 a.text-brand-400:focus {
   color: var(--pgn-color-action-default-brand-400) !important;
 }
-
 .border-brand-400 {
   border-color: var(--pgn-color-brand-400) !important;
 }
-
 .bg-brand-500 {
   background-color: var(--pgn-color-brand-500) !important;
 }
-
 a.bg-brand-500:hover,
 a.bg-brand-500:focus,
 button.bg-brand-500:hover,
 button.bg-brand-500:focus {
   background-color: var(--pgn-color-action-default-brand-500) !important;
 }
-
 .text-brand-500 {
   color: var(--pgn-color-brand-500) !important;
 }
-
 a.text-brand-500:hover,
 a.text-brand-500:focus {
   color: var(--pgn-color-action-default-brand-500) !important;
 }
-
 .border-brand-500 {
   border-color: var(--pgn-color-brand-500) !important;
 }
-
 .bg-brand-600 {
   background-color: var(--pgn-color-brand-600) !important;
 }
-
 a.bg-brand-600:hover,
 a.bg-brand-600:focus,
 button.bg-brand-600:hover,
 button.bg-brand-600:focus {
   background-color: var(--pgn-color-action-default-brand-600) !important;
 }
-
 .text-brand-600 {
   color: var(--pgn-color-brand-600) !important;
 }
-
 a.text-brand-600:hover,
 a.text-brand-600:focus {
   color: var(--pgn-color-action-default-brand-600) !important;
 }
-
 .border-brand-600 {
   border-color: var(--pgn-color-brand-600) !important;
 }
-
 .bg-brand-700 {
   background-color: var(--pgn-color-brand-700) !important;
 }
-
 a.bg-brand-700:hover,
 a.bg-brand-700:focus,
 button.bg-brand-700:hover,
 button.bg-brand-700:focus {
   background-color: var(--pgn-color-action-default-brand-700) !important;
 }
-
 .text-brand-700 {
   color: var(--pgn-color-brand-700) !important;
 }
-
 a.text-brand-700:hover,
 a.text-brand-700:focus {
   color: var(--pgn-color-action-default-brand-700) !important;
 }
-
 .border-brand-700 {
   border-color: var(--pgn-color-brand-700) !important;
 }
-
 .bg-brand-800 {
   background-color: var(--pgn-color-brand-800) !important;
 }
-
 a.bg-brand-800:hover,
 a.bg-brand-800:focus,
 button.bg-brand-800:hover,
 button.bg-brand-800:focus {
   background-color: var(--pgn-color-action-default-brand-800) !important;
 }
-
 .text-brand-800 {
   color: var(--pgn-color-brand-800) !important;
 }
-
 a.text-brand-800:hover,
 a.text-brand-800:focus {
   color: var(--pgn-color-action-default-brand-800) !important;
 }
-
 .border-brand-800 {
   border-color: var(--pgn-color-brand-800) !important;
 }
-
 .bg-brand-900 {
   background-color: var(--pgn-color-brand-900) !important;
 }
-
 a.bg-brand-900:hover,
 a.bg-brand-900:focus,
 button.bg-brand-900:hover,
 button.bg-brand-900:focus {
   background-color: var(--pgn-color-action-default-brand-900) !important;
 }
-
 .text-brand-900 {
   color: var(--pgn-color-brand-900) !important;
 }
-
 a.text-brand-900:hover,
 a.text-brand-900:focus {
   color: var(--pgn-color-action-default-brand-900) !important;
 }
-
 .border-brand-900 {
   border-color: var(--pgn-color-brand-900) !important;
 }
-
 .bg-brand {
   background-color: var(--pgn-color-brand-base) !important;
 }
-
 a.bg-brand:hover,
 a.bg-brand:focus,
 button.bg-brand:hover,
 button.bg-brand:focus {
   background-color: var(--pgn-color-action-default-brand-base) !important;
 }
-
 .text-brand {
   color: var(--pgn-color-brand-base) !important;
 }
-
 a.text-brand:hover,
 a.text-brand:focus {
   color: var(--pgn-color-action-default-brand-base) !important;
 }
-
 .border-brand {
   border-color: var(--pgn-color-brand-base) !important;
 }
-
 .bg-success-100 {
   background-color: var(--pgn-color-success-100) !important;
 }
-
 a.bg-success-100:hover,
 a.bg-success-100:focus,
 button.bg-success-100:hover,
 button.bg-success-100:focus {
   background-color: var(--pgn-color-action-default-success-100) !important;
 }
-
 .text-success-100 {
   color: var(--pgn-color-success-100) !important;
 }
-
 a.text-success-100:hover,
 a.text-success-100:focus {
   color: var(--pgn-color-action-default-success-100) !important;
 }
-
 .border-success-100 {
   border-color: var(--pgn-color-success-100) !important;
 }
-
 .bg-success-200 {
   background-color: var(--pgn-color-success-200) !important;
 }
-
 a.bg-success-200:hover,
 a.bg-success-200:focus,
 button.bg-success-200:hover,
 button.bg-success-200:focus {
   background-color: var(--pgn-color-action-default-success-200) !important;
 }
-
 .text-success-200 {
   color: var(--pgn-color-success-200) !important;
 }
-
 a.text-success-200:hover,
 a.text-success-200:focus {
   color: var(--pgn-color-action-default-success-200) !important;
 }
-
 .border-success-200 {
   border-color: var(--pgn-color-success-200) !important;
 }
-
 .bg-success-300 {
   background-color: var(--pgn-color-success-300) !important;
 }
-
 a.bg-success-300:hover,
 a.bg-success-300:focus,
 button.bg-success-300:hover,
 button.bg-success-300:focus {
   background-color: var(--pgn-color-action-default-success-300) !important;
 }
-
 .text-success-300 {
   color: var(--pgn-color-success-300) !important;
 }
-
 a.text-success-300:hover,
 a.text-success-300:focus {
   color: var(--pgn-color-action-default-success-300) !important;
 }
-
 .border-success-300 {
   border-color: var(--pgn-color-success-300) !important;
 }
-
 .bg-success-400 {
   background-color: var(--pgn-color-success-400) !important;
 }
-
 a.bg-success-400:hover,
 a.bg-success-400:focus,
 button.bg-success-400:hover,
 button.bg-success-400:focus {
   background-color: var(--pgn-color-action-default-success-400) !important;
 }
-
 .text-success-400 {
   color: var(--pgn-color-success-400) !important;
 }
-
 a.text-success-400:hover,
 a.text-success-400:focus {
   color: var(--pgn-color-action-default-success-400) !important;
 }
-
 .border-success-400 {
   border-color: var(--pgn-color-success-400) !important;
 }
-
 .bg-success-500 {
   background-color: var(--pgn-color-success-500) !important;
 }
-
 a.bg-success-500:hover,
 a.bg-success-500:focus,
 button.bg-success-500:hover,
 button.bg-success-500:focus {
   background-color: var(--pgn-color-action-default-success-500) !important;
 }
-
 .text-success-500 {
   color: var(--pgn-color-success-500) !important;
 }
-
 a.text-success-500:hover,
 a.text-success-500:focus {
   color: var(--pgn-color-action-default-success-500) !important;
 }
-
 .border-success-500 {
   border-color: var(--pgn-color-success-500) !important;
 }
-
 .bg-success-600 {
   background-color: var(--pgn-color-success-600) !important;
 }
-
 a.bg-success-600:hover,
 a.bg-success-600:focus,
 button.bg-success-600:hover,
 button.bg-success-600:focus {
   background-color: var(--pgn-color-action-default-success-600) !important;
 }
-
 .text-success-600 {
   color: var(--pgn-color-success-600) !important;
 }
-
 a.text-success-600:hover,
 a.text-success-600:focus {
   color: var(--pgn-color-action-default-success-600) !important;
 }
-
 .border-success-600 {
   border-color: var(--pgn-color-success-600) !important;
 }
-
 .bg-success-700 {
   background-color: var(--pgn-color-success-700) !important;
 }
-
 a.bg-success-700:hover,
 a.bg-success-700:focus,
 button.bg-success-700:hover,
 button.bg-success-700:focus {
   background-color: var(--pgn-color-action-default-success-700) !important;
 }
-
 .text-success-700 {
   color: var(--pgn-color-success-700) !important;
 }
-
 a.text-success-700:hover,
 a.text-success-700:focus {
   color: var(--pgn-color-action-default-success-700) !important;
 }
-
 .border-success-700 {
   border-color: var(--pgn-color-success-700) !important;
 }
-
 .bg-success-800 {
   background-color: var(--pgn-color-success-800) !important;
 }
-
 a.bg-success-800:hover,
 a.bg-success-800:focus,
 button.bg-success-800:hover,
 button.bg-success-800:focus {
   background-color: var(--pgn-color-action-default-success-800) !important;
 }
-
 .text-success-800 {
   color: var(--pgn-color-success-800) !important;
 }
-
 a.text-success-800:hover,
 a.text-success-800:focus {
   color: var(--pgn-color-action-default-success-800) !important;
 }
-
 .border-success-800 {
   border-color: var(--pgn-color-success-800) !important;
 }
-
 .bg-success-900 {
   background-color: var(--pgn-color-success-900) !important;
 }
-
 a.bg-success-900:hover,
 a.bg-success-900:focus,
 button.bg-success-900:hover,
 button.bg-success-900:focus {
   background-color: var(--pgn-color-action-default-success-900) !important;
 }
-
 .text-success-900 {
   color: var(--pgn-color-success-900) !important;
 }
-
 a.text-success-900:hover,
 a.text-success-900:focus {
   color: var(--pgn-color-action-default-success-900) !important;
 }
-
 .border-success-900 {
   border-color: var(--pgn-color-success-900) !important;
 }
-
 .bg-success {
   background-color: var(--pgn-color-success-base) !important;
 }
-
 a.bg-success:hover,
 a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
   background-color: var(--pgn-color-action-default-success-base) !important;
 }
-
 .text-success {
   color: var(--pgn-color-success-base) !important;
 }
-
 a.text-success:hover,
 a.text-success:focus {
   color: var(--pgn-color-action-default-success-base) !important;
 }
-
 .border-success {
   border-color: var(--pgn-color-success-base) !important;
 }
-
 .bg-info-100 {
   background-color: var(--pgn-color-info-100) !important;
 }
-
 a.bg-info-100:hover,
 a.bg-info-100:focus,
 button.bg-info-100:hover,
 button.bg-info-100:focus {
   background-color: var(--pgn-color-action-default-info-100) !important;
 }
-
 .text-info-100 {
   color: var(--pgn-color-info-100) !important;
 }
-
 a.text-info-100:hover,
 a.text-info-100:focus {
   color: var(--pgn-color-action-default-info-100) !important;
 }
-
 .border-info-100 {
   border-color: var(--pgn-color-info-100) !important;
 }
-
 .bg-info-200 {
   background-color: var(--pgn-color-info-200) !important;
 }
-
 a.bg-info-200:hover,
 a.bg-info-200:focus,
 button.bg-info-200:hover,
 button.bg-info-200:focus {
   background-color: var(--pgn-color-action-default-info-200) !important;
 }
-
 .text-info-200 {
   color: var(--pgn-color-info-200) !important;
 }
-
 a.text-info-200:hover,
 a.text-info-200:focus {
   color: var(--pgn-color-action-default-info-200) !important;
 }
-
 .border-info-200 {
   border-color: var(--pgn-color-info-200) !important;
 }
-
 .bg-info-300 {
   background-color: var(--pgn-color-info-300) !important;
 }
-
 a.bg-info-300:hover,
 a.bg-info-300:focus,
 button.bg-info-300:hover,
 button.bg-info-300:focus {
   background-color: var(--pgn-color-action-default-info-300) !important;
 }
-
 .text-info-300 {
   color: var(--pgn-color-info-300) !important;
 }
-
 a.text-info-300:hover,
 a.text-info-300:focus {
   color: var(--pgn-color-action-default-info-300) !important;
 }
-
 .border-info-300 {
   border-color: var(--pgn-color-info-300) !important;
 }
-
 .bg-info-400 {
   background-color: var(--pgn-color-info-400) !important;
 }
-
 a.bg-info-400:hover,
 a.bg-info-400:focus,
 button.bg-info-400:hover,
 button.bg-info-400:focus {
   background-color: var(--pgn-color-action-default-info-400) !important;
 }
-
 .text-info-400 {
   color: var(--pgn-color-info-400) !important;
 }
-
 a.text-info-400:hover,
 a.text-info-400:focus {
   color: var(--pgn-color-action-default-info-400) !important;
 }
-
 .border-info-400 {
   border-color: var(--pgn-color-info-400) !important;
 }
-
 .bg-info-500 {
   background-color: var(--pgn-color-info-500) !important;
 }
-
 a.bg-info-500:hover,
 a.bg-info-500:focus,
 button.bg-info-500:hover,
 button.bg-info-500:focus {
   background-color: var(--pgn-color-action-default-info-500) !important;
 }
-
 .text-info-500 {
   color: var(--pgn-color-info-500) !important;
 }
-
 a.text-info-500:hover,
 a.text-info-500:focus {
   color: var(--pgn-color-action-default-info-500) !important;
 }
-
 .border-info-500 {
   border-color: var(--pgn-color-info-500) !important;
 }
-
 .bg-info-600 {
   background-color: var(--pgn-color-info-600) !important;
 }
-
 a.bg-info-600:hover,
 a.bg-info-600:focus,
 button.bg-info-600:hover,
 button.bg-info-600:focus {
   background-color: var(--pgn-color-action-default-info-600) !important;
 }
-
 .text-info-600 {
   color: var(--pgn-color-info-600) !important;
 }
-
 a.text-info-600:hover,
 a.text-info-600:focus {
   color: var(--pgn-color-action-default-info-600) !important;
 }
-
 .border-info-600 {
   border-color: var(--pgn-color-info-600) !important;
 }
-
 .bg-info-700 {
   background-color: var(--pgn-color-info-700) !important;
 }
-
 a.bg-info-700:hover,
 a.bg-info-700:focus,
 button.bg-info-700:hover,
 button.bg-info-700:focus {
   background-color: var(--pgn-color-action-default-info-700) !important;
 }
-
 .text-info-700 {
   color: var(--pgn-color-info-700) !important;
 }
-
 a.text-info-700:hover,
 a.text-info-700:focus {
   color: var(--pgn-color-action-default-info-700) !important;
 }
-
 .border-info-700 {
   border-color: var(--pgn-color-info-700) !important;
 }
-
 .bg-info-800 {
   background-color: var(--pgn-color-info-800) !important;
 }
-
 a.bg-info-800:hover,
 a.bg-info-800:focus,
 button.bg-info-800:hover,
 button.bg-info-800:focus {
   background-color: var(--pgn-color-action-default-info-800) !important;
 }
-
 .text-info-800 {
   color: var(--pgn-color-info-800) !important;
 }
-
 a.text-info-800:hover,
 a.text-info-800:focus {
   color: var(--pgn-color-action-default-info-800) !important;
 }
-
 .border-info-800 {
   border-color: var(--pgn-color-info-800) !important;
 }
-
 .bg-info-900 {
   background-color: var(--pgn-color-info-900) !important;
 }
-
 a.bg-info-900:hover,
 a.bg-info-900:focus,
 button.bg-info-900:hover,
 button.bg-info-900:focus {
   background-color: var(--pgn-color-action-default-info-900) !important;
 }
-
 .text-info-900 {
   color: var(--pgn-color-info-900) !important;
 }
-
 a.text-info-900:hover,
 a.text-info-900:focus {
   color: var(--pgn-color-action-default-info-900) !important;
 }
-
 .border-info-900 {
   border-color: var(--pgn-color-info-900) !important;
 }
-
 .bg-info {
   background-color: var(--pgn-color-info-base) !important;
 }
-
 a.bg-info:hover,
 a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
   background-color: var(--pgn-color-action-default-info-base) !important;
 }
-
 .text-info {
   color: var(--pgn-color-info-base) !important;
 }
-
 a.text-info:hover,
 a.text-info:focus {
   color: var(--pgn-color-action-default-info-base) !important;
 }
-
 .border-info {
   border-color: var(--pgn-color-info-base) !important;
 }
-
 .bg-warning-100 {
   background-color: var(--pgn-color-warning-100) !important;
 }
-
 a.bg-warning-100:hover,
 a.bg-warning-100:focus,
 button.bg-warning-100:hover,
 button.bg-warning-100:focus {
   background-color: var(--pgn-color-action-default-warning-100) !important;
 }
-
 .text-warning-100 {
   color: var(--pgn-color-warning-100) !important;
 }
-
 a.text-warning-100:hover,
 a.text-warning-100:focus {
   color: var(--pgn-color-action-default-warning-100) !important;
 }
-
 .border-warning-100 {
   border-color: var(--pgn-color-warning-100) !important;
 }
-
 .bg-warning-200 {
   background-color: var(--pgn-color-warning-200) !important;
 }
-
 a.bg-warning-200:hover,
 a.bg-warning-200:focus,
 button.bg-warning-200:hover,
 button.bg-warning-200:focus {
   background-color: var(--pgn-color-action-default-warning-200) !important;
 }
-
 .text-warning-200 {
   color: var(--pgn-color-warning-200) !important;
 }
-
 a.text-warning-200:hover,
 a.text-warning-200:focus {
   color: var(--pgn-color-action-default-warning-200) !important;
 }
-
 .border-warning-200 {
   border-color: var(--pgn-color-warning-200) !important;
 }
-
 .bg-warning-300 {
   background-color: var(--pgn-color-warning-300) !important;
 }
-
 a.bg-warning-300:hover,
 a.bg-warning-300:focus,
 button.bg-warning-300:hover,
 button.bg-warning-300:focus {
   background-color: var(--pgn-color-action-default-warning-300) !important;
 }
-
 .text-warning-300 {
   color: var(--pgn-color-warning-300) !important;
 }
-
 a.text-warning-300:hover,
 a.text-warning-300:focus {
   color: var(--pgn-color-action-default-warning-300) !important;
 }
-
 .border-warning-300 {
   border-color: var(--pgn-color-warning-300) !important;
 }
-
 .bg-warning-400 {
   background-color: var(--pgn-color-warning-400) !important;
 }
-
 a.bg-warning-400:hover,
 a.bg-warning-400:focus,
 button.bg-warning-400:hover,
 button.bg-warning-400:focus {
   background-color: var(--pgn-color-action-default-warning-400) !important;
 }
-
 .text-warning-400 {
   color: var(--pgn-color-warning-400) !important;
 }
-
 a.text-warning-400:hover,
 a.text-warning-400:focus {
   color: var(--pgn-color-action-default-warning-400) !important;
 }
-
 .border-warning-400 {
   border-color: var(--pgn-color-warning-400) !important;
 }
-
 .bg-warning-500 {
   background-color: var(--pgn-color-warning-500) !important;
 }
-
 a.bg-warning-500:hover,
 a.bg-warning-500:focus,
 button.bg-warning-500:hover,
 button.bg-warning-500:focus {
   background-color: var(--pgn-color-action-default-warning-500) !important;
 }
-
 .text-warning-500 {
   color: var(--pgn-color-warning-500) !important;
 }
-
 a.text-warning-500:hover,
 a.text-warning-500:focus {
   color: var(--pgn-color-action-default-warning-500) !important;
 }
-
 .border-warning-500 {
   border-color: var(--pgn-color-warning-500) !important;
 }
-
 .bg-warning-600 {
   background-color: var(--pgn-color-warning-600) !important;
 }
-
 a.bg-warning-600:hover,
 a.bg-warning-600:focus,
 button.bg-warning-600:hover,
 button.bg-warning-600:focus {
   background-color: var(--pgn-color-action-default-warning-600) !important;
 }
-
 .text-warning-600 {
   color: var(--pgn-color-warning-600) !important;
 }
-
 a.text-warning-600:hover,
 a.text-warning-600:focus {
   color: var(--pgn-color-action-default-warning-600) !important;
 }
-
 .border-warning-600 {
   border-color: var(--pgn-color-warning-600) !important;
 }
-
 .bg-warning-700 {
   background-color: var(--pgn-color-warning-700) !important;
 }
-
 a.bg-warning-700:hover,
 a.bg-warning-700:focus,
 button.bg-warning-700:hover,
 button.bg-warning-700:focus {
   background-color: var(--pgn-color-action-default-warning-700) !important;
 }
-
 .text-warning-700 {
   color: var(--pgn-color-warning-700) !important;
 }
-
 a.text-warning-700:hover,
 a.text-warning-700:focus {
   color: var(--pgn-color-action-default-warning-700) !important;
 }
-
 .border-warning-700 {
   border-color: var(--pgn-color-warning-700) !important;
 }
-
 .bg-warning-800 {
   background-color: var(--pgn-color-warning-800) !important;
 }
-
 a.bg-warning-800:hover,
 a.bg-warning-800:focus,
 button.bg-warning-800:hover,
 button.bg-warning-800:focus {
   background-color: var(--pgn-color-action-default-warning-800) !important;
 }
-
 .text-warning-800 {
   color: var(--pgn-color-warning-800) !important;
 }
-
 a.text-warning-800:hover,
 a.text-warning-800:focus {
   color: var(--pgn-color-action-default-warning-800) !important;
 }
-
 .border-warning-800 {
   border-color: var(--pgn-color-warning-800) !important;
 }
-
 .bg-warning-900 {
   background-color: var(--pgn-color-warning-900) !important;
 }
-
 a.bg-warning-900:hover,
 a.bg-warning-900:focus,
 button.bg-warning-900:hover,
 button.bg-warning-900:focus {
   background-color: var(--pgn-color-action-default-warning-900) !important;
 }
-
 .text-warning-900 {
   color: var(--pgn-color-warning-900) !important;
 }
-
 a.text-warning-900:hover,
 a.text-warning-900:focus {
   color: var(--pgn-color-action-default-warning-900) !important;
 }
-
 .border-warning-900 {
   border-color: var(--pgn-color-warning-900) !important;
 }
-
 .bg-warning {
   background-color: var(--pgn-color-warning-base) !important;
 }
-
 a.bg-warning:hover,
 a.bg-warning:focus,
 button.bg-warning:hover,
 button.bg-warning:focus {
   background-color: var(--pgn-color-action-default-warning-base) !important;
 }
-
 .text-warning {
   color: var(--pgn-color-warning-base) !important;
 }
-
 a.text-warning:hover,
 a.text-warning:focus {
   color: var(--pgn-color-action-default-warning-base) !important;
 }
-
 .border-warning {
   border-color: var(--pgn-color-warning-base) !important;
 }
-
 .bg-danger-100 {
   background-color: var(--pgn-color-danger-100) !important;
 }
-
 a.bg-danger-100:hover,
 a.bg-danger-100:focus,
 button.bg-danger-100:hover,
 button.bg-danger-100:focus {
   background-color: var(--pgn-color-action-default-danger-100) !important;
 }
-
 .text-danger-100 {
   color: var(--pgn-color-danger-100) !important;
 }
-
 a.text-danger-100:hover,
 a.text-danger-100:focus {
   color: var(--pgn-color-action-default-danger-100) !important;
 }
-
 .border-danger-100 {
   border-color: var(--pgn-color-danger-100) !important;
 }
-
 .bg-danger-200 {
   background-color: var(--pgn-color-danger-200) !important;
 }
-
 a.bg-danger-200:hover,
 a.bg-danger-200:focus,
 button.bg-danger-200:hover,
 button.bg-danger-200:focus {
   background-color: var(--pgn-color-action-default-danger-200) !important;
 }
-
 .text-danger-200 {
   color: var(--pgn-color-danger-200) !important;
 }
-
 a.text-danger-200:hover,
 a.text-danger-200:focus {
   color: var(--pgn-color-action-default-danger-200) !important;
 }
-
 .border-danger-200 {
   border-color: var(--pgn-color-danger-200) !important;
 }
-
 .bg-danger-300 {
   background-color: var(--pgn-color-danger-300) !important;
 }
-
 a.bg-danger-300:hover,
 a.bg-danger-300:focus,
 button.bg-danger-300:hover,
 button.bg-danger-300:focus {
   background-color: var(--pgn-color-action-default-danger-300) !important;
 }
-
 .text-danger-300 {
   color: var(--pgn-color-danger-300) !important;
 }
-
 a.text-danger-300:hover,
 a.text-danger-300:focus {
   color: var(--pgn-color-action-default-danger-300) !important;
 }
-
 .border-danger-300 {
   border-color: var(--pgn-color-danger-300) !important;
 }
-
 .bg-danger-400 {
   background-color: var(--pgn-color-danger-400) !important;
 }
-
 a.bg-danger-400:hover,
 a.bg-danger-400:focus,
 button.bg-danger-400:hover,
 button.bg-danger-400:focus {
   background-color: var(--pgn-color-action-default-danger-400) !important;
 }
-
 .text-danger-400 {
   color: var(--pgn-color-danger-400) !important;
 }
-
 a.text-danger-400:hover,
 a.text-danger-400:focus {
   color: var(--pgn-color-action-default-danger-400) !important;
 }
-
 .border-danger-400 {
   border-color: var(--pgn-color-danger-400) !important;
 }
-
 .bg-danger-500 {
   background-color: var(--pgn-color-danger-500) !important;
 }
-
 a.bg-danger-500:hover,
 a.bg-danger-500:focus,
 button.bg-danger-500:hover,
 button.bg-danger-500:focus {
   background-color: var(--pgn-color-action-default-danger-500) !important;
 }
-
 .text-danger-500 {
   color: var(--pgn-color-danger-500) !important;
 }
-
 a.text-danger-500:hover,
 a.text-danger-500:focus {
   color: var(--pgn-color-action-default-danger-500) !important;
 }
-
 .border-danger-500 {
   border-color: var(--pgn-color-danger-500) !important;
 }
-
 .bg-danger-600 {
   background-color: var(--pgn-color-danger-600) !important;
 }
-
 a.bg-danger-600:hover,
 a.bg-danger-600:focus,
 button.bg-danger-600:hover,
 button.bg-danger-600:focus {
   background-color: var(--pgn-color-action-default-danger-600) !important;
 }
-
 .text-danger-600 {
   color: var(--pgn-color-danger-600) !important;
 }
-
 a.text-danger-600:hover,
 a.text-danger-600:focus {
   color: var(--pgn-color-action-default-danger-600) !important;
 }
-
 .border-danger-600 {
   border-color: var(--pgn-color-danger-600) !important;
 }
-
 .bg-danger-700 {
   background-color: var(--pgn-color-danger-700) !important;
 }
-
 a.bg-danger-700:hover,
 a.bg-danger-700:focus,
 button.bg-danger-700:hover,
 button.bg-danger-700:focus {
   background-color: var(--pgn-color-action-default-danger-700) !important;
 }
-
 .text-danger-700 {
   color: var(--pgn-color-danger-700) !important;
 }
-
 a.text-danger-700:hover,
 a.text-danger-700:focus {
   color: var(--pgn-color-action-default-danger-700) !important;
 }
-
 .border-danger-700 {
   border-color: var(--pgn-color-danger-700) !important;
 }
-
 .bg-danger-800 {
   background-color: var(--pgn-color-danger-800) !important;
 }
-
 a.bg-danger-800:hover,
 a.bg-danger-800:focus,
 button.bg-danger-800:hover,
 button.bg-danger-800:focus {
   background-color: var(--pgn-color-action-default-danger-800) !important;
 }
-
 .text-danger-800 {
   color: var(--pgn-color-danger-800) !important;
 }
-
 a.text-danger-800:hover,
 a.text-danger-800:focus {
   color: var(--pgn-color-action-default-danger-800) !important;
 }
-
 .border-danger-800 {
   border-color: var(--pgn-color-danger-800) !important;
 }
-
 .bg-danger-900 {
   background-color: var(--pgn-color-danger-900) !important;
 }
-
 a.bg-danger-900:hover,
 a.bg-danger-900:focus,
 button.bg-danger-900:hover,
 button.bg-danger-900:focus {
   background-color: var(--pgn-color-action-default-danger-900) !important;
 }
-
 .text-danger-900 {
   color: var(--pgn-color-danger-900) !important;
 }
-
 a.text-danger-900:hover,
 a.text-danger-900:focus {
   color: var(--pgn-color-action-default-danger-900) !important;
 }
-
 .border-danger-900 {
   border-color: var(--pgn-color-danger-900) !important;
 }
-
 .bg-danger {
   background-color: var(--pgn-color-danger-base) !important;
 }
-
 a.bg-danger:hover,
 a.bg-danger:focus,
 button.bg-danger:hover,
 button.bg-danger:focus {
   background-color: var(--pgn-color-action-default-danger-base) !important;
 }
-
 .text-danger {
   color: var(--pgn-color-danger-base) !important;
 }
-
 a.text-danger:hover,
 a.text-danger:focus {
   color: var(--pgn-color-action-default-danger-base) !important;
 }
-
 .border-danger {
   border-color: var(--pgn-color-danger-base) !important;
 }
-
 .bg-light-100 {
   background-color: var(--pgn-color-light-100) !important;
 }
-
 a.bg-light-100:hover,
 a.bg-light-100:focus,
 button.bg-light-100:hover,
 button.bg-light-100:focus {
   background-color: var(--pgn-color-action-default-light-100) !important;
 }
-
 .text-light-100 {
   color: var(--pgn-color-light-100) !important;
 }
-
 a.text-light-100:hover,
 a.text-light-100:focus {
   color: var(--pgn-color-action-default-light-100) !important;
 }
-
 .border-light-100 {
   border-color: var(--pgn-color-light-100) !important;
 }
-
 .bg-light-200 {
   background-color: var(--pgn-color-light-200) !important;
 }
-
 a.bg-light-200:hover,
 a.bg-light-200:focus,
 button.bg-light-200:hover,
 button.bg-light-200:focus {
   background-color: var(--pgn-color-action-default-light-200) !important;
 }
-
 .text-light-200 {
   color: var(--pgn-color-light-200) !important;
 }
-
 a.text-light-200:hover,
 a.text-light-200:focus {
   color: var(--pgn-color-action-default-light-200) !important;
 }
-
 .border-light-200 {
   border-color: var(--pgn-color-light-200) !important;
 }
-
 .bg-light-300 {
   background-color: var(--pgn-color-light-300) !important;
 }
-
 a.bg-light-300:hover,
 a.bg-light-300:focus,
 button.bg-light-300:hover,
 button.bg-light-300:focus {
   background-color: var(--pgn-color-action-default-light-300) !important;
 }
-
 .text-light-300 {
   color: var(--pgn-color-light-300) !important;
 }
-
 a.text-light-300:hover,
 a.text-light-300:focus {
   color: var(--pgn-color-action-default-light-300) !important;
 }
-
 .border-light-300 {
   border-color: var(--pgn-color-light-300) !important;
 }
-
 .bg-light-400 {
   background-color: var(--pgn-color-light-400) !important;
 }
-
 a.bg-light-400:hover,
 a.bg-light-400:focus,
 button.bg-light-400:hover,
 button.bg-light-400:focus {
   background-color: var(--pgn-color-action-default-light-400) !important;
 }
-
 .text-light-400 {
   color: var(--pgn-color-light-400) !important;
 }
-
 a.text-light-400:hover,
 a.text-light-400:focus {
   color: var(--pgn-color-action-default-light-400) !important;
 }
-
 .border-light-400 {
   border-color: var(--pgn-color-light-400) !important;
 }
-
 .bg-light-500 {
   background-color: var(--pgn-color-light-500) !important;
 }
-
 a.bg-light-500:hover,
 a.bg-light-500:focus,
 button.bg-light-500:hover,
 button.bg-light-500:focus {
   background-color: var(--pgn-color-action-default-light-500) !important;
 }
-
 .text-light-500 {
   color: var(--pgn-color-light-500) !important;
 }
-
 a.text-light-500:hover,
 a.text-light-500:focus {
   color: var(--pgn-color-action-default-light-500) !important;
 }
-
 .border-light-500 {
   border-color: var(--pgn-color-light-500) !important;
 }
-
 .bg-light-600 {
   background-color: var(--pgn-color-light-600) !important;
 }
-
 a.bg-light-600:hover,
 a.bg-light-600:focus,
 button.bg-light-600:hover,
 button.bg-light-600:focus {
   background-color: var(--pgn-color-action-default-light-600) !important;
 }
-
 .text-light-600 {
   color: var(--pgn-color-light-600) !important;
 }
-
 a.text-light-600:hover,
 a.text-light-600:focus {
   color: var(--pgn-color-action-default-light-600) !important;
 }
-
 .border-light-600 {
   border-color: var(--pgn-color-light-600) !important;
 }
-
 .bg-light-700 {
   background-color: var(--pgn-color-light-700) !important;
 }
-
 a.bg-light-700:hover,
 a.bg-light-700:focus,
 button.bg-light-700:hover,
 button.bg-light-700:focus {
   background-color: var(--pgn-color-action-default-light-700) !important;
 }
-
 .text-light-700 {
   color: var(--pgn-color-light-700) !important;
 }
-
 a.text-light-700:hover,
 a.text-light-700:focus {
   color: var(--pgn-color-action-default-light-700) !important;
 }
-
 .border-light-700 {
   border-color: var(--pgn-color-light-700) !important;
 }
-
 .bg-light-800 {
   background-color: var(--pgn-color-light-800) !important;
 }
-
 a.bg-light-800:hover,
 a.bg-light-800:focus,
 button.bg-light-800:hover,
 button.bg-light-800:focus {
   background-color: var(--pgn-color-action-default-light-800) !important;
 }
-
 .text-light-800 {
   color: var(--pgn-color-light-800) !important;
 }
-
 a.text-light-800:hover,
 a.text-light-800:focus {
   color: var(--pgn-color-action-default-light-800) !important;
 }
-
 .border-light-800 {
   border-color: var(--pgn-color-light-800) !important;
 }
-
 .bg-light-900 {
   background-color: var(--pgn-color-light-900) !important;
 }
-
 a.bg-light-900:hover,
 a.bg-light-900:focus,
 button.bg-light-900:hover,
 button.bg-light-900:focus {
   background-color: var(--pgn-color-action-default-light-900) !important;
 }
-
 .text-light-900 {
   color: var(--pgn-color-light-900) !important;
 }
-
 a.text-light-900:hover,
 a.text-light-900:focus {
   color: var(--pgn-color-action-default-light-900) !important;
 }
-
 .border-light-900 {
   border-color: var(--pgn-color-light-900) !important;
 }
-
 .bg-light {
   background-color: var(--pgn-color-light-base) !important;
 }
-
 a.bg-light:hover,
 a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
   background-color: var(--pgn-color-action-default-light-base) !important;
 }
-
 .text-light {
   color: var(--pgn-color-light-base) !important;
 }
-
 a.text-light:hover,
 a.text-light:focus {
   color: var(--pgn-color-action-default-light-base) !important;
 }
-
 .border-light {
   border-color: var(--pgn-color-light-base) !important;
 }
-
 .bg-dark-100 {
   background-color: var(--pgn-color-dark-100) !important;
 }
-
 a.bg-dark-100:hover,
 a.bg-dark-100:focus,
 button.bg-dark-100:hover,
 button.bg-dark-100:focus {
   background-color: var(--pgn-color-action-default-dark-100) !important;
 }
-
 .text-dark-100 {
   color: var(--pgn-color-dark-100) !important;
 }
-
 a.text-dark-100:hover,
 a.text-dark-100:focus {
   color: var(--pgn-color-action-default-dark-100) !important;
 }
-
 .border-dark-100 {
   border-color: var(--pgn-color-dark-100) !important;
 }
-
 .bg-dark-200 {
   background-color: var(--pgn-color-dark-200) !important;
 }
-
 a.bg-dark-200:hover,
 a.bg-dark-200:focus,
 button.bg-dark-200:hover,
 button.bg-dark-200:focus {
   background-color: var(--pgn-color-action-default-dark-200) !important;
 }
-
 .text-dark-200 {
   color: var(--pgn-color-dark-200) !important;
 }
-
 a.text-dark-200:hover,
 a.text-dark-200:focus {
   color: var(--pgn-color-action-default-dark-200) !important;
 }
-
 .border-dark-200 {
   border-color: var(--pgn-color-dark-200) !important;
 }
-
 .bg-dark-300 {
   background-color: var(--pgn-color-dark-300) !important;
 }
-
 a.bg-dark-300:hover,
 a.bg-dark-300:focus,
 button.bg-dark-300:hover,
 button.bg-dark-300:focus {
   background-color: var(--pgn-color-action-default-dark-300) !important;
 }
-
 .text-dark-300 {
   color: var(--pgn-color-dark-300) !important;
 }
-
 a.text-dark-300:hover,
 a.text-dark-300:focus {
   color: var(--pgn-color-action-default-dark-300) !important;
 }
-
 .border-dark-300 {
   border-color: var(--pgn-color-dark-300) !important;
 }
-
 .bg-dark-400 {
   background-color: var(--pgn-color-dark-400) !important;
 }
-
 a.bg-dark-400:hover,
 a.bg-dark-400:focus,
 button.bg-dark-400:hover,
 button.bg-dark-400:focus {
   background-color: var(--pgn-color-action-default-dark-400) !important;
 }
-
 .text-dark-400 {
   color: var(--pgn-color-dark-400) !important;
 }
-
 a.text-dark-400:hover,
 a.text-dark-400:focus {
   color: var(--pgn-color-action-default-dark-400) !important;
 }
-
 .border-dark-400 {
   border-color: var(--pgn-color-dark-400) !important;
 }
-
 .bg-dark-500 {
   background-color: var(--pgn-color-dark-500) !important;
 }
-
 a.bg-dark-500:hover,
 a.bg-dark-500:focus,
 button.bg-dark-500:hover,
 button.bg-dark-500:focus {
   background-color: var(--pgn-color-action-default-dark-500) !important;
 }
-
 .text-dark-500 {
   color: var(--pgn-color-dark-500) !important;
 }
-
 a.text-dark-500:hover,
 a.text-dark-500:focus {
   color: var(--pgn-color-action-default-dark-500) !important;
 }
-
 .border-dark-500 {
   border-color: var(--pgn-color-dark-500) !important;
 }
-
 .bg-dark-600 {
   background-color: var(--pgn-color-dark-600) !important;
 }
-
 a.bg-dark-600:hover,
 a.bg-dark-600:focus,
 button.bg-dark-600:hover,
 button.bg-dark-600:focus {
   background-color: var(--pgn-color-action-default-dark-600) !important;
 }
-
 .text-dark-600 {
   color: var(--pgn-color-dark-600) !important;
 }
-
 a.text-dark-600:hover,
 a.text-dark-600:focus {
   color: var(--pgn-color-action-default-dark-600) !important;
 }
-
 .border-dark-600 {
   border-color: var(--pgn-color-dark-600) !important;
 }
-
 .bg-dark-700 {
   background-color: var(--pgn-color-dark-700) !important;
 }
-
 a.bg-dark-700:hover,
 a.bg-dark-700:focus,
 button.bg-dark-700:hover,
 button.bg-dark-700:focus {
   background-color: var(--pgn-color-action-default-dark-700) !important;
 }
-
 .text-dark-700 {
   color: var(--pgn-color-dark-700) !important;
 }
-
 a.text-dark-700:hover,
 a.text-dark-700:focus {
   color: var(--pgn-color-action-default-dark-700) !important;
 }
-
 .border-dark-700 {
   border-color: var(--pgn-color-dark-700) !important;
 }
-
 .bg-dark-800 {
   background-color: var(--pgn-color-dark-800) !important;
 }
-
 a.bg-dark-800:hover,
 a.bg-dark-800:focus,
 button.bg-dark-800:hover,
 button.bg-dark-800:focus {
   background-color: var(--pgn-color-action-default-dark-800) !important;
 }
-
 .text-dark-800 {
   color: var(--pgn-color-dark-800) !important;
 }
-
 a.text-dark-800:hover,
 a.text-dark-800:focus {
   color: var(--pgn-color-action-default-dark-800) !important;
 }
-
 .border-dark-800 {
   border-color: var(--pgn-color-dark-800) !important;
 }
-
 .bg-dark-900 {
   background-color: var(--pgn-color-dark-900) !important;
 }
-
 a.bg-dark-900:hover,
 a.bg-dark-900:focus,
 button.bg-dark-900:hover,
 button.bg-dark-900:focus {
   background-color: var(--pgn-color-action-default-dark-900) !important;
 }
-
 .text-dark-900 {
   color: var(--pgn-color-dark-900) !important;
 }
-
 a.text-dark-900:hover,
 a.text-dark-900:focus {
   color: var(--pgn-color-action-default-dark-900) !important;
 }
-
 .border-dark-900 {
   border-color: var(--pgn-color-dark-900) !important;
 }
-
 .bg-dark {
   background-color: var(--pgn-color-dark-base) !important;
 }
-
 a.bg-dark:hover,
 a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: var(--pgn-color-action-default-dark-base) !important;
 }
-
 .text-dark {
   color: var(--pgn-color-dark-base) !important;
 }
-
 a.text-dark:hover,
 a.text-dark:focus {
   color: var(--pgn-color-action-default-dark-base) !important;
 }
-
 .border-dark {
   border-color: var(--pgn-color-dark-base) !important;
+}
+/* Futures dark theme: rules Paragon has no token for. Everything colour-
+   bearing that Paragon exposes as a token is in paragon/tokens/src/themes/dark
+   and is NOT repeated here. Selectors are scoped to the active variant
+   attribute frontend-platform sets on <html>, which also gives them the
+   specificity the old `.dark` class rules had. */
+/* ---- Text that bakes black/grey at equal specificity ---- */
+html[data-paragon-theme-variant="dark"] .edit-section-header,
+html[data-paragon-theme-variant="dark"] h2.edit-section-header,
+html[data-paragon-theme-variant="dark"] .section-title {
+  color: var(--pgn-color-futures-cream) !important;
+}
+html[data-paragon-theme-variant="dark"] p,
+html[data-paragon-theme-variant="dark"] span,
+html[data-paragon-theme-variant="dark"] li,
+html[data-paragon-theme-variant="dark"] dt,
+html[data-paragon-theme-variant="dark"] dd,
+html[data-paragon-theme-variant="dark"] label,
+html[data-paragon-theme-variant="dark"] small {
+  color: inherit;
+}
+/* Monochrome inline icons often hardcode fill: #000. */
+html[data-paragon-theme-variant="dark"] svg {
+  fill: currentColor;
+}
+html[data-paragon-theme-variant="dark"] .border-light,
+html[data-paragon-theme-variant="dark"] [class*="border-light"] {
+  border-color: var(--pgn-color-border) !important;
+}
+html[data-paragon-theme-variant="dark"] .icon-container,
+html[data-paragon-theme-variant="dark"] [aria-label*="notification" i] {
+  color: var(--pgn-color-futures-cream);
+}
+/* Indigo "primary" text utilities are low-contrast on ink; use aqua. */
+html[data-paragon-theme-variant="dark"] [class*="text-primary"] {
+  color: var(--pgn-color-brand-500) !important;
+}
+html[data-paragon-theme-variant="dark"] .grade-bar rect:first-of-type {
+  fill: rgba(245, 242, 235, 0.16) !important;
+}
+html[data-paragon-theme-variant="dark"] small,
+html[data-paragon-theme-variant="dark"] .small,
+html[data-paragon-theme-variant="dark"] .x-small,
+html[data-paragon-theme-variant="dark"] .micro {
+  color: rgba(245, 242, 235, 0.8);
+}
+/* Course-material tabs built without .nav-tabs. */
+html[data-paragon-theme-variant="dark"] .nav-link.h-100,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link {
+  color: rgba(245, 242, 235, 0.8);
+}
+html[data-paragon-theme-variant="dark"] .nav-link.h-100:hover,
+html[data-paragon-theme-variant="dark"] .nav-link.h-100:focus,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link:hover,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link:focus {
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .nav-link.h-100.active,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link.active {
+  color: var(--pgn-color-brand-500);
+  border-color: var(--pgn-color-brand-500);
+}
+/* Utilities that name white or black stay literal (white text on the indigo
+   hero, the modal backdrop); only .text-black flips, as on Teak. */
+html[data-paragon-theme-variant="dark"] .text-black {
+  color: var(--pgn-color-futures-cream) !important;
+}
+/* ---- Surfaces ---- */
+html[data-paragon-theme-variant="dark"] .bg-white,
+html[data-paragon-theme-variant="dark"] .bg-light {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+}
+/* Authn side panel: ink so it blends into the page. */
+html[data-paragon-theme-variant="dark"] .col-md-3.bg-white.p-0,
+html[data-paragon-theme-variant="dark"] .bg-light-200 {
+  background-color: var(--pgn-color-bg-base) !important;
+}
+/* Card header text bakes black at (0,3,0). */
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title-sm,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title-md,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title-lg,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-content,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-content *,
+html[data-paragon-theme-variant="dark"] .course-card-title {
+  color: var(--pgn-color-futures-cream) !important;
+}
+html[data-paragon-theme-variant="dark"] .pgn__card-header-subtitle-sm,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-subtitle-md,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-subtitle-lg {
+  color: rgba(245, 242, 235, 0.8) !important;
+}
+html[data-paragon-theme-variant="dark"] .pgn__card-light {
+  background-color: var(--pgn-color-futures-ink-raised);
+  color: var(--pgn-color-futures-cream);
+}
+/* ---- Forms ---- */
+/* The authn MFE forces .form-control to var(--pgn-color-white) !important in
+   its own stylesheet; Teak beat it the same way. Inputs follow the input
+   tokens (raised ink surface, cream text) whatever the host sets. */
+html[data-paragon-theme-variant="dark"] .form-control,
+html[data-paragon-theme-variant="dark"] .pgn__form-control,
+html[data-paragon-theme-variant="dark"] .pgn__form-control-decorator-group {
+  background-color: var(--pgn-color-form-input-bg-base) !important;
+  color: var(--pgn-color-form-input-base) !important;
+}
+/* Autosuggest dropdown (country, and other FormAutosuggest fields). Paragon
+   hard-wires its background to --pgn-color-white instead of the dropdown
+   token, so it needs a rule of its own: raised surface, cream items, a
+   stronger cream wash on hover than ordinary menus (Teak values). */
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  border: 1px solid rgba(245, 242, 235, 0.2);
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item,
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item:active {
+  color: var(--pgn-color-futures-cream) !important;
+}
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item:hover,
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item:focus {
+  background-color: rgba(245, 242, 235, 0.2) !important;
+  color: var(--pgn-color-futures-cream) !important;
+}
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .pgn__form-autosuggest__dropdown-loading .spinner-border {
+  border-color: var(--pgn-color-futures-cream);
+  border-right-color: transparent;
+}
+/* The clear / expand icon button inside the field. */
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-control-decorator .btn-icon:hover,
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-control-decorator .btn-icon:focus {
+  fill: var(--pgn-color-futures-cream);
+}
+/* Floating label text: Paragon colours .has-floating-label gray-500; use
+   muted cream, as on Teak. */
+html[data-paragon-theme-variant="dark"] .pgn__form-control-floating-label-text {
+  color: rgba(245, 242, 235, 0.6);
+}
+/* Native control accents and the weekly-goal flag buttons */
+html[data-paragon-theme-variant="dark"] input[type="checkbox"],
+html[data-paragon-theme-variant="dark"] input[type="radio"],
+html[data-paragon-theme-variant="dark"] .pgn__form-checkbox-input,
+html[data-paragon-theme-variant="dark"] .pgn__form-radio-input,
+html[data-paragon-theme-variant="dark"] .pgn__form-switch-input {
+  accent-color: var(--pgn-color-brand-500);
+}
+html[data-paragon-theme-variant="dark"] .flag-button {
+  background-color: var(--pgn-color-futures-ink-raised);
+  border-color: var(--pgn-color-border);
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .flag-button.selected,
+html[data-paragon-theme-variant="dark"] .flag-button:hover {
+  border-color: var(--pgn-color-brand-500);
+}
+/* Modal chrome borders and striped tables have no token. */
+html[data-paragon-theme-variant="dark"] .modal-header,
+html[data-paragon-theme-variant="dark"] .modal-footer {
+  border-color: var(--pgn-color-border);
+}
+html[data-paragon-theme-variant="dark"] .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(245, 242, 235, 0.04);
+}
+html[data-paragon-theme-variant="dark"] .breadcrumb {
+  background-color: transparent;
+}
+/* ---- Site header: ink bar, cream links, aqua on hover ---- */
+html[data-paragon-theme-variant="dark"] .site-header-desktop,
+html[data-paragon-theme-variant="dark"] .site-header-mobile,
+html[data-paragon-theme-variant="dark"] .learning-header {
+  background-color: var(--pgn-color-bg-base);
+  border-bottom-color: var(--pgn-color-border);
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .site-header-desktop .icon-button,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .menu-trigger,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .icon-button,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .icon-button svg,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .menu-trigger svg,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .icon-button svg,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger svg {
+  color: var(--pgn-color-futures-cream);
+  fill: currentColor;
+}
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .secondary-menu-container .nav-link {
+  color: var(--pgn-color-futures-cream);
+  background-color: transparent;
+}
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link:hover,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link:focus,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link.active,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .expanded .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link:hover,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link:focus,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link.active,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .expanded .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link:hover,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link:focus,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link.active,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .expanded .nav-link {
+  color: var(--pgn-color-brand-500);
+  background-color: transparent;
+}
+/* Header icon buttons: white glyph; fill and focus ring via the IconButton
+   hooks in core.scss, with the ring in aqua for dark. */
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .btn.hdruk-header-icon,
+html[data-paragon-theme-variant="dark"] .btn.hdruk-header-icon {
+  --btn-icon-color: #fff;
+  --btn-icon-hover-color: #fff;
+  --btn-icon-focus-color: #fff;
+  --pgn-btn-color: #fff;
+  --pgn-btn-hover-color: #fff;
+  --pgn-btn-focus-color: #fff;
+  --pgn-btn-active-color: #fff;
+  --pgn-btn-focus-outline-color: var(--pgn-color-brand-500);
+  color: #fff;
+}
+html[data-paragon-theme-variant="dark"] .btn.hdruk-header-icon svg,
+html[data-paragon-theme-variant="dark"] .btn.hdruk-header-icon .pgn__icon svg {
+  color: #fff;
+  fill: currentColor;
+}
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .menu-trigger.btn-outline-primary,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .secondary-menu-container .menu-trigger.btn-outline-primary,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger.btn-outline-primary {
+  color: var(--pgn-color-futures-cream);
+  background-color: transparent;
+  border-color: rgba(245, 242, 235, 0.2);
+}
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .menu-trigger.btn-outline-primary:hover,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .secondary-menu-container .menu-trigger.btn-outline-primary:hover,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger.btn-outline-primary:hover {
+  background-color: rgba(245, 242, 235, 0.08);
+  border-color: var(--pgn-color-brand-500);
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .learning-header .course-title,
+html[data-paragon-theme-variant="dark"] .learning-header a,
+html[data-paragon-theme-variant="dark"] .course-title,
+html[data-paragon-theme-variant="dark"] .course-title-lockup {
+  color: var(--pgn-color-futures-cream);
+}
+/* Header focus ring is aqua in dark (set as one outline in core.scss). */
+html[data-paragon-theme-variant="dark"] .site-header-desktop a:focus-visible,
+html[data-paragon-theme-variant="dark"] .site-header-mobile a:focus-visible,
+html[data-paragon-theme-variant="dark"] .learning-header a:focus-visible,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .menu-trigger:focus-visible,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger:focus-visible,
+html[data-paragon-theme-variant="dark"] .learning-header .menu-trigger:focus-visible {
+  outline-color: var(--pgn-color-brand-500);
+}
+/* User menu panel: the header component hard-wires it to --pgn-color-white. */
+html[data-paragon-theme-variant="dark"] .menu-content {
+  background: var(--pgn-color-dropdown-bg);
+  border: 1px solid var(--pgn-color-border);
+  color: var(--pgn-color-futures-cream);
+}
+/* ---- Paragon components that read the light scale directly ----
+   These rules use --pgn-color-light-N rather than a component token, and the
+   light scale stays literal in dark (text-light-* must remain light on the
+   indigo hero), so each gets a dark value here. */
+html[data-paragon-theme-variant="dark"] .pgn__card .pgn__card-section.is-muted {
+  background-color: rgba(245, 242, 235, 0.05);
+  color: rgba(245, 242, 235, 0.8);
+}
+html[data-paragon-theme-variant="dark"] .pgn__card .pgn__card-status.pgn__card-status__light {
+  background-color: rgba(245, 242, 235, 0.05);
+}
+html[data-paragon-theme-variant="dark"] .pgn__progress-annotated .progress,
+html[data-paragon-theme-variant="dark"] .pgn__dropzone__upload-icon-wrapper {
+  background-color: rgba(245, 242, 235, 0.12);
+}
+html[data-paragon-theme-variant="dark"] .pgn__data-table th {
+  background-color: rgba(245, 242, 235, 0.08);
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .pgn__data-table.is-striped tr:nth-child(even) {
+  background-color: rgba(245, 242, 235, 0.04);
+}
+/* ---- Pagination (Paragon 23 renders the pages as Buttons, so the pagination
+   tokens do not apply): raised ink pages, aqua current page with ink text. */
+html[data-paragon-theme-variant="dark"] .pagination .page-link.btn {
+  --pgn-btn-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-btn-color: var(--pgn-color-futures-cream);
+  --pgn-btn-hover-bg: #303134;
+  --pgn-btn-hover-color: var(--pgn-color-futures-cream);
+  --pgn-btn-focus-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-btn-focus-color: var(--pgn-color-futures-cream);
+  --pgn-btn-active-bg: #303134;
+  --pgn-btn-active-color: var(--pgn-color-futures-cream);
+  --pgn-btn-disabled-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-btn-disabled-color: rgba(245, 242, 235, 0.6);
+  border: 1px solid var(--pgn-color-border);
+}
+html[data-paragon-theme-variant="dark"] .pagination .page-item.active .page-link.btn {
+  --pgn-btn-bg: var(--pgn-color-brand-500);
+  --pgn-btn-color: var(--pgn-color-futures-ink);
+  --pgn-btn-hover-bg: var(--pgn-color-brand-700);
+  --pgn-btn-hover-color: var(--pgn-color-futures-ink);
+  --pgn-btn-focus-bg: var(--pgn-color-brand-500);
+  --pgn-btn-focus-color: var(--pgn-color-futures-ink);
+  --pgn-btn-active-bg: var(--pgn-color-brand-700);
+  --pgn-btn-active-color: var(--pgn-color-futures-ink);
+  border-color: var(--pgn-color-brand-500);
+}
+/* ---- Profile MFE: surfaces it hard-codes as literal colours ---- */
+html[data-paragon-theme-variant="dark"] .bg-color-grey-FBFAF9 {
+  background-color: var(--pgn-color-bg-base);
+}
+html[data-paragon-theme-variant="dark"] .certificate {
+  background-color: var(--pgn-color-futures-ink-raised);
+  border-color: var(--pgn-color-border);
+}
+html[data-paragon-theme-variant="dark"] .color-black {
+  color: var(--pgn-color-futures-cream);
+}
+/* ---- Learning MFE: course-outline sidebar and courseware chrome ---- */
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  border-color: var(--pgn-color-border) !important;
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper h1,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper h2,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper h3,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper button,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper span,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper a {
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper .btn-icon {
+  background-color: transparent !important;
+}
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper .btn-icon:hover,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper .btn-icon:focus {
+  background-color: rgba(245, 242, 235, 0.08) !important;
+}
+html[data-paragon-theme-variant="dark"] .course-sidebar-section {
+  background: var(--pgn-color-futures-ink-raised);
+  border-color: var(--pgn-color-border);
+}
+html[data-paragon-theme-variant="dark"] .course-sidebar-section button,
+html[data-paragon-theme-variant="dark"] .course-sidebar-section button span,
+html[data-paragon-theme-variant="dark"] .course-sidebar-section a {
+  color: var(--pgn-color-futures-cream);
+}
+/* The outline's active item uses .bg-info-100; the aqua tint reads muddy
+   there, so give it a neutral cream wash instead. */
+html[data-paragon-theme-variant="dark"] #outline-sidebar-outline li.bg-info-100,
+html[data-paragon-theme-variant="dark"] #outline-sidebar-outline .bg-info-100 {
+  background-color: rgba(245, 242, 235, 0.08) !important;
+}
+html[data-paragon-theme-variant="dark"] #outline-sidebar-outline li .collapsible-trigger:hover,
+html[data-paragon-theme-variant="dark"] .course-tabs-navigation .nav a:not(.active):hover {
+  background-color: rgba(245, 242, 235, 0.06) !important;
+}
+html[data-paragon-theme-variant="dark"] .sequence,
+html[data-paragon-theme-variant="dark"] .course-tabs-navigation {
+  border-color: var(--pgn-color-border) !important;
+}
+html[data-paragon-theme-variant="dark"] #non-passing-grade-tooltip,
+html[data-paragon-theme-variant="dark"] #non-passing-grade-tooltip.tooltip .tooltip-inner {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  color: var(--pgn-color-futures-cream) !important;
+}
+html[data-paragon-theme-variant="dark"] .raised-card .bg-warning-100 {
+  background-color: rgba(245, 242, 235, 0.06) !important;
+}
+html[data-paragon-theme-variant="dark"] .raised-card .bg-warning-100 .pgn__icon {
+  color: var(--pgn-color-warning-500);
+}
+/* ---- Authn ---- */
+/* The floated label chip takes the input background from its token; the
+   label content box itself stays transparent (Teak rule). */
+html[data-paragon-theme-variant="dark"] .pgn__form-control-floating-label-content {
+  background-color: transparent !important;
+}
+/* Trailing icon buttons inside inputs (password show/hide) follow the input
+   text colour. Scoped to the decorator group so icon buttons elsewhere keep
+   Paragon's colours. */
+html[data-paragon-theme-variant="dark"] .pgn__form-control-decorator-group .btn-icon,
+html[data-paragon-theme-variant="dark"] .pgn__form-control-decorator-group .btn-icon-secondary {
+  --btn-icon-color: var(--pgn-color-futures-cream);
+  --btn-icon-hover-color: var(--pgn-color-futures-cream);
+  --btn-icon-focus-color: var(--pgn-color-futures-cream);
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] #password-requirement-top .tooltip-inner {
+  border: solid 1px rgba(245, 242, 235, 0.2) !important;
+}
+html[data-paragon-theme-variant="dark"] #login-failure-alert,
+html[data-paragon-theme-variant="dark"] #validation-errors {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  border-color: rgba(245, 242, 235, 0.2) !important;
+}
+html[data-paragon-theme-variant="dark"] #login-failure-alert .alert-heading,
+html[data-paragon-theme-variant="dark"] #validation-errors .alert-heading {
+  color: #ffffff !important;
+}
+/* Authn username suggestions: the MFE colours the chips indigo-700 itself. */
+html[data-paragon-theme-variant="dark"] .username-suggestions--chip {
+  color: var(--pgn-color-futures-cream);
+}
+/* Alerts rendered without a variant class have no token; give them the dark
+   surface. Variant alerts keep their tinted token backgrounds. */
+html[data-paragon-theme-variant="dark"] .alert:not([class*="alert-"]) {
+  background-color: var(--pgn-color-futures-ink-raised);
+  color: var(--pgn-color-futures-cream);
+  border-color: var(--pgn-color-border);
+}
+/* Product tour: the inactive breadcrumb dot has no token. */
+html[data-paragon-theme-variant="dark"] .pgn__checkpoint .pgn__checkpoint-breadcrumb.pgn__checkpoint-breadcrumb_inactive {
+  border-color: rgba(245, 242, 235, 0.4);
+}
+/* ---- Footer ---- */
+html[data-paragon-theme-variant="dark"] .footer,
+html[data-paragon-theme-variant="dark"] .wrapper-footer {
+  background-color: var(--pgn-color-bg-base);
+  color: rgba(245, 242, 235, 0.8);
+}
+html[data-paragon-theme-variant="dark"] .footer .content-container .nav-colophon ol li a,
+html[data-paragon-theme-variant="dark"] .footer .nav-colophon a,
+html[data-paragon-theme-variant="dark"] .footer a {
+  color: var(--pgn-color-futures-cream);
+}
+html[data-paragon-theme-variant="dark"] .footer .content-container .nav-colophon ol li a:hover,
+html[data-paragon-theme-variant="dark"] .footer .content-container .nav-colophon ol li a:focus,
+html[data-paragon-theme-variant="dark"] .footer .nav-colophon a:hover,
+html[data-paragon-theme-variant="dark"] .footer .nav-colophon a:focus,
+html[data-paragon-theme-variant="dark"] .footer a:hover,
+html[data-paragon-theme-variant="dark"] .footer a:focus {
+  color: var(--pgn-color-brand-500);
+}
+/* "Powered by" logos and the Futures mark are ink; invert to light. */
+html[data-paragon-theme-variant="dark"] .footer .powered-area img:not(.no-dark-invert),
+html[data-paragon-theme-variant="dark"] .logo img,
+html[data-paragon-theme-variant="dark"] img.logo {
+  filter: brightness(0) invert(1);
+}
+/* ---- Learner-dashboard course cards ---- */
+html[data-paragon-theme-variant="dark"] .course-card:hover .pgn__card,
+html[data-paragon-theme-variant="dark"] .course-card .pgn__card:focus-within {
+  border-color: var(--pgn-color-brand-500);
+}
+html[data-paragon-theme-variant="dark"] .course-card .pgn__icon-button,
+html[data-paragon-theme-variant="dark"] .course-card .btn-icon,
+html[data-paragon-theme-variant="dark"] .course-card .pgn__icon-button svg,
+html[data-paragon-theme-variant="dark"] .course-card .btn-icon svg {
+  color: var(--pgn-color-futures-cream);
+  border-color: rgba(245, 242, 235, 0.2);
+  fill: currentColor;
+}
+html[data-paragon-theme-variant="dark"] main .d-flex.align-items-center.justify-content-center.mb-4\.5 {
+  border-color: var(--pgn-color-border) !important;
 }

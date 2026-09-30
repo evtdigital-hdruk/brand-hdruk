@@ -7,7 +7,11 @@
   --pgn-size-btn-focus-width: 2px;
   --pgn-size-input-btn-focus-width: 1px;
   --pgn-spacing-input-btn-padding-y: 0.5625rem;
-  --pgn-color-bg-base: #1E1F1DFF; /** Ink page background (dark mode). */
+  --pgn-other-form-feedback-tooltip-opacity: .9;
+  --pgn-other-content-form-control-select-bg-repeat: no-repeat;
+  --pgn-other-content-form-control-select-bg-position-x: right;
+  --pgn-other-content-form-control-select-bg-position-y: center;
+  --pgn-color-alert-title: #FFFFFFFF;
   --pgn-color-btn-bg-outline-dark: inherit;
   --pgn-color-btn-bg-inverse-outline-dark: #00000000;
   --pgn-color-btn-border-inverse-dark: #00000000;
@@ -23,8 +27,9 @@
   --pgn-color-btn-disabled-bg-inverse-dark: inherit;
   --pgn-color-btn-disabled-bg-inverse-outline-dark: inherit;
   --pgn-color-btn-disabled-border-inverse-dark: #00000000;
-  --pgn-color-white: #1E1F1DFF; /** In dark mode 'white' surfaces map to ink so default backgrounds invert. */
-  --pgn-color-black: #F5F2EBFF; /** In dark mode 'black' text maps to cream. */
+  --pgn-color-link-hover: #2CE7D4FF; /**  (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index). */
+  --pgn-color-link-muted-hover: #2CE7D4FF;
+  --pgn-color-link-muted-inline-hover-base: #2CE7D4FF;
   --pgn-color-gray-100: #26272AFF; /** Gray color of level 100. */
   --pgn-color-gray-200: #303134FF; /** Gray color of level 200. */
   --pgn-color-gray-300: #3C3D40FF; /** Gray color of level 300. */
@@ -34,58 +39,253 @@
   --pgn-color-gray-700: #D6D6D2FF; /** Gray color of level 700. */
   --pgn-color-gray-800: #E8E7E1FF; /** Gray color of level 800. */
   --pgn-color-gray-900: #F5F2EBFF; /** Gray color of level 900. */
-  --pgn-color-primary-base: #2E34BAFF; /** Futures indigo - brand primary (mode-invariant). */
-  --pgn-color-brand-base: #0ADEC8FF; /** Futures aqua - action accent (mode-invariant). */
+  --pgn-color-gray-base: #8A8B8DFF; /** Matches gray.500; .text-gray and other gray-base consumers. */
+  --pgn-color-primary-base: #2E34BAFF; /** Mode-invariant. */
+  --pgn-color-brand-base: #0ADEC8FF; /** Mode-invariant. */
+  --pgn-color-success-100: #54CF5E24; /** Success color of level 100. */
+  --pgn-color-success-200: #54CF5E59; /** Success color of level 200. */
+  --pgn-color-success-base: #54CF5EFF; /** Basic success color. */
+  --pgn-color-info-base: #0ADEC8FF; /** Basic info color. */
+  --pgn-color-warning-100: #FFE34024; /** Warning color of level 100. */
+  --pgn-color-warning-200: #FFE34059; /** Warning color of level 200. */
+  --pgn-color-warning-base: #FFE340FF; /** Basic warning color. */
+  --pgn-color-danger-100: #FF8A8A24; /** Danger color of level 100. */
+  --pgn-color-danger-200: #FF8A8A59; /** Danger color of level 200. */
+  --pgn-color-danger-base: #FF8A8AFF; /** Readable red on ink (invalid fields, danger alerts). */
+  --pgn-color-dark-base: #F5F2EBFF; /** Paragon's 'dark' text utilities become cream. Literal: the derived shades cannot follow a reference. */
+  --pgn-color-futures-indigo: #2E34BAFF; /** Futures indigo: brand primary. */
+  --pgn-color-futures-aqua: #0ADEC8FF; /** Futures aqua: action accent. */
+  --pgn-color-futures-cream: #F5F2EBFF; /** Futures cream: light page background, dark-mode text. */
+  --pgn-color-futures-ink: #1E1F1DFF; /** Futures ink: light-mode text, dark-mode page background. */
+  --pgn-color-futures-ink-raised: #26272AFF; /** Futures ink-raised: dark-mode surfaces (cards, inputs, menus). */
+  --pgn-color-futures-header-icon-hover-bg: #323336FF; /** Header icon hover fill (marketing nav --accent dark). */
   --pgn-spacing-form-input-padding-y-base: var(--pgn-spacing-input-btn-padding-y);
-  --pgn-color-btn-text-outline-dark: var(--pgn-color-dark-base);
+  --pgn-color-bg-base: var(--pgn-color-futures-ink); /** Ink page background. */
+  --pgn-color-bg-active: var(--pgn-color-futures-aqua); /** Active/selected fills (checked controls, active pages) are aqua. */
+  --pgn-color-active: var(--pgn-color-futures-ink); /** Text on aqua active fills is ink. */
+  --pgn-color-input-focus: var(--pgn-color-futures-aqua); /** Focused input value color. */
+  --pgn-color-border: #F5F2EB1F; /** Hairline borders: cream at 12%. */
+  --pgn-color-theme-focus-primary: var(--pgn-color-futures-aqua); /** Focus rings for primary, outline-primary and tertiary buttons: indigo is invisible on ink. */
+  --pgn-color-alert-content: #F5F2EBD9;
+  --pgn-color-badge-text-secondary: #F5F2EBFF; /**  (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index). */
+  --pgn-color-badge-text-light: #F5F2EBFF; /**  (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index). */
+  --pgn-color-badge-bg-secondary: var(--pgn-color-futures-ink-raised);
+  --pgn-color-badge-bg-light: var(--pgn-color-futures-ink-raised);
+  --pgn-color-breadcrumb-base: var(--pgn-color-futures-aqua);
+  --pgn-color-breadcrumb-active: #F5F2EB99;
+  --pgn-color-btn-text-brand: #1E1F1DFF; /** Ink on aqua (alpha 1 replaces Paragon's colour-yiq, which is baked into a literal at build time). */
+  --pgn-color-btn-text-outline-dark: var(--pgn-color-futures-cream);
   --pgn-color-btn-text-inverse-dark: var(--pgn-color-dark-base);
   --pgn-color-btn-text-inverse-outline-dark: var(--pgn-color-white);
+  --pgn-color-btn-text-primary: #F5F2EBFF; /** Cream on indigo (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index). */
+  --pgn-color-btn-text-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-text-tertiary: var(--pgn-color-futures-cream);
   --pgn-color-btn-bg-dark: var(--pgn-color-dark-base);
-  --pgn-color-btn-border-outline-dark: var(--pgn-color-dark-base);
+  --pgn-color-btn-border-outline-dark: #F5F2EB66;
   --pgn-color-btn-border-inverse-outline-dark: var(--pgn-color-white);
+  --pgn-color-btn-border-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-hover-text-brand: #1E1F1DFF; /** Ink on aqua (alpha 1 replaces Paragon's colour-yiq, which is baked into a literal at build time). */
+  --pgn-color-btn-hover-text-outline-dark: #F5F2EBFF;
+  --pgn-color-btn-hover-text-primary: #F5F2EBFF; /** Cream on indigo (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index). */
+  --pgn-color-btn-hover-text-outline-primary: var(--pgn-color-futures-ink);
+  --pgn-color-btn-hover-text-tertiary: var(--pgn-color-futures-cream);
+  --pgn-color-btn-hover-bg-outline-dark: #F5F2EB14;
+  --pgn-color-btn-hover-bg-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-hover-bg-tertiary: #F5F2EB14;
+  --pgn-color-btn-hover-border-outline-dark: var(--pgn-color-futures-cream);
+  --pgn-color-btn-hover-border-outline-primary: var(--pgn-color-futures-aqua);
+  --pgn-color-btn-active-text-brand: #1E1F1DFF; /** Ink on aqua (alpha 1 replaces Paragon's colour-yiq, which is baked into a literal at build time). */
+  --pgn-color-btn-active-text-outline-dark: #F5F2EBFF;
+  --pgn-color-btn-active-text-tertiary: var(--pgn-color-futures-cream);
+  --pgn-color-btn-active-bg-outline-dark: #F5F2EB1F;
   --pgn-color-btn-active-bg-inverse-dark: var(--pgn-color-gray-100);
+  --pgn-color-btn-active-bg-tertiary: #F5F2EB14;
+  --pgn-color-btn-active-border-outline-dark: var(--pgn-color-futures-cream);
+  --pgn-color-btn-focus-border-outline-dark: var(--pgn-color-futures-cream);
   --pgn-color-btn-focus-border-inverse-dark: var(--pgn-color-white);
   --pgn-color-btn-focus-border-inverse-outline-dark: var(--pgn-color-white);
-  --pgn-color-btn-text-dark: #FFFFFFFF;
-  --pgn-color-btn-bg-inverse-dark: #FFFFFFFF;
+  --pgn-color-btn-focus-outline-outline-dark: var(--pgn-color-futures-aqua);
+  --pgn-color-card-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-card-bg-muted: #F5F2EB0D;
+  --pgn-color-card-border-base: #F5F2EB1F;
+  --pgn-color-card-border-focus-base: var(--pgn-color-futures-aqua);
+  --pgn-color-card-divider-bg: #F5F2EB1F;
+  --pgn-color-chip-text-light: var(--pgn-color-futures-aqua);
+  --pgn-color-chip-bg-light: #0ADEC81F;
+  --pgn-color-chip-border-base: #0ADEC84D;
+  --pgn-color-chip-label-base: var(--pgn-color-futures-aqua);
+  --pgn-color-data-table-border: #F5F2EB1F;
+  --pgn-color-dropdown-text: var(--pgn-color-futures-cream);
+  --pgn-color-dropdown-header: #F5F2EB99;
+  --pgn-color-dropdown-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-dropdown-border: #F5F2EB1F;
+  --pgn-color-dropdown-divider-bg: #F5F2EB1F;
+  --pgn-color-dropdown-link-base: var(--pgn-color-futures-cream);
+  --pgn-color-dropdown-link-hover-base: #F5F2EBFF; /**  (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index). */
+  --pgn-color-dropdown-link-hover-bg: #F5F2EB14;
+  --pgn-color-form-input-base: var(--pgn-color-futures-cream);
+  --pgn-color-form-input-placeholder: #F5F2EB99;
+  --pgn-color-form-input-border: #F5F2EB33;
+  --pgn-color-form-input-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-form-input-bg-disabled: #F5F2EB0F;
+  --pgn-color-form-input-group-addon-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-form-control-indicator-border: #F5F2EB99;
+  --pgn-color-form-control-label-floating-text: #26272AFF; /** Floating label chip matches the input surface (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index). */
+  --pgn-color-form-control-switch-indicator-checked-bg: var(--pgn-color-futures-aqua);
+  --pgn-color-icon-button-bg-primary-hover: #0ADEC81F;
+  --pgn-color-icon-button-bg-primary-focus: #0ADEC81F;
+  --pgn-color-icon-button-bg-black-hover: #F5F2EB14;
+  --pgn-color-icon-button-bg-black-focus: #F5F2EB14;
+  --pgn-color-icon-button-text-primary-base: var(--pgn-color-futures-aqua); /** Primary icon buttons (outline expand/collapse) are aqua on ink. */
+  --pgn-color-icon-button-text-primary-hover: var(--pgn-color-futures-aqua);
+  --pgn-color-icon-button-text-primary-focus: var(--pgn-color-futures-aqua);
+  --pgn-color-icon-button-text-black-base: var(--pgn-color-futures-cream); /** The 'black' icon-button variant (authn username-suggestion close) is cream on ink. */
+  --pgn-color-icon-button-text-black-hover: var(--pgn-color-futures-cream);
+  --pgn-color-icon-button-text-black-focus: var(--pgn-color-futures-cream);
+  --pgn-color-menu-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-menu-item-color: var(--pgn-color-futures-cream);
+  --pgn-color-menu-item-focus-bg: #F5F2EB14;
+  --pgn-color-modal-content-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-modal-content-border: #F5F2EB1F;
+  --pgn-color-nav-link-text-base: #F5F2EBCC;
+  --pgn-color-nav-tabs-base-border-base: #F5F2EB1F;
+  --pgn-color-nav-tabs-base-link-hover-bg: #F5F2EB14;
+  --pgn-color-nav-tabs-base-link-active-text: var(--pgn-color-futures-aqua);
+  --pgn-color-pagination-text-base: var(--pgn-color-futures-cream);
+  --pgn-color-pagination-text-hover: var(--pgn-color-futures-cream);
+  --pgn-color-pagination-text-disabled: #F5F2EB99;
+  --pgn-color-pagination-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-pagination-bg-hover: #F5F2EB14;
+  --pgn-color-pagination-bg-disabled: var(--pgn-color-futures-ink-raised);
+  --pgn-color-pagination-border-base: #F5F2EB1F;
+  --pgn-color-pagination-border-hover: #F5F2EB1F;
+  --pgn-color-pagination-border-disabled: #F5F2EB1F;
+  --pgn-color-popover-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-popover-border: #F5F2EB1F;
+  --pgn-color-popover-header-text: var(--pgn-color-futures-cream);
+  --pgn-color-popover-header-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-popover-body: var(--pgn-color-futures-cream);
+  --pgn-color-product-tour-checkpoint-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-color-product-tour-checkpoint-body: #F5F2EBCC;
+  --pgn-color-product-tour-checkpoint-breadcrumb: var(--pgn-color-futures-aqua);
+  --pgn-color-tooltip-text: var(--pgn-color-futures-cream);
+  --pgn-color-tooltip-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-body-base: var(--pgn-color-futures-cream);
+  --pgn-color-headings-base: var(--pgn-color-futures-cream);
+  --pgn-color-hr-border: #F5F2EB1F;
+  --pgn-color-link-base: var(--pgn-color-futures-aqua); /** Dark-mode links use aqua. */
+  --pgn-color-link-inline-base: var(--pgn-color-futures-aqua);
+  --pgn-color-link-muted-base: var(--pgn-color-futures-aqua);
+  --pgn-color-link-muted-inline-base: var(--pgn-color-futures-aqua);
+  --pgn-color-list-group-bg-base: var(--pgn-color-futures-ink-raised);
+  --pgn-color-list-group-bg-hover: #F5F2EB14;
+  --pgn-color-list-group-border: #F5F2EB1F;
+  --pgn-color-list-group-action-base: var(--pgn-color-futures-cream);
+  --pgn-color-text-muted: #F5F2EB99;
+  --pgn-color-accent-a: var(--pgn-color-futures-aqua); /** Accent-A color. */
+  --pgn-color-primary-100: #2E34BA2E; /** Primary color of level 100. */
+  --pgn-color-primary-200: #2E34BA59; /** Primary color of level 200. */
+  --pgn-color-primary-300: #979ADDFF; /** Primary color of level 300. */
+  --pgn-color-primary-400: #6267CBFF; /** Primary color of level 400. */
+  --pgn-color-primary-500: var(--pgn-color-primary-base); /** Primary color of level 500. */
+  --pgn-color-primary-600: #292FA7FF; /** Primary color of level 600. */
+  --pgn-color-primary-700: #252A95FF; /** Primary color of level 700. */
+  --pgn-color-primary-800: #23278CFF; /** Primary color of level 800. */
+  --pgn-color-primary-900: #202482FF; /** Primary color of level 900. */
+  --pgn-color-brand-100: #0ADEC81F; /** Brand color of level 100. */
+  --pgn-color-brand-200: #0ADEC84D; /** Brand color of level 200. */
+  --pgn-color-brand-300: #85EFE4FF; /** Brand color of level 300. */
+  --pgn-color-brand-400: #47E6D6FF; /** Brand color of level 400. */
+  --pgn-color-brand-500: var(--pgn-color-brand-base); /** Brand color of level 500. */
+  --pgn-color-brand-600: #09C8B4FF; /** Brand color of level 600. */
+  --pgn-color-brand-700: #08B2A0FF; /** Brand color of level 700. */
+  --pgn-color-brand-800: #08A796FF; /** Brand color of level 800. */
+  --pgn-color-brand-900: #079B8CFF; /** Brand color of level 900. */
+  --pgn-color-success-300: #AAE7AFFF; /** Success color of level 300. */
+  --pgn-color-success-400: #7FDB86FF; /** Success color of level 400. */
+  --pgn-color-success-500: var(--pgn-color-success-base); /** Success color of level 500. */
+  --pgn-color-success-600: #4CBA55FF; /** Success color of level 600. */
+  --pgn-color-success-700: #43A64BFF; /** Success color of level 700. */
+  --pgn-color-success-800: #3F9B47FF; /** Success color of level 800. */
+  --pgn-color-success-900: #3B9142FF; /** Success color of level 900. */
+  --pgn-color-info-100: #0ADEC81F; /** Info color of level 100. */
+  --pgn-color-info-200: #0ADEC84D; /** Info color of level 200. */
+  --pgn-color-info-300: #85EFE4FF; /** Info color of level 300. */
+  --pgn-color-info-400: #47E6D6FF; /** Info color of level 400. */
+  --pgn-color-info-500: var(--pgn-color-info-base); /** Info color of level 500. */
+  --pgn-color-info-600: #09C8B4FF; /** Info color of level 600. */
+  --pgn-color-info-700: #08B2A0FF; /** Info color of level 700. */
+  --pgn-color-info-800: #08A796FF; /** Info color of level 800. */
+  --pgn-color-info-900: #079B8CFF; /** Info color of level 900. */
+  --pgn-color-warning-300: #FFF1A0FF; /** Warning color of level 300. */
+  --pgn-color-warning-400: #FFEA70FF; /** Warning color of level 400. */
+  --pgn-color-warning-500: var(--pgn-color-warning-base); /** Warning color of level 500. */
+  --pgn-color-warning-600: #E6CC3AFF; /** Warning color of level 600. */
+  --pgn-color-warning-700: #CCB633FF; /** Warning color of level 700. */
+  --pgn-color-warning-800: #BFAA30FF; /** Warning color of level 800. */
+  --pgn-color-warning-900: #B39F2DFF; /** Warning color of level 900. */
+  --pgn-color-danger-300: #FFC5C5FF; /** Danger color of level 300. */
+  --pgn-color-danger-400: #FFA7A7FF; /** Danger color of level 400. */
+  --pgn-color-danger-500: var(--pgn-color-danger-base); /** Danger color of level 500. */
+  --pgn-color-danger-600: #E67C7CFF; /** Danger color of level 600. */
+  --pgn-color-danger-700: #CC6E6EFF; /** Danger color of level 700. */
+  --pgn-color-danger-800: #BF6868FF; /** Danger color of level 800. */
+  --pgn-color-danger-900: #B36161FF; /** Danger color of level 900. */
+  --pgn-color-dark-100: #FEFEFEFF; /** Dark color of level 100. */
+  --pgn-color-dark-200: #FDFCFAFF; /** Dark color of level 200. */
+  --pgn-color-dark-300: #FAF9F5FF; /** Dark color of level 300. */
+  --pgn-color-dark-400: #F8F5F0FF; /** Dark color of level 400. */
+  --pgn-color-dark-500: var(--pgn-color-dark-base); /** Dark color of level 500. */
+  --pgn-color-dark-600: #DDDAD4FF; /** Dark color of level 600. */
+  --pgn-color-dark-700: #C4C2BCFF; /** Info color of level 700. */
+  --pgn-color-dark-800: #B8B6B0FF; /** Dark color of level 800. */
+  --pgn-color-dark-900: #ACA9A5FF; /** Dark color of level 900. */
+  --pgn-border-color-nav-tabs-link-border-active: var(--pgn-color-futures-aqua);
+  --pgn-other-content-form-control-checkbox-indicator-icon-checked-valid: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z' fill='%2354CF5EFF'/></svg>");
+  --pgn-other-content-form-control-checkbox-indicator-icon-checked-invalid: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z' fill='%23FF8A8AFF'/></svg>");
+  --pgn-other-content-form-control-radio-indicator-icon-checked-valid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2354CF5EFF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-radio-indicator-icon-checked-invalid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FF8A8AFF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-select-bg-offset-y: var(--pgn-spacing-form-input-padding-y-base);
+  --pgn-color-btn-text-dark: #454545FF;
+  --pgn-color-btn-bg-inverse-dark: #454545FF;
   --pgn-color-btn-border-dark: var(--pgn-color-btn-bg-dark);
-  --pgn-color-btn-hover-text-inverse-dark: #18271DFF;
-  --pgn-color-btn-hover-bg-outline-dark: var(--pgn-color-dark-100);
+  --pgn-color-btn-hover-text-inverse-dark: #E8E1D1FF;
   --pgn-color-btn-hover-bg-inverse-outline-dark: var(--pgn-color-dark-100);
-  --pgn-color-btn-hover-border-outline-dark: var(--pgn-color-dark-900);
-  --pgn-color-btn-active-text-inverse-dark: #142018FF;
+  --pgn-color-btn-active-text-inverse-dark: #E4DCC9FF;
   --pgn-color-btn-focus-text-inverse-dark: var(--pgn-color-btn-text-inverse-dark);
   --pgn-color-btn-focus-text-inverse-outline-dark: var(--pgn-color-btn-text-inverse-outline-dark);
-  --pgn-color-btn-focus-border-outline-dark: var(--pgn-color-btn-border-outline-dark);
   --pgn-color-btn-focus-bg-dark: var(--pgn-color-btn-bg-dark);
   --pgn-color-btn-focus-outline-inverse-dark: var(--pgn-color-btn-focus-border-inverse-dark);
   --pgn-color-btn-focus-outline-inverse-outline-dark: var(--pgn-color-btn-focus-border-inverse-outline-dark);
   --pgn-color-btn-disabled-text-inverse-dark: var(--pgn-color-btn-text-inverse-dark);
   --pgn-color-btn-disabled-text-inverse-outline-dark: var(--pgn-color-btn-text-inverse-outline-dark);
   --pgn-color-btn-disabled-bg-dark: var(--pgn-color-btn-bg-dark);
+  --pgn-color-btn-disabled-border-outline-dark: var(--pgn-color-btn-hover-text-outline-dark);
   --pgn-color-btn-disabled-border-inverse-outline-dark: var(--pgn-color-btn-focus-border-inverse-outline-dark);
-  --pgn-color-link-base: var(--pgn-color-brand-500); /** Dark-mode links use aqua (the indigo/aqua swap from the spec). */
-  --pgn-color-link-inline-base: var(--pgn-color-brand-500);
-  --pgn-color-btn-hover-text-outline-dark: var(--pgn-color-theme-hover-dark);
+  --pgn-other-content-form-control-checkbox-indicator-icon-checked-base: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z' fill='%230ADEC8FF'/></svg>");
+  --pgn-other-content-form-control-radio-indicator-icon-checked-base: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%230ADEC8FF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-switch-indicator-icon-off: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%230ADEC8FF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-switch-indicator-icon-on: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%231E1F1DFF'/%3e%3c/svg%3e");
+  --pgn-other-content-form-control-select-indicator-icon: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="%23D6D6D2FF"/></svg>');
+  --pgn-other-content-form-control-select-bg-color: var(--pgn-color-form-control-select-bg-base);
+  --pgn-other-content-form-feedback-icon-valid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2354CF5EFF' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  --pgn-other-content-form-feedback-icon-invalid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23FF8A8AFF' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23FF8A8AFF' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
   --pgn-color-btn-hover-text-inverse-outline-dark: var(--pgn-color-theme-hover-dark);
   --pgn-color-btn-hover-bg-dark: var(--pgn-color-theme-hover-dark);
-  --pgn-color-btn-hover-bg-inverse-dark: #ECECECFF;
+  --pgn-color-btn-hover-bg-inverse-dark: #323232FF;
   --pgn-color-btn-hover-border-dark: var(--pgn-color-theme-hover-dark);
   --pgn-color-btn-active-bg-dark: var(--pgn-color-theme-active-dark);
-  --pgn-color-btn-active-bg-outline-dark: var(--pgn-color-theme-bg-dark);
   --pgn-color-btn-active-bg-inverse-outline-dark: var(--pgn-color-theme-bg-dark);
   --pgn-color-btn-active-border-dark: var(--pgn-color-theme-active-dark);
-  --pgn-color-btn-active-border-outline-dark: var(--pgn-color-theme-active-dark);
   --pgn-color-btn-focus-text-dark: var(--pgn-color-btn-text-dark);
   --pgn-color-btn-focus-border-dark: var(--pgn-color-btn-focus-bg-dark);
   --pgn-color-btn-focus-bg-inverse-dark: var(--pgn-color-btn-bg-inverse-dark);
   --pgn-color-btn-focus-outline-dark: var(--pgn-color-theme-focus-dark);
-  --pgn-color-btn-focus-outline-outline-dark: var(--pgn-color-theme-focus-dark);
   --pgn-color-btn-disabled-text-dark: var(--pgn-color-btn-text-dark);
   --pgn-color-btn-disabled-border-dark: var(--pgn-color-btn-border-dark);
-  --pgn-color-btn-hover-text-dark: #FFFFFFFF;
-  --pgn-color-btn-active-text-dark: #FFFFFFFF;
-  --pgn-color-btn-active-text-outline-dark: #454545FF;
+  --pgn-other-content-form-control-checkbox-indicator-indeterminate-icon: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM17 13H7V11H17V13Z' fill='%230ADEC8FF'/></svg>");
+  --pgn-other-content-form-control-select-bg-image: var(--pgn-other-content-form-control-select-indicator-icon);
+  --pgn-color-btn-hover-text-dark: #454545FF;
+  --pgn-color-btn-active-text-dark: #3D3D3DFF;
   --pgn-color-btn-active-text-inverse-outline-dark: #454545FF;
-  --pgn-color-btn-disabled-border-outline-dark: var(--pgn-color-btn-hover-text-outline-dark);
 }

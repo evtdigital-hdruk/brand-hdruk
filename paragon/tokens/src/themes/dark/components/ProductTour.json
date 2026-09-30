@@ -1,0 +1,24 @@
+{
+  "color": {
+    "$type": "color",
+    "product-tour": {
+      "checkpoint": {
+        "bg": {
+          "$value": "{color.futures.ink-raised}"
+        },
+        "body": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.8
+            }
+          ]
+        },
+        "breadcrumb": {
+          "$value": "{color.futures.aqua}"
+        }
+      }
+    }
+  }
+}

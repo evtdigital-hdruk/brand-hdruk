@@ -3,8 +3,8 @@
     "$type": "color",
     "bg": {
       "base": {
-        "$value": "#f5f2eb",
-        "$description": "Warm cream page background (light mode)."
+        "$value": "{color.futures.cream}",
+        "$description": "Warm cream page background."
       }
     }
   }

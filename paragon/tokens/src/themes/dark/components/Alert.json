@@ -1,0 +1,19 @@
+{
+  "color": {
+    "$type": "color",
+    "alert": {
+      "title": {
+        "$value": "#ffffff"
+      },
+      "content": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.85
+          }
+        ]
+      }
+    }
+  }
+}

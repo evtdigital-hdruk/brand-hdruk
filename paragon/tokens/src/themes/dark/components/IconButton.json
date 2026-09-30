@@ -1,0 +1,75 @@
+{
+  "color": {
+    "$type": "color",
+    "icon-button": {
+      "text": {
+        "primary": {
+          "base": {
+            "$value": "{color.futures.aqua}",
+            "$description": "Primary icon buttons (outline expand/collapse) are aqua on ink."
+          },
+          "hover": {
+            "$value": "{color.futures.aqua}"
+          },
+          "focus": {
+            "$value": "{color.futures.aqua}"
+          }
+        },
+        "black": {
+          "base": {
+            "$value": "{color.futures.cream}",
+            "$description": "The 'black' icon-button variant (authn username-suggestion close) is cream on ink."
+          },
+          "hover": {
+            "$value": "{color.futures.cream}"
+          },
+          "focus": {
+            "$value": "{color.futures.cream}"
+          }
+        }
+      },
+      "bg": {
+        "primary": {
+          "hover": {
+            "$value": "{color.futures.aqua}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.12
+              }
+            ]
+          },
+          "focus": {
+            "$value": "{color.futures.aqua}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.12
+              }
+            ]
+          }
+        },
+        "black": {
+          "hover": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.08
+              }
+            ]
+          },
+          "focus": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.08
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

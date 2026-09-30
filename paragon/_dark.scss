@@ -1,3 +1,11 @@
+// DEPRECATED (Ulmo / Paragon 23): this SCSS is no longer compiled into the
+// MFEs. Dark mode is now the `dark` theme variant: tokens under
+// paragon/tokens/src/themes/dark plus paragon/themes/dark/custom.css, applied by
+// frontend-platform when <html data-paragon-theme-variant="dark">. Every rule
+// below has been ported there. It is kept only because the slots package's
+// HeaderSecondaryMenuSlot styles and Storybook still import it; delete it once
+// they move to the variant stylesheet.
+//
 // Futures dark theme for the MFEs (Paragon 22 / sass-compiled stack).
 //
 // `.dark <selector>` (specificity +1 class) sits above Paragon's base

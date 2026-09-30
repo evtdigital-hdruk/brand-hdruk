@@ -1,0 +1,15 @@
+{
+  "color": {
+    "$type": "color",
+    "tooltip": {
+      "text": {
+        "$value": "{color.futures.cream}"
+      },
+      "bg": {
+        "base": {
+          "$value": "{color.futures.ink-raised}"
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,48 @@
 {
   "color": {
     "$type": "color",
+    "futures": {
+      "indigo": {
+        "$value": "#2e34ba",
+        "$description": "Futures indigo: brand primary."
+      },
+      "aqua": {
+        "$value": "#0adec8",
+        "$description": "Futures aqua: action accent."
+      },
+      "cream": {
+        "$value": "#f5f2eb",
+        "$description": "Futures cream: light page background, dark-mode text."
+      },
+      "ink": {
+        "$value": "#1e1f1d",
+        "$description": "Futures ink: light-mode text, dark-mode page background."
+      },
+      "ink-raised": {
+        "$value": "#26272a",
+        "$description": "Futures ink-raised: dark-mode surfaces (cards, inputs, menus)."
+      },
+      "header-icon-hover-bg": {
+        "$value": "#ebe8df",
+        "$description": "Header icon hover fill (marketing nav --accent light)."
+      }
+    },
     "primary": {
       "base": {
-        "$value": "#2e34ba",
-        "$description": "Futures indigo - brand primary (buttons, focus, links)."
+        "$value": "{color.futures.indigo}",
+        "$description": "Brand primary (buttons, focus, links)."
       }
     },
     "brand": {
       "base": {
-        "$value": "#0adec8",
-        "$description": "Futures aqua - action accent (CTAs, badges, highlights)."
+        "$value": "{color.futures.aqua}",
+        "$description": "Action accent (CTAs, badges, highlights)."
+      }
+    },
+    "accent": {
+      "a": {
+        "$value": "{color.futures.aqua}",
+        "$description": "Aqua drives the accent-a utilities (badges, highlights)."
       }
     }
   }

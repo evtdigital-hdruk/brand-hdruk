@@ -1,0 +1,30 @@
+{
+  "color": {
+    "$type": "color",
+    "popover": {
+      "bg": {
+        "$value": "{color.futures.ink-raised}"
+      },
+      "border": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      },
+      "header": {
+        "text": {
+          "$value": "{color.futures.cream}"
+        },
+        "bg": {
+          "$value": "{color.futures.ink-raised}"
+        }
+      },
+      "body": {
+        "$value": "{color.futures.cream}"
+      }
+    }
+  }
+}

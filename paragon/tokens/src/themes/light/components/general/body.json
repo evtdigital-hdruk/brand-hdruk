@@ -1,0 +1,11 @@
+{
+  "color": {
+    "$type": "color",
+    "body": {
+      "base": {
+        "$value": "{color.futures.ink}",
+        "$description": "Ink body text on cream."
+      }
+    }
+  }
+}

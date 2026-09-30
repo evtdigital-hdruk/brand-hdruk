@@ -1,0 +1,65 @@
+{
+  "color": {
+    "$type": "color",
+    "nav": {
+      "link": {
+        "text": {
+          "base": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.8
+              }
+            ]
+          }
+        }
+      },
+      "tabs": {
+        "base": {
+          "border": {
+            "base": {
+              "$value": "{color.futures.cream}",
+              "modify": [
+                {
+                  "type": "alpha",
+                  "amount": 0.12
+                }
+              ]
+            }
+          },
+          "link": {
+            "hover": {
+              "bg": {
+                "$value": "{color.futures.cream}",
+                "modify": [
+                  {
+                    "type": "alpha",
+                    "amount": 0.08
+                  }
+                ]
+              }
+            },
+            "active": {
+              "text": {
+                "$value": "{color.futures.aqua}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "border-color": {
+    "$type": "color",
+    "nav": {
+      "tabs-link": {
+        "border": {
+          "active": {
+            "$value": "{color.futures.aqua}"
+          }
+        }
+      }
+    }
+  }
+}

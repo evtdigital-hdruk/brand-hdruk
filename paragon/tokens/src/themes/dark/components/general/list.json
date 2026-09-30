@@ -1,0 +1,35 @@
+{
+  "color": {
+    "$type": "color",
+    "list-group": {
+      "bg": {
+        "base": {
+          "$value": "{color.futures.ink-raised}"
+        },
+        "hover": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.08
+            }
+          ]
+        }
+      },
+      "border": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      },
+      "action": {
+        "base": {
+          "$value": "{color.futures.cream}"
+        }
+      }
+    }
+  }
+}

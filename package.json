@@ -4,9 +4,10 @@
   "description": "The branding and SASS theme package for Futures.",
   "scripts": {
     "build-tokens": "paragon build-tokens --source ./paragon/tokens/src/ --build-dir ./paragon/build -t light,dark --base-paragon-theme light",
-    "build-scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/build/themes --defaultThemeVariants light,dark --source",
+    "build-scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/themes --defaultThemeVariants light,dark --source",
     "build": "make build",
-    "build:watch": "nodemon --ignore dist -x \"make build\"",
+    "build:watch": "nodemon --ignore dist --ignore package*.json -x \"make build\"",
+    "dev:server": "python3 -m http.server 8090 --directory ./dist",
     "paragon:help": "paragon help"
   },
   "repository": {

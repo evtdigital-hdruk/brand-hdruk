@@ -1,0 +1,66 @@
+{
+  "color": {
+    "$type": "color",
+    "dropdown": {
+      "text": {
+        "$value": "{color.futures.cream}"
+      },
+      "header": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.6
+          }
+        ]
+      },
+      "bg": {
+        "$value": "{color.futures.ink-raised}"
+      },
+      "border": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      },
+      "divider-bg": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      },
+      "link": {
+        "base": {
+          "$value": "{color.futures.cream}"
+        },
+        "hover": {
+          "base": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 1
+              }
+            ],
+            "$description": " (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index)."
+          },
+          "bg": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.08
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

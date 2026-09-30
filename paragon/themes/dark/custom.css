@@ -1,0 +1,536 @@
+/* Futures dark theme: rules Paragon has no token for. Everything colour-
+   bearing that Paragon exposes as a token is in paragon/tokens/src/themes/dark
+   and is NOT repeated here. Selectors are scoped to the active variant
+   attribute frontend-platform sets on <html>, which also gives them the
+   specificity the old `.dark` class rules had. */
+
+/* ---- Text that bakes black/grey at equal specificity ---- */
+html[data-paragon-theme-variant="dark"] .edit-section-header,
+html[data-paragon-theme-variant="dark"] h2.edit-section-header,
+html[data-paragon-theme-variant="dark"] .section-title {
+  color: var(--pgn-color-futures-cream) !important;
+}
+
+html[data-paragon-theme-variant="dark"] p,
+html[data-paragon-theme-variant="dark"] span,
+html[data-paragon-theme-variant="dark"] li,
+html[data-paragon-theme-variant="dark"] dt,
+html[data-paragon-theme-variant="dark"] dd,
+html[data-paragon-theme-variant="dark"] label,
+html[data-paragon-theme-variant="dark"] small {
+  color: inherit;
+}
+
+/* Monochrome inline icons often hardcode fill: #000. */
+html[data-paragon-theme-variant="dark"] svg {
+  fill: currentColor;
+}
+
+html[data-paragon-theme-variant="dark"] .border-light,
+html[data-paragon-theme-variant="dark"] [class*="border-light"] {
+  border-color: var(--pgn-color-border) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .icon-container,
+html[data-paragon-theme-variant="dark"] [aria-label*="notification" i] {
+  color: var(--pgn-color-futures-cream);
+}
+
+/* Indigo "primary" text utilities are low-contrast on ink; use aqua. */
+html[data-paragon-theme-variant="dark"] [class*="text-primary"] {
+  color: var(--pgn-color-brand-500) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .grade-bar rect:first-of-type {
+  fill: rgba(245, 242, 235, 0.16) !important;
+}
+
+html[data-paragon-theme-variant="dark"] small,
+html[data-paragon-theme-variant="dark"] .small,
+html[data-paragon-theme-variant="dark"] .x-small,
+html[data-paragon-theme-variant="dark"] .micro {
+  color: rgba(245, 242, 235, 0.8);
+}
+
+/* Course-material tabs built without .nav-tabs. */
+html[data-paragon-theme-variant="dark"] .nav-link.h-100,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link {
+  color: rgba(245, 242, 235, 0.8);
+}
+
+html[data-paragon-theme-variant="dark"] .nav-link.h-100:hover,
+html[data-paragon-theme-variant="dark"] .nav-link.h-100:focus,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link:hover,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link:focus {
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .nav-link.h-100.active,
+html[data-paragon-theme-variant="dark"] nav[class*="tab"] .nav-link.active {
+  color: var(--pgn-color-brand-500);
+  border-color: var(--pgn-color-brand-500);
+}
+
+/* Utilities that name white or black stay literal (white text on the indigo
+   hero, the modal backdrop); only .text-black flips, as on Teak. */
+html[data-paragon-theme-variant="dark"] .text-black {
+  color: var(--pgn-color-futures-cream) !important;
+}
+
+/* ---- Surfaces ---- */
+html[data-paragon-theme-variant="dark"] .bg-white,
+html[data-paragon-theme-variant="dark"] .bg-light {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+}
+
+/* Authn side panel: ink so it blends into the page. */
+html[data-paragon-theme-variant="dark"] .col-md-3.bg-white.p-0,
+html[data-paragon-theme-variant="dark"] .bg-light-200 {
+  background-color: var(--pgn-color-bg-base) !important;
+}
+
+/* Card header text bakes black at (0,3,0). */
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title-sm,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title-md,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-title-lg,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-content,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-content *,
+html[data-paragon-theme-variant="dark"] .course-card-title {
+  color: var(--pgn-color-futures-cream) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__card-header-subtitle-sm,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-subtitle-md,
+html[data-paragon-theme-variant="dark"] .pgn__card-header-subtitle-lg {
+  color: rgba(245, 242, 235, 0.8) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__card-light {
+  background-color: var(--pgn-color-futures-ink-raised);
+  color: var(--pgn-color-futures-cream);
+}
+
+/* ---- Forms ---- */
+/* The authn MFE forces .form-control to var(--pgn-color-white) !important in
+   its own stylesheet; Teak beat it the same way. Inputs follow the input
+   tokens (raised ink surface, cream text) whatever the host sets. */
+html[data-paragon-theme-variant="dark"] .form-control,
+html[data-paragon-theme-variant="dark"] .pgn__form-control,
+html[data-paragon-theme-variant="dark"] .pgn__form-control-decorator-group {
+  background-color: var(--pgn-color-form-input-bg-base) !important;
+  color: var(--pgn-color-form-input-base) !important;
+}
+
+/* Autosuggest dropdown (country, and other FormAutosuggest fields). Paragon
+   hard-wires its background to --pgn-color-white instead of the dropdown
+   token, so it needs a rule of its own: raised surface, cream items, a
+   stronger cream wash on hover than ordinary menus (Teak values). */
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  border: 1px solid rgba(245, 242, 235, 0.2);
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item,
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item:active {
+  color: var(--pgn-color-futures-cream) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item:hover,
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .dropdown-item:focus {
+  background-color: rgba(245, 242, 235, 0.2) !important;
+  color: var(--pgn-color-futures-cream) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown .pgn__form-autosuggest__dropdown-loading .spinner-border {
+  border-color: var(--pgn-color-futures-cream);
+  border-right-color: transparent;
+}
+
+/* The clear / expand icon button inside the field. */
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-control-decorator .btn-icon:hover,
+html[data-paragon-theme-variant="dark"] .pgn__form-autosuggest__wrapper .pgn__form-control-decorator .btn-icon:focus {
+  fill: var(--pgn-color-futures-cream);
+}
+
+/* Floating label text: Paragon colours .has-floating-label gray-500; use
+   muted cream, as on Teak. */
+html[data-paragon-theme-variant="dark"] .pgn__form-control-floating-label-text {
+  color: rgba(245, 242, 235, 0.6);
+}
+
+/* Native control accents and the weekly-goal flag buttons */
+html[data-paragon-theme-variant="dark"] input[type="checkbox"],
+html[data-paragon-theme-variant="dark"] input[type="radio"],
+html[data-paragon-theme-variant="dark"] .pgn__form-checkbox-input,
+html[data-paragon-theme-variant="dark"] .pgn__form-radio-input,
+html[data-paragon-theme-variant="dark"] .pgn__form-switch-input {
+  accent-color: var(--pgn-color-brand-500);
+}
+
+html[data-paragon-theme-variant="dark"] .flag-button {
+  background-color: var(--pgn-color-futures-ink-raised);
+  border-color: var(--pgn-color-border);
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .flag-button.selected,
+html[data-paragon-theme-variant="dark"] .flag-button:hover {
+  border-color: var(--pgn-color-brand-500);
+}
+
+/* Modal chrome borders and striped tables have no token. */
+html[data-paragon-theme-variant="dark"] .modal-header,
+html[data-paragon-theme-variant="dark"] .modal-footer {
+  border-color: var(--pgn-color-border);
+}
+
+html[data-paragon-theme-variant="dark"] .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(245, 242, 235, 0.04);
+}
+
+html[data-paragon-theme-variant="dark"] .breadcrumb {
+  background-color: transparent;
+}
+
+/* ---- Site header: ink bar, cream links, aqua on hover ---- */
+html[data-paragon-theme-variant="dark"] .site-header-desktop,
+html[data-paragon-theme-variant="dark"] .site-header-mobile,
+html[data-paragon-theme-variant="dark"] .learning-header {
+  background-color: var(--pgn-color-bg-base);
+  border-bottom-color: var(--pgn-color-border);
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .site-header-desktop .icon-button,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .menu-trigger,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .icon-button,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .icon-button svg,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .menu-trigger svg,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .icon-button svg,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger svg {
+  color: var(--pgn-color-futures-cream);
+  fill: currentColor;
+}
+
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .secondary-menu-container .nav-link {
+  color: var(--pgn-color-futures-cream);
+  background-color: transparent;
+}
+
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link:hover,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link:focus,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .nav-link.active,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .main-nav .expanded .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link:hover,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link:focus,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .nav-link.active,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .expanded .nav-link,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link:hover,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link:focus,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .nav-link.active,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .main-nav .expanded .nav-link {
+  color: var(--pgn-color-brand-500);
+  background-color: transparent;
+}
+
+/* Header icon buttons: white glyph; fill and focus ring via the IconButton
+   hooks in core.scss, with the ring in aqua for dark. */
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .btn.hdruk-header-icon,
+html[data-paragon-theme-variant="dark"] .btn.hdruk-header-icon {
+  --btn-icon-color: #fff;
+  --btn-icon-hover-color: #fff;
+  --btn-icon-focus-color: #fff;
+  --pgn-btn-color: #fff;
+  --pgn-btn-hover-color: #fff;
+  --pgn-btn-focus-color: #fff;
+  --pgn-btn-active-color: #fff;
+  --pgn-btn-focus-outline-color: var(--pgn-color-brand-500);
+  color: #fff;
+}
+
+html[data-paragon-theme-variant="dark"] .btn.hdruk-header-icon svg,
+html[data-paragon-theme-variant="dark"] .btn.hdruk-header-icon .pgn__icon svg {
+  color: #fff;
+  fill: currentColor;
+}
+
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .menu-trigger.btn-outline-primary,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .secondary-menu-container .menu-trigger.btn-outline-primary,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger.btn-outline-primary {
+  color: var(--pgn-color-futures-cream);
+  background-color: transparent;
+  border-color: rgba(245, 242, 235, 0.2);
+}
+
+html[data-paragon-theme-variant="dark"] .site-header-desktop .secondary-menu-container .menu-trigger.btn-outline-primary:hover,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .secondary-menu-container .menu-trigger.btn-outline-primary:hover,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger.btn-outline-primary:hover {
+  background-color: rgba(245, 242, 235, 0.08);
+  border-color: var(--pgn-color-brand-500);
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .learning-header .course-title,
+html[data-paragon-theme-variant="dark"] .learning-header a,
+html[data-paragon-theme-variant="dark"] .course-title,
+html[data-paragon-theme-variant="dark"] .course-title-lockup {
+  color: var(--pgn-color-futures-cream);
+}
+
+/* Header focus ring is aqua in dark (set as one outline in core.scss). */
+html[data-paragon-theme-variant="dark"] .site-header-desktop a:focus-visible,
+html[data-paragon-theme-variant="dark"] .site-header-mobile a:focus-visible,
+html[data-paragon-theme-variant="dark"] .learning-header a:focus-visible,
+html[data-paragon-theme-variant="dark"] .site-header-desktop .menu-trigger:focus-visible,
+html[data-paragon-theme-variant="dark"] .site-header-mobile .menu-trigger:focus-visible,
+html[data-paragon-theme-variant="dark"] .learning-header .menu-trigger:focus-visible {
+  outline-color: var(--pgn-color-brand-500);
+}
+
+/* User menu panel: the header component hard-wires it to --pgn-color-white. */
+html[data-paragon-theme-variant="dark"] .menu-content {
+  background: var(--pgn-color-dropdown-bg);
+  border: 1px solid var(--pgn-color-border);
+  color: var(--pgn-color-futures-cream);
+}
+
+/* ---- Paragon components that read the light scale directly ----
+   These rules use --pgn-color-light-N rather than a component token, and the
+   light scale stays literal in dark (text-light-* must remain light on the
+   indigo hero), so each gets a dark value here. */
+html[data-paragon-theme-variant="dark"] .pgn__card .pgn__card-section.is-muted {
+  background-color: rgba(245, 242, 235, 0.05);
+  color: rgba(245, 242, 235, 0.8);
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__card .pgn__card-status.pgn__card-status__light {
+  background-color: rgba(245, 242, 235, 0.05);
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__progress-annotated .progress,
+html[data-paragon-theme-variant="dark"] .pgn__dropzone__upload-icon-wrapper {
+  background-color: rgba(245, 242, 235, 0.12);
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__data-table th {
+  background-color: rgba(245, 242, 235, 0.08);
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .pgn__data-table.is-striped tr:nth-child(even) {
+  background-color: rgba(245, 242, 235, 0.04);
+}
+
+/* ---- Pagination (Paragon 23 renders the pages as Buttons, so the pagination
+   tokens do not apply): raised ink pages, aqua current page with ink text. */
+html[data-paragon-theme-variant="dark"] .pagination .page-link.btn {
+  --pgn-btn-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-btn-color: var(--pgn-color-futures-cream);
+  --pgn-btn-hover-bg: #303134;
+  --pgn-btn-hover-color: var(--pgn-color-futures-cream);
+  --pgn-btn-focus-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-btn-focus-color: var(--pgn-color-futures-cream);
+  --pgn-btn-active-bg: #303134;
+  --pgn-btn-active-color: var(--pgn-color-futures-cream);
+  --pgn-btn-disabled-bg: var(--pgn-color-futures-ink-raised);
+  --pgn-btn-disabled-color: rgba(245, 242, 235, 0.6);
+  border: 1px solid var(--pgn-color-border);
+}
+
+html[data-paragon-theme-variant="dark"] .pagination .page-item.active .page-link.btn {
+  --pgn-btn-bg: var(--pgn-color-brand-500);
+  --pgn-btn-color: var(--pgn-color-futures-ink);
+  --pgn-btn-hover-bg: var(--pgn-color-brand-700);
+  --pgn-btn-hover-color: var(--pgn-color-futures-ink);
+  --pgn-btn-focus-bg: var(--pgn-color-brand-500);
+  --pgn-btn-focus-color: var(--pgn-color-futures-ink);
+  --pgn-btn-active-bg: var(--pgn-color-brand-700);
+  --pgn-btn-active-color: var(--pgn-color-futures-ink);
+  border-color: var(--pgn-color-brand-500);
+}
+
+/* ---- Profile MFE: surfaces it hard-codes as literal colours ---- */
+html[data-paragon-theme-variant="dark"] .bg-color-grey-FBFAF9 {
+  background-color: var(--pgn-color-bg-base);
+}
+
+html[data-paragon-theme-variant="dark"] .certificate {
+  background-color: var(--pgn-color-futures-ink-raised);
+  border-color: var(--pgn-color-border);
+}
+
+html[data-paragon-theme-variant="dark"] .color-black {
+  color: var(--pgn-color-futures-cream);
+}
+
+/* ---- Learning MFE: course-outline sidebar and courseware chrome ---- */
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  border-color: var(--pgn-color-border) !important;
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper h1,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper h2,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper h3,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper button,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper span,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper a {
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper .btn-icon {
+  background-color: transparent !important;
+}
+
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper .btn-icon:hover,
+html[data-paragon-theme-variant="dark"] .outline-sidebar-heading-wrapper .btn-icon:focus {
+  background-color: rgba(245, 242, 235, 0.08) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .course-sidebar-section {
+  background: var(--pgn-color-futures-ink-raised);
+  border-color: var(--pgn-color-border);
+}
+
+html[data-paragon-theme-variant="dark"] .course-sidebar-section button,
+html[data-paragon-theme-variant="dark"] .course-sidebar-section button span,
+html[data-paragon-theme-variant="dark"] .course-sidebar-section a {
+  color: var(--pgn-color-futures-cream);
+}
+
+/* The outline's active item uses .bg-info-100; the aqua tint reads muddy
+   there, so give it a neutral cream wash instead. */
+html[data-paragon-theme-variant="dark"] #outline-sidebar-outline li.bg-info-100,
+html[data-paragon-theme-variant="dark"] #outline-sidebar-outline .bg-info-100 {
+  background-color: rgba(245, 242, 235, 0.08) !important;
+}
+
+html[data-paragon-theme-variant="dark"] #outline-sidebar-outline li .collapsible-trigger:hover,
+html[data-paragon-theme-variant="dark"] .course-tabs-navigation .nav a:not(.active):hover {
+  background-color: rgba(245, 242, 235, 0.06) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .sequence,
+html[data-paragon-theme-variant="dark"] .course-tabs-navigation {
+  border-color: var(--pgn-color-border) !important;
+}
+
+html[data-paragon-theme-variant="dark"] #non-passing-grade-tooltip,
+html[data-paragon-theme-variant="dark"] #non-passing-grade-tooltip.tooltip .tooltip-inner {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  color: var(--pgn-color-futures-cream) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .raised-card .bg-warning-100 {
+  background-color: rgba(245, 242, 235, 0.06) !important;
+}
+
+html[data-paragon-theme-variant="dark"] .raised-card .bg-warning-100 .pgn__icon {
+  color: var(--pgn-color-warning-500);
+}
+
+/* ---- Authn ---- */
+/* The floated label chip takes the input background from its token; the
+   label content box itself stays transparent (Teak rule). */
+html[data-paragon-theme-variant="dark"] .pgn__form-control-floating-label-content {
+  background-color: transparent !important;
+}
+
+/* Trailing icon buttons inside inputs (password show/hide) follow the input
+   text colour. Scoped to the decorator group so icon buttons elsewhere keep
+   Paragon's colours. */
+html[data-paragon-theme-variant="dark"] .pgn__form-control-decorator-group .btn-icon,
+html[data-paragon-theme-variant="dark"] .pgn__form-control-decorator-group .btn-icon-secondary {
+  --btn-icon-color: var(--pgn-color-futures-cream);
+  --btn-icon-hover-color: var(--pgn-color-futures-cream);
+  --btn-icon-focus-color: var(--pgn-color-futures-cream);
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] #password-requirement-top .tooltip-inner {
+  border: solid 1px rgba(245, 242, 235, 0.2) !important;
+}
+
+html[data-paragon-theme-variant="dark"] #login-failure-alert,
+html[data-paragon-theme-variant="dark"] #validation-errors {
+  background-color: var(--pgn-color-futures-ink-raised) !important;
+  border-color: rgba(245, 242, 235, 0.2) !important;
+}
+
+html[data-paragon-theme-variant="dark"] #login-failure-alert .alert-heading,
+html[data-paragon-theme-variant="dark"] #validation-errors .alert-heading {
+  color: #ffffff !important;
+}
+
+/* Authn username suggestions: the MFE colours the chips indigo-700 itself. */
+html[data-paragon-theme-variant="dark"] .username-suggestions--chip {
+  color: var(--pgn-color-futures-cream);
+}
+
+/* Alerts rendered without a variant class have no token; give them the dark
+   surface. Variant alerts keep their tinted token backgrounds. */
+html[data-paragon-theme-variant="dark"] .alert:not([class*="alert-"]) {
+  background-color: var(--pgn-color-futures-ink-raised);
+  color: var(--pgn-color-futures-cream);
+  border-color: var(--pgn-color-border);
+}
+
+/* Product tour: the inactive breadcrumb dot has no token. */
+html[data-paragon-theme-variant="dark"] .pgn__checkpoint .pgn__checkpoint-breadcrumb.pgn__checkpoint-breadcrumb_inactive {
+  border-color: rgba(245, 242, 235, 0.4);
+}
+
+/* ---- Footer ---- */
+html[data-paragon-theme-variant="dark"] .footer,
+html[data-paragon-theme-variant="dark"] .wrapper-footer {
+  background-color: var(--pgn-color-bg-base);
+  color: rgba(245, 242, 235, 0.8);
+}
+
+html[data-paragon-theme-variant="dark"] .footer .content-container .nav-colophon ol li a,
+html[data-paragon-theme-variant="dark"] .footer .nav-colophon a,
+html[data-paragon-theme-variant="dark"] .footer a {
+  color: var(--pgn-color-futures-cream);
+}
+
+html[data-paragon-theme-variant="dark"] .footer .content-container .nav-colophon ol li a:hover,
+html[data-paragon-theme-variant="dark"] .footer .content-container .nav-colophon ol li a:focus,
+html[data-paragon-theme-variant="dark"] .footer .nav-colophon a:hover,
+html[data-paragon-theme-variant="dark"] .footer .nav-colophon a:focus,
+html[data-paragon-theme-variant="dark"] .footer a:hover,
+html[data-paragon-theme-variant="dark"] .footer a:focus {
+  color: var(--pgn-color-brand-500);
+}
+
+/* "Powered by" logos and the Futures mark are ink; invert to light. */
+html[data-paragon-theme-variant="dark"] .footer .powered-area img:not(.no-dark-invert),
+html[data-paragon-theme-variant="dark"] .logo img,
+html[data-paragon-theme-variant="dark"] img.logo {
+  filter: brightness(0) invert(1);
+}
+
+/* ---- Learner-dashboard course cards ---- */
+html[data-paragon-theme-variant="dark"] .course-card:hover .pgn__card,
+html[data-paragon-theme-variant="dark"] .course-card .pgn__card:focus-within {
+  border-color: var(--pgn-color-brand-500);
+}
+
+html[data-paragon-theme-variant="dark"] .course-card .pgn__icon-button,
+html[data-paragon-theme-variant="dark"] .course-card .btn-icon,
+html[data-paragon-theme-variant="dark"] .course-card .pgn__icon-button svg,
+html[data-paragon-theme-variant="dark"] .course-card .btn-icon svg {
+  color: var(--pgn-color-futures-cream);
+  border-color: rgba(245, 242, 235, 0.2);
+  fill: currentColor;
+}
+
+html[data-paragon-theme-variant="dark"] main .d-flex.align-items-center.justify-content-center.mb-4\.5 {
+  border-color: var(--pgn-color-border) !important;
+}

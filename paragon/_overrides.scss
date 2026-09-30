@@ -1,3 +1,10 @@
+// DEPRECATED (Ulmo / Paragon 23): this SCSS is no longer compiled into the
+// MFEs. The runtime theme is built from the design tokens under
+// paragon/tokens/src and the residual rules in paragon/themes/<variant>/custom.css
+// and paragon/core.scss; every rule below has been ported there. It is kept
+// only because hdruk-frontend-plugin-slots' Storybook still imports it; delete
+// it once Storybook loads dist/light.css and dist/dark.css instead.
+//
 // Use this file to define style overrides for @edx/paragon
 // This file is included after all Paragon styles, but should generally avoid
 // using private mixins in Paragon.

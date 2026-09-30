@@ -1,0 +1,58 @@
+/* Futures light theme: rules Paragon has no token for. Values reference the
+   generated --pgn-* variables so a token change propagates here too.
+   Selectors are prefixed with `html` for one extra element of specificity. */
+
+/* ---- Authn (register / sign in) layout ---- */
+/* "White" page panels are the cream page background in light. Cards and
+   inputs are tokens (white) and are not affected. The mode-independent authn
+   rules (hero, SVG fills, decorator group, floating select) are in core.scss. */
+html .col-md-3.bg-white.p-0,
+html .bg-light-200,
+html .bg-white {
+  background-color: var(--pgn-color-bg-base) !important;
+}
+
+/* ---- Site header: cream bar, ink links, indigo on hover ---- */
+html .site-header-desktop,
+html .site-header-mobile,
+html .learning-header {
+  background-color: var(--pgn-color-bg-base);
+}
+
+html .site-header-desktop .main-nav .nav-link,
+html .site-header-desktop .secondary-menu-container .nav-link,
+html .site-header-mobile .main-nav .nav-link,
+html .site-header-mobile .secondary-menu-container .nav-link {
+  color: var(--pgn-color-body-base);
+}
+
+/* The header package sets a hover background on nav-links; keep them flat. */
+html .site-header-desktop .main-nav .nav-link:hover,
+html .site-header-desktop .main-nav .nav-link:focus,
+html .site-header-desktop .main-nav .nav-link.active,
+html .site-header-desktop .main-nav .expanded .nav-link,
+html .site-header-desktop .secondary-menu-container .nav-link:hover,
+html .site-header-desktop .secondary-menu-container .nav-link:focus,
+html .site-header-desktop .secondary-menu-container .nav-link.active,
+html .site-header-desktop .secondary-menu-container .expanded .nav-link,
+html .site-header-mobile .main-nav .nav-link:hover,
+html .site-header-mobile .main-nav .nav-link:focus,
+html .site-header-mobile .main-nav .nav-link.active,
+html .site-header-mobile .main-nav .expanded .nav-link {
+  color: var(--pgn-color-primary-500);
+  background-color: transparent;
+}
+
+/* Header icon buttons: ink glyph in every state; the hover/focus fill and the
+   focus ring come from the IconButton hooks set in core.scss. */
+html .site-header-desktop .secondary-menu-container .btn.hdruk-header-icon,
+html .btn.hdruk-header-icon {
+  --btn-icon-color: var(--pgn-color-body-base);
+  --btn-icon-hover-color: var(--pgn-color-body-base);
+  --btn-icon-focus-color: var(--pgn-color-body-base);
+  --pgn-btn-color: var(--pgn-color-body-base);
+  --pgn-btn-hover-color: var(--pgn-color-body-base);
+  --pgn-btn-focus-color: var(--pgn-color-body-base);
+  --pgn-btn-active-color: var(--pgn-color-body-base);
+  color: var(--pgn-color-body-base);
+}

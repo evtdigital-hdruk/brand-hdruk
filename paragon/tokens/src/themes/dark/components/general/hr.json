@@ -1,0 +1,16 @@
+{
+  "color": {
+    "$type": "color",
+    "hr": {
+      "border": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      }
+    }
+  }
+}

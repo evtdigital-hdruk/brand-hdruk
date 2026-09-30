@@ -1,0 +1,93 @@
+{
+  "color": {
+    "$type": "color",
+    "btn": {
+      "text": {
+        "outline-dark": {
+          "$value": "{color.futures.cream}"
+        }
+      },
+      "border": {
+        "outline-dark": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.4
+            }
+          ]
+        }
+      },
+      "hover": {
+        "text": {
+          "outline-dark": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 1
+              }
+            ]
+          }
+        },
+        "bg": {
+          "outline-dark": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.08
+              }
+            ]
+          }
+        },
+        "border": {
+          "outline-dark": {
+            "$value": "{color.futures.cream}"
+          }
+        }
+      },
+      "active": {
+        "text": {
+          "outline-dark": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 1
+              }
+            ]
+          }
+        },
+        "bg": {
+          "outline-dark": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.12
+              }
+            ]
+          }
+        },
+        "border": {
+          "outline-dark": {
+            "$value": "{color.futures.cream}"
+          }
+        }
+      },
+      "focus": {
+        "border": {
+          "outline-dark": {
+            "$value": "{color.futures.cream}"
+          }
+        },
+        "outline": {
+          "outline-dark": {
+            "$value": "{color.futures.aqua}"
+          }
+        }
+      }
+    }
+  }
+}

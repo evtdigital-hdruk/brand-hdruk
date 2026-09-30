@@ -1,0 +1,11 @@
+{
+  "color": {
+    "$type": "color",
+    "dropdown": {
+      "bg": {
+        "$value": "{color.white}",
+        "$description": "Autosuggest and menus stay white on cream."
+      }
+    }
+  }
+}

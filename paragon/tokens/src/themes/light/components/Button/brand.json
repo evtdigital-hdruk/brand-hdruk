@@ -1,0 +1,47 @@
+{
+  "color": {
+    "$type": "color",
+    "btn": {
+      "text": {
+        "brand": {
+          "$value": "{color.futures.ink}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 1
+            }
+          ],
+          "$description": "Ink on aqua (alpha 1 replaces Paragon's colour-yiq, which is baked into a literal at build time)."
+        }
+      },
+      "hover": {
+        "text": {
+          "brand": {
+            "$value": "{color.futures.ink}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 1
+              }
+            ],
+            "$description": "Ink on aqua (alpha 1 replaces Paragon's colour-yiq, which is baked into a literal at build time)."
+          }
+        }
+      },
+      "active": {
+        "text": {
+          "brand": {
+            "$value": "{color.futures.ink}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 1
+              }
+            ],
+            "$description": "Ink on aqua (alpha 1 replaces Paragon's colour-yiq, which is baked into a literal at build time)."
+          }
+        }
+      }
+    }
+  }
+}

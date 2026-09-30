@@ -1,3 +1,8 @@
+// DEPRECATED (Ulmo / Paragon 23): the MFEs no longer read these SASS variables;
+// the palette and typography live in paragon/tokens/src. Kept for the slots
+// package's SCSS (FooterSlot imports it for $font-family-sans-serif) and
+// Storybook. Keep the values in step with the tokens until it is removed.
+//
 // Use this file to set SASS variables for @edx/paragon
 // See _variables.scss in https://github.com/openedx/paragon/blob/master/scss/core/ for reference
 //

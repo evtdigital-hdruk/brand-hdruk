@@ -1,0 +1,37 @@
+{
+  "color": {
+    "$type": "color",
+    "badge": {
+      "text": {
+        "light": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 1
+            }
+          ],
+          "$description": " (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index)."
+        },
+        "secondary": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 1
+            }
+          ],
+          "$description": " (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index)."
+        }
+      },
+      "bg": {
+        "light": {
+          "$value": "{color.futures.ink-raised}"
+        },
+        "secondary": {
+          "$value": "{color.futures.ink-raised}"
+        }
+      }
+    }
+  }
+}

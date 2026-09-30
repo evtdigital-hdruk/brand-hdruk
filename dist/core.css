@@ -666,3 +666,125 @@
   --pgn-typography-form-control-file-font-weight: var(--pgn-typography-form-input-font-weight);
   --pgn-size-form-control-select-height-lg: var(--pgn-size-form-input-height-lg);
 }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  letter-spacing: -0.025em;
+}
+html .site-header-desktop,
+html .site-header-mobile,
+html .learning-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+html .site-header-desktop .main-nav .nav-link,
+html .site-header-desktop .secondary-menu-container .nav-link {
+  background-color: transparent;
+  font-size: 0.9375rem;
+}
+html .site-header-desktop .secondary-menu-container .btn.hdruk-header-icon,
+html .btn.hdruk-header-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  border-radius: 0.875rem;
+  --btn-icon-bg-color: transparent;
+  --btn-icon-hover-bg-color: var(--pgn-color-futures-header-icon-hover-bg);
+  --btn-icon-focus-bg-color: var(--pgn-color-futures-header-icon-hover-bg);
+  --btn-icon-box-shadow: none;
+  --pgn-btn-bg: transparent;
+  --pgn-btn-border-color: transparent;
+  --pgn-btn-hover-bg: var(--pgn-color-futures-header-icon-hover-bg);
+  --pgn-btn-hover-border-color: transparent;
+  --pgn-btn-focus-bg: var(--pgn-color-futures-header-icon-hover-bg);
+  --pgn-btn-focus-border-color: transparent;
+  --pgn-btn-active-bg: var(--pgn-color-futures-header-icon-hover-bg);
+  --pgn-btn-focus-outline-color: var(--pgn-color-primary-500);
+}
+html .site-header-desktop a:focus-visible,
+html .site-header-mobile a:focus-visible,
+html .learning-header a:focus-visible,
+html .site-header-desktop .menu-trigger:focus-visible,
+html .site-header-mobile .menu-trigger:focus-visible,
+html .learning-header .menu-trigger:focus-visible {
+  outline: 2px solid var(--pgn-color-primary-500);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+html .site-header-desktop .menu-trigger:focus::before,
+html .site-header-mobile .menu-trigger:focus::before,
+html .learning-header .menu-trigger:focus::before {
+  content: none;
+}
+html .site-header-desktop .logo,
+html .site-header-mobile .logo {
+  display: inline-flex;
+  align-items: center;
+  height: 100% !important;
+  padding: 0;
+}
+html .site-header-desktop .logo img,
+html .site-header-mobile .logo img {
+  width: 72px;
+  height: auto !important;
+}
+html .learning-header .logo {
+  display: inline-flex;
+  align-items: center;
+  height: auto !important;
+  padding: 0;
+}
+html .learning-header .logo img {
+  width: 72px;
+  height: auto !important;
+}
+html .bg-primary-400.w-100,
+html .col-md-9.bg-primary-400,
+html .col-md-10.bg-primary-400 {
+  background-color: var(--pgn-color-primary-500) !important;
+}
+html .medium-screen-svg-primary,
+html .large-screen-svg-primary {
+  fill: var(--pgn-color-primary-500) !important;
+}
+html .large-screen-svg-light,
+html .medium-screen-svg-light {
+  fill: var(--pgn-color-bg-base) !important;
+}
+html .bg-white h1, html .bg-white h2, html .bg-white h3,
+html .bg-white h4, html .bg-white h5, html .bg-white h6 {
+  color: var(--pgn-color-headings-base);
+}
+html .pgn__form-control-decorator-group {
+  background-color: var(--pgn-color-form-input-bg-base);
+}
+html .has-floating-label select.form-control:not(.has-value):not(:focus) {
+  color: transparent !important;
+}
+html .medium-yellow-line {
+  border: 3px solid var(--pgn-color-brand-500);
+}
+html .btn-accent-a {
+  --pgn-btn-color: var(--pgn-color-futures-ink);
+  --pgn-btn-bg: var(--pgn-color-brand-500);
+  --pgn-btn-border-color: var(--pgn-color-brand-500);
+  --pgn-btn-hover-color: var(--pgn-color-futures-ink);
+  --pgn-btn-hover-bg: var(--pgn-color-brand-700);
+  --pgn-btn-hover-border-color: var(--pgn-color-brand-700);
+  --pgn-btn-focus-color: var(--pgn-color-futures-ink);
+  --pgn-btn-focus-bg: var(--pgn-color-brand-500);
+  --pgn-btn-focus-border-color: var(--pgn-color-brand-500);
+  --pgn-btn-focus-outline-color: var(--pgn-color-brand-500);
+  --pgn-btn-active-color: var(--pgn-color-futures-ink);
+  --pgn-btn-active-bg: var(--pgn-color-brand-900);
+  --pgn-btn-active-border-color: var(--pgn-color-brand-900);
+  background-color: var(--pgn-color-brand-500);
+  border-color: var(--pgn-color-brand-500);
+  color: var(--pgn-color-futures-ink);
+}
+html.hdruk-no-transition,
+html.hdruk-no-transition *,
+html.hdruk-no-transition *::before,
+html.hdruk-no-transition *::after {
+  transition: none !important;
+}

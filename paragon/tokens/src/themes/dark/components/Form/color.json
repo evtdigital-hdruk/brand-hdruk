@@ -1,0 +1,87 @@
+{
+  "color": {
+    "$type": "color",
+    "form": {
+      "input": {
+        "base": {
+          "$value": "{color.futures.cream}"
+        },
+        "placeholder": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.6
+            }
+          ]
+        },
+        "border": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.2
+            }
+          ]
+        },
+        "bg": {
+          "base": {
+            "$value": "{color.futures.ink-raised}"
+          },
+          "disabled": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.06
+              }
+            ]
+          }
+        },
+        "group": {
+          "addon": {
+            "bg": {
+              "$value": "{color.futures.ink-raised}"
+            }
+          }
+        }
+      },
+      "control": {
+        "indicator": {
+          "border": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.6
+              }
+            ]
+          }
+        },
+        "label": {
+          "floating": {
+            "text": {
+              "$value": "{color.futures.ink-raised}",
+              "modify": [
+                {
+                  "type": "alpha",
+                  "amount": 1
+                }
+              ],
+              "$description": "Floating label chip matches the input surface (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index)."
+            }
+          }
+        },
+        "switch": {
+          "indicator": {
+            "checked": {
+              "bg": {
+                "$value": "{color.futures.aqua}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

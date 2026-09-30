@@ -1,8 +1,192 @@
 // Assembled by `paragon build-scss` into `dist/core.css`, which the MFEs load
 // as the brand's core override (see HDRUKFUTURESTHEME_PARAGON_THEME_BASE_URL
-// in tutor-hdrukfuturestheme). Fonts and the token-generated core variables
-// must be here or they never reach the MFE: Paragon 23 MFEs do not compile
-// this package's SCSS, they only load the built CSS.
+// in tutor-hdrukfuturestheme). Paragon 23 MFEs do not compile this package's
+// SCSS; they only load the built CSS, so anything that must reach an MFE has
+// to be here or in a theme variant (paragon/themes/<variant>/custom.css).
+//
+// Colour never belongs in this file: it comes from the design tokens under
+// paragon/tokens/src and the variant stylesheets. Only fonts, the generated
+// core variables, and mode-independent layout rules that have no Paragon
+// token live here.
 
 @use "./fonts";
 @use "./build/core/variables";
+
+// Headings tracking (Paragon has no letter-spacing token).
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  letter-spacing: -0.025em;
+}
+
+// Rules are nested under `html` for one extra element of specificity, so they
+// beat @edx/frontend-component-header's own single-class defaults regardless
+// of stylesheet order.
+html {
+  // Sticky site header (colour per variant).
+  .site-header-desktop,
+  .site-header-mobile,
+  .learning-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  // Header nav-links: transparent background in every state; colour per variant.
+  .site-header-desktop .main-nav .nav-link,
+  .site-header-desktop .secondary-menu-container .nav-link {
+    background-color: transparent;
+    font-size: 0.9375rem;
+  }
+
+  // Search and theme icon buttons: 44px rounded squares (marketing nav).
+  // Colour goes through the custom properties Paragon 23's IconButton reads
+  // on :hover and :focus (the same hooks its own variants set), so no
+  // declaration overrides are needed and Paragon's focus ring is the only one.
+  // Scoped to the header on purpose: the primary IconButton tokens are left
+  // alone so icon buttons elsewhere keep Paragon's look.
+  .site-header-desktop .secondary-menu-container .btn.hdruk-header-icon,
+  .btn.hdruk-header-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    min-width: 2.75rem;
+    border-radius: 0.875rem;
+    // No background-color declaration here: it would outrank Paragon's
+    // :hover rule and pin the button transparent. Two Paragon rules set the
+    // state backgrounds, .btn-icon:hover (reads --btn-icon-*) and the more
+    // specific .btn:not(...):hover / :focus (reads --pgn-btn-*), so both sets
+    // of hooks are given the same values.
+    --btn-icon-bg-color: transparent;
+    --btn-icon-hover-bg-color: var(--pgn-color-futures-header-icon-hover-bg);
+    --btn-icon-focus-bg-color: var(--pgn-color-futures-header-icon-hover-bg);
+    --btn-icon-box-shadow: none;
+    --pgn-btn-bg: transparent;
+    --pgn-btn-border-color: transparent;
+    --pgn-btn-hover-bg: var(--pgn-color-futures-header-icon-hover-bg);
+    --pgn-btn-hover-border-color: transparent;
+    --pgn-btn-focus-bg: var(--pgn-color-futures-header-icon-hover-bg);
+    --pgn-btn-focus-border-color: transparent;
+    --pgn-btn-active-bg: var(--pgn-color-futures-header-icon-hover-bg);
+    --pgn-btn-focus-outline-color: var(--pgn-color-primary-500);
+  }
+
+  // Header links, logo and user-menu button: one ring. Links otherwise get the
+  // browser's two-tone default, and the user-menu button gets Paragon's
+  // ::before ring on top of its own border. The ring colour is per variant.
+  .site-header-desktop a:focus-visible,
+  .site-header-mobile a:focus-visible,
+  .learning-header a:focus-visible,
+  .site-header-desktop .menu-trigger:focus-visible,
+  .site-header-mobile .menu-trigger:focus-visible,
+  .learning-header .menu-trigger:focus-visible {
+    outline: 2px solid var(--pgn-color-primary-500);
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+
+  .site-header-desktop .menu-trigger:focus::before,
+  .site-header-mobile .menu-trigger:focus::before,
+  .learning-header .menu-trigger:focus::before {
+    content: none;
+  }
+
+  // Logo: 72px wide, vertically centred, aspect ratio kept.
+  .site-header-desktop .logo,
+  .site-header-mobile .logo {
+    display: inline-flex;
+    align-items: center;
+    height: 100% !important;
+    padding: 0;
+
+    img {
+      width: 72px;
+      height: auto !important;
+    }
+  }
+
+  // The Learning MFE header forces `.logo { height: 28px }`; undo it.
+  .learning-header .logo {
+    display: inline-flex;
+    align-items: center;
+    height: auto !important;
+    padding: 0;
+
+    img {
+      width: 72px;
+      height: auto !important;
+    }
+  }
+
+  // Authn (register / sign in) layout, both modes. The hero and its diagonal
+  // SVG stay full indigo whatever the variant; Paragon's .bg-primary-400
+  // utility would otherwise tint it.
+  .bg-primary-400.w-100,
+  .col-md-9.bg-primary-400,
+  .col-md-10.bg-primary-400 {
+    background-color: var(--pgn-color-primary-500) !important;
+  }
+
+  .medium-screen-svg-primary,
+  .large-screen-svg-primary {
+    fill: var(--pgn-color-primary-500) !important;
+  }
+
+  // The cream (light) / ink (dark) wedge revealed by the skewed SVG: follows
+  // the page background token in either mode.
+  .large-screen-svg-light,
+  .medium-screen-svg-light {
+    fill: var(--pgn-color-bg-base) !important;
+  }
+
+  .bg-white h1, .bg-white h2, .bg-white h3,
+  .bg-white h4, .bg-white h5, .bg-white h6 {
+    color: var(--pgn-color-headings-base);
+  }
+
+  // Decorator groups wrap the input; match its (token) background. A
+  // floating-label select with no value hides its text until focused.
+  .pgn__form-control-decorator-group {
+    background-color: var(--pgn-color-form-input-bg-base);
+  }
+
+  .has-floating-label select.form-control:not(.has-value):not(:focus) {
+    color: transparent !important;
+  }
+
+  // Authn: the divider line between the hero and the form.
+  .medium-yellow-line {
+    border: 3px solid var(--pgn-color-brand-500);
+  }
+
+  // Aqua CTA (authn submit). Paragon 23 has no accent-a button variant, and
+  // its .btn state rules read per-variant custom properties with transparent
+  // fallbacks, so an unknown variant loses its fill on hover and focus. Set
+  // the same hooks Paragon's generated variants set. (.btn-brand is the real
+  // variant with this look; use it where the markup can be changed.)
+  .btn-accent-a {
+    --pgn-btn-color: var(--pgn-color-futures-ink);
+    --pgn-btn-bg: var(--pgn-color-brand-500);
+    --pgn-btn-border-color: var(--pgn-color-brand-500);
+    --pgn-btn-hover-color: var(--pgn-color-futures-ink);
+    --pgn-btn-hover-bg: var(--pgn-color-brand-700);
+    --pgn-btn-hover-border-color: var(--pgn-color-brand-700);
+    --pgn-btn-focus-color: var(--pgn-color-futures-ink);
+    --pgn-btn-focus-bg: var(--pgn-color-brand-500);
+    --pgn-btn-focus-border-color: var(--pgn-color-brand-500);
+    --pgn-btn-focus-outline-color: var(--pgn-color-brand-500);
+    --pgn-btn-active-color: var(--pgn-color-futures-ink);
+    --pgn-btn-active-bg: var(--pgn-color-brand-900);
+    --pgn-btn-active-border-color: var(--pgn-color-brand-900);
+    background-color: var(--pgn-color-brand-500);
+    border-color: var(--pgn-color-brand-500);
+    color: var(--pgn-color-futures-ink);
+  }
+}
+
+// Suppress transitions during a theme switch so toggling light/dark is instant
+// (`hdruk-no-transition` is added to <html> by the theme toggle for one frame).
+html.hdruk-no-transition,
+html.hdruk-no-transition *,
+html.hdruk-no-transition *::before,
+html.hdruk-no-transition *::after {
+  transition: none !important;
+}

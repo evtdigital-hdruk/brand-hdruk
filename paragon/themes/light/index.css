@@ -1,0 +1,4 @@
+/* Light variant: the token-generated CSS plus the residual rules that have no
+   Paragon token. Compiled by `paragon build-scss` into dist/light.css. */
+@import "../../build/themes/light/index.css";
+@import "./custom.css";

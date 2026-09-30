@@ -1,0 +1,4 @@
+/* Dark variant: the token-generated CSS plus the residual rules that have no
+   Paragon token. Compiled by `paragon build-scss` into dist/dark.css. */
+@import "../../build/themes/dark/index.css";
+@import "./custom.css";

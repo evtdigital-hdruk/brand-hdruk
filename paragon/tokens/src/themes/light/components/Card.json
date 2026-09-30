@@ -1,0 +1,25 @@
+{
+  "color": {
+    "$type": "color",
+    "card": {
+      "bg": {
+        "base": {
+          "$value": "{color.white}",
+          "$description": "Cards sit white on the cream page background."
+        }
+      },
+      "border": {
+        "base": {
+          "$value": "{color.futures.ink}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.12
+            }
+          ],
+          "$description": "Hairline ink border, as on the marketing cards."
+        }
+      }
+    }
+  }
+}

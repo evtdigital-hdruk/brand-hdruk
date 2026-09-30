@@ -1,0 +1,48 @@
+{
+  "color": {
+    "$type": "color",
+    "btn": {
+      "text": {
+        "tertiary": {
+          "$value": "{color.futures.cream}"
+        }
+      },
+      "hover": {
+        "text": {
+          "tertiary": {
+            "$value": "{color.futures.cream}"
+          }
+        },
+        "bg": {
+          "tertiary": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.08
+              }
+            ]
+          }
+        }
+      },
+      "active": {
+        "text": {
+          "tertiary": {
+            "$value": "{color.futures.cream}"
+          }
+        },
+        "bg": {
+          "tertiary": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 0.08
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

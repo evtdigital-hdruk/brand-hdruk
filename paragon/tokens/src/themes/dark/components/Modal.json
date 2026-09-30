@@ -1,0 +1,21 @@
+{
+  "color": {
+    "$type": "color",
+    "modal": {
+      "content": {
+        "bg": {
+          "$value": "{color.futures.ink-raised}"
+        },
+        "border": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.12
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "color": {
+    "$type": "color",
+    "pagination": {
+      "text": {
+        "base": {
+          "$value": "{color.futures.cream}"
+        },
+        "hover": {
+          "$value": "{color.futures.cream}"
+        },
+        "disabled": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.6
+            }
+          ]
+        }
+      },
+      "bg": {
+        "base": {
+          "$value": "{color.futures.ink-raised}"
+        },
+        "hover": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.08
+            }
+          ]
+        },
+        "disabled": {
+          "$value": "{color.futures.ink-raised}"
+        }
+      },
+      "border": {
+        "base": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.12
+            }
+          ]
+        },
+        "hover": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.12
+            }
+          ]
+        },
+        "disabled": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.12
+            }
+          ]
+        }
+      }
+    }
+  }
+}

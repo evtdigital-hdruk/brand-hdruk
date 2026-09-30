@@ -3,12 +3,52 @@
     "$type": "color",
     "link": {
       "base": {
-        "$value": "{color.brand.500}",
-        "$description": "Dark-mode links use aqua (the indigo/aqua swap from the spec)."
+        "$value": "{color.futures.aqua}",
+        "$description": "Dark-mode links use aqua."
+      },
+      "hover": {
+        "$value": "#2ce7d4",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 1
+          }
+        ],
+        "$description": " (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index)."
       },
       "inline": {
         "base": {
-          "$value": "{color.brand.500}"
+          "$value": "{color.futures.aqua}"
+        }
+      },
+      "muted": {
+        "base": {
+          "$value": "{color.futures.aqua}"
+        },
+        "hover": {
+          "$value": "#2ce7d4",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 1
+            }
+          ]
+        },
+        "inline": {
+          "base": {
+            "$value": "{color.futures.aqua}"
+          },
+          "hover": {
+            "base": {
+              "$value": "#2ce7d4",
+              "modify": [
+                {
+                  "type": "alpha",
+                  "amount": 1
+                }
+              ]
+            }
+          }
         }
       }
     }

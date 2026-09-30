@@ -3,8 +3,39 @@
     "$type": "color",
     "bg": {
       "base": {
-        "$value": "#1e1f1d",
-        "$description": "Ink page background (dark mode)."
+        "$value": "{color.futures.ink}",
+        "$description": "Ink page background."
+      },
+      "active": {
+        "$value": "{color.futures.aqua}",
+        "$description": "Active/selected fills (checked controls, active pages) are aqua."
+      }
+    },
+    "active": {
+      "$value": "{color.futures.ink}",
+      "$description": "Text on aqua active fills is ink."
+    },
+    "border": {
+      "$value": "{color.futures.cream}",
+      "modify": [
+        {
+          "type": "alpha",
+          "amount": 0.12
+        }
+      ],
+      "$description": "Hairline borders: cream at 12%."
+    },
+    "input": {
+      "focus": {
+        "$value": "{color.futures.aqua}"
+      }
+    },
+    "theme": {
+      "focus": {
+        "primary": {
+          "$value": "{color.futures.aqua}",
+          "$description": "Focus rings for primary, outline-primary and tertiary buttons: indigo is invisible on ink."
+        }
       }
     }
   }

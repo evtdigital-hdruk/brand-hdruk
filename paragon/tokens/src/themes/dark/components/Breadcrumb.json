@@ -1,0 +1,19 @@
+{
+  "color": {
+    "$type": "color",
+    "breadcrumb": {
+      "base": {
+        "$value": "{color.futures.aqua}"
+      },
+      "active": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.6
+          }
+        ]
+      }
+    }
+  }
+}

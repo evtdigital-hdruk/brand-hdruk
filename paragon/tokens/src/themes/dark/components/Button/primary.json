@@ -1,0 +1,54 @@
+{
+  "color": {
+    "$type": "color",
+    "btn": {
+      "text": {
+        "primary": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 1
+            }
+          ],
+          "$description": "Cream on indigo (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index)."
+        },
+        "outline-primary": {
+          "$value": "{color.futures.aqua}"
+        }
+      },
+      "border": {
+        "outline-primary": {
+          "$value": "{color.futures.aqua}"
+        }
+      },
+      "hover": {
+        "text": {
+          "primary": {
+            "$value": "{color.futures.cream}",
+            "modify": [
+              {
+                "type": "alpha",
+                "amount": 1
+              }
+            ],
+            "$description": "Cream on indigo (alpha 1 replaces the modifier Paragon applies to this token; modifiers merge by index)."
+          },
+          "outline-primary": {
+            "$value": "{color.futures.ink}"
+          }
+        },
+        "bg": {
+          "outline-primary": {
+            "$value": "{color.futures.aqua}"
+          }
+        },
+        "border": {
+          "outline-primary": {
+            "$value": "{color.futures.aqua}"
+          }
+        }
+      }
+    }
+  }
+}

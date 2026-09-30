@@ -1,0 +1,10 @@
+{
+  "color": {
+    "$type": "color",
+    "body": {
+      "base": {
+        "$value": "{color.futures.cream}"
+      }
+    }
+  }
+}

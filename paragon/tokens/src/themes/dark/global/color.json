@@ -1,36 +1,677 @@
 {
   "color": {
     "$type": "color",
+    "futures": {
+      "indigo": {
+        "$value": "#2e34ba",
+        "$description": "Futures indigo: brand primary."
+      },
+      "aqua": {
+        "$value": "#0adec8",
+        "$description": "Futures aqua: action accent."
+      },
+      "cream": {
+        "$value": "#f5f2eb",
+        "$description": "Futures cream: light page background, dark-mode text."
+      },
+      "ink": {
+        "$value": "#1e1f1d",
+        "$description": "Futures ink: light-mode text, dark-mode page background."
+      },
+      "ink-raised": {
+        "$value": "#26272a",
+        "$description": "Futures ink-raised: dark-mode surfaces (cards, inputs, menus)."
+      },
+      "header-icon-hover-bg": {
+        "$value": "#323336",
+        "$description": "Header icon hover fill (marketing nav --accent dark)."
+      }
+    },
     "primary": {
       "base": {
         "$value": "#2e34ba",
-        "$description": "Futures indigo - brand primary (mode-invariant)."
+        "$description": "Mode-invariant."
+      },
+      "100": {
+        "$value": "{color.futures.indigo}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.18
+          }
+        ]
+      },
+      "200": {
+        "$value": "{color.futures.indigo}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.35
+          }
+        ]
+      },
+      "300": {
+        "$value": "{color.primary.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.5"
+          }
+        ]
+      },
+      "400": {
+        "$value": "{color.primary.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "500": {
+        "$value": "{color.primary.base}"
+      },
+      "600": {
+        "$value": "{color.primary.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.1"
+          }
+        ]
+      },
+      "700": {
+        "$value": "{color.primary.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.2"
+          }
+        ]
+      },
+      "800": {
+        "$value": "{color.primary.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "900": {
+        "$value": "{color.primary.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.3"
+          }
+        ]
       }
     },
     "brand": {
       "base": {
         "$value": "#0adec8",
-        "$description": "Futures aqua - action accent (mode-invariant)."
+        "$description": "Mode-invariant."
+      },
+      "100": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      },
+      "200": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.3
+          }
+        ]
+      },
+      "300": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.5"
+          }
+        ]
+      },
+      "400": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "500": {
+        "$value": "{color.brand.base}"
+      },
+      "600": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.1"
+          }
+        ]
+      },
+      "700": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.2"
+          }
+        ]
+      },
+      "800": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "900": {
+        "$value": "{color.brand.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.3"
+          }
+        ]
       }
     },
-    "white": {
-      "$value": "#1e1f1d",
-      "$description": "In dark mode 'white' surfaces map to ink so default backgrounds invert."
-    },
-    "black": {
-      "$value": "#f5f2eb",
-      "$description": "In dark mode 'black' text maps to cream."
+    "accent": {
+      "a": {
+        "$value": "{color.futures.aqua}"
+      }
     },
     "gray": {
-      "100": { "$value": "#26272a" },
-      "200": { "$value": "#303134" },
-      "300": { "$value": "#3c3d40" },
-      "400": { "$value": "#56575a" },
-      "500": { "$value": "#8a8b8d" },
-      "600": { "$value": "#b7b8b8" },
-      "700": { "$value": "#d6d6d2" },
-      "800": { "$value": "#e8e7e1" },
-      "900": { "$value": "#f5f2eb" }
+      "100": {
+        "$value": "#26272a"
+      },
+      "200": {
+        "$value": "#303134"
+      },
+      "300": {
+        "$value": "#3c3d40"
+      },
+      "400": {
+        "$value": "#56575a"
+      },
+      "500": {
+        "$value": "#8a8b8d"
+      },
+      "600": {
+        "$value": "#b7b8b8"
+      },
+      "700": {
+        "$value": "#d6d6d2"
+      },
+      "800": {
+        "$value": "#e8e7e1"
+      },
+      "900": {
+        "$value": "#f5f2eb"
+      },
+      "base": {
+        "$value": "#8a8b8d",
+        "$description": "Matches gray.500; .text-gray and other gray-base consumers."
+      }
+    },
+    "dark": {
+      "base": {
+        "$value": "#f5f2eb",
+        "$description": "Paragon's 'dark' text utilities become cream. Literal: the derived shades cannot follow a reference."
+      },
+      "500": {
+        "$value": "{color.dark.base}"
+      },
+      "600": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.1"
+          }
+        ]
+      },
+      "700": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.2"
+          }
+        ]
+      },
+      "800": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "900": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.3"
+          }
+        ]
+      },
+      "100": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.94"
+          }
+        ]
+      },
+      "200": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.75"
+          }
+        ]
+      },
+      "300": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.5"
+          }
+        ]
+      },
+      "400": {
+        "$value": "{color.dark.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.25"
+          }
+        ]
+      }
+    },
+    "info": {
+      "base": {
+        "$value": "#0adec8"
+      },
+      "100": {
+        "$value": "{color.futures.aqua}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      },
+      "200": {
+        "$value": "{color.futures.aqua}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.3
+          }
+        ]
+      },
+      "300": {
+        "$value": "{color.info.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.5"
+          }
+        ]
+      },
+      "400": {
+        "$value": "{color.info.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "500": {
+        "$value": "{color.info.base}"
+      },
+      "600": {
+        "$value": "{color.info.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.1"
+          }
+        ]
+      },
+      "700": {
+        "$value": "{color.info.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.2"
+          }
+        ]
+      },
+      "800": {
+        "$value": "{color.info.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "900": {
+        "$value": "{color.info.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.3"
+          }
+        ]
+      }
+    },
+    "success": {
+      "base": {
+        "$value": "#54cf5e"
+      },
+      "100": {
+        "$value": "#54cf5e",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.14
+          }
+        ]
+      },
+      "200": {
+        "$value": "#54cf5e",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.35
+          }
+        ]
+      },
+      "300": {
+        "$value": "{color.success.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.5"
+          }
+        ]
+      },
+      "400": {
+        "$value": "{color.success.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "500": {
+        "$value": "{color.success.base}"
+      },
+      "600": {
+        "$value": "{color.success.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.1"
+          }
+        ]
+      },
+      "700": {
+        "$value": "{color.success.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.2"
+          }
+        ]
+      },
+      "800": {
+        "$value": "{color.success.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "900": {
+        "$value": "{color.success.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.3"
+          }
+        ]
+      }
+    },
+    "warning": {
+      "base": {
+        "$value": "#ffe340"
+      },
+      "100": {
+        "$value": "#ffe340",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.14
+          }
+        ]
+      },
+      "200": {
+        "$value": "#ffe340",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.35
+          }
+        ]
+      },
+      "300": {
+        "$value": "{color.warning.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.5"
+          }
+        ]
+      },
+      "400": {
+        "$value": "{color.warning.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "500": {
+        "$value": "{color.warning.base}"
+      },
+      "600": {
+        "$value": "{color.warning.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.1"
+          }
+        ]
+      },
+      "700": {
+        "$value": "{color.warning.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.2"
+          }
+        ]
+      },
+      "800": {
+        "$value": "{color.warning.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "900": {
+        "$value": "{color.warning.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.3"
+          }
+        ]
+      }
+    },
+    "danger": {
+      "base": {
+        "$value": "#ff8a8a",
+        "$description": "Readable red on ink (invalid fields, danger alerts)."
+      },
+      "100": {
+        "$value": "#ff8a8a",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.14
+          }
+        ]
+      },
+      "200": {
+        "$value": "#ff8a8a",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.35
+          }
+        ]
+      },
+      "300": {
+        "$value": "{color.danger.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.5"
+          }
+        ]
+      },
+      "400": {
+        "$value": "{color.danger.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "white",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "500": {
+        "$value": "{color.danger.base}"
+      },
+      "600": {
+        "$value": "{color.danger.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.1"
+          }
+        ]
+      },
+      "700": {
+        "$value": "{color.danger.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.2"
+          }
+        ]
+      },
+      "800": {
+        "$value": "{color.danger.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.25"
+          }
+        ]
+      },
+      "900": {
+        "$value": "{color.danger.base}",
+        "modify": [
+          {
+            "type": "mix",
+            "otherColor": "black",
+            "amount": "0.3"
+          }
+        ]
+      }
     }
   }
 }

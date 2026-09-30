@@ -1,0 +1,46 @@
+{
+  "color": {
+    "$type": "color",
+    "card": {
+      "bg": {
+        "base": {
+          "$value": "{color.futures.ink-raised}"
+        },
+        "muted": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.05
+            }
+          ]
+        }
+      },
+      "border": {
+        "base": {
+          "$value": "{color.futures.cream}",
+          "modify": [
+            {
+              "type": "alpha",
+              "amount": 0.12
+            }
+          ]
+        },
+        "focus": {
+          "base": {
+            "$value": "{color.futures.aqua}"
+          }
+        }
+      },
+      "divider-bg": {
+        "$value": "{color.futures.cream}",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      }
+    }
+  }
+}
