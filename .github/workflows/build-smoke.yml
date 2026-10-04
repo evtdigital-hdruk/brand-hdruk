@@ -3,24 +3,64 @@ name: Build smoke
 # Verify the brand stylesheet build (Paragon CLI build-tokens + build-scss) still
 # compiles and emits the theme CSS. Catches SCSS/token regressions that would
 # otherwise only surface when an MFE rebuilds against this package.
+#
+# This workflow is informational. It must NOT be made a required status
+# check or otherwise gate merges yet.
 on:
+  push:
+    branches:
+      - "hdr-uk/**"
+      - "upgrade/**"
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    name: Build and check outputs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version-file: .nvmrc
           cache: npm
-      - run: npm ci
-      - run: npm run build
-      - name: Build emitted the core + light theme stylesheets
+
+      - name: Install dependencies
+        run: npm ci
+
+      # paragon/build and dist/ are committed. Remove them first so the
+      # checks below prove this build emitted the files.
+      - name: Remove committed build output
+        run: rm -rf paragon/build dist
+
+      - name: Build
+        id: build
+        run: npm run build
+
+      - name: Token build emitted the core, light and dark stylesheets
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         run: |
-          test -f paragon/build/core/index.css
-          test -f paragon/build/themes/light/index.css
+          test -s paragon/build/core/index.css
+          test -s paragon/build/themes/light/index.css
+          test -s paragon/build/themes/dark/index.css
+
+      - name: SCSS build emitted the core, light and dark bundles
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          test -s dist/core.css
+          test -s dist/core.min.css
+          test -s dist/light.css
+          test -s dist/light.min.css
+          test -s dist/dark.css
+          test -s dist/dark.min.css
+          test -s dist/theme-urls.json
